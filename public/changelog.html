@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Changelog — Tradevada</title>
+<meta name="description" content="What's new in Tradevada. Every release, every fix, in chronological order." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --bg:#07070c;--panel:#11111c;--border:rgba(255,255,255,0.06);
+    --border-strong:rgba(255,255,255,0.12);--text:#ffffff;
+    --muted:rgba(255,255,255,0.7);--dim:rgba(255,255,255,0.42);
+    --primary:#7C3AED;--primary-2:#a78bfa;--primary-soft:rgba(124,58,237,0.14);
+    --teal:#14b8a6;--teal-soft:rgba(20,184,166,0.14);
+    --blue:#3b82f6;--blue-soft:rgba(59,130,246,0.14);
+    --amber:#f59e0b;--amber-soft:rgba(245,158,11,0.14);
+    --red:#ef4444;--red-soft:rgba(239,68,68,0.14);
+    --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+    --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--bg);color:var(--text);font-family:var(--sans);
+    -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;line-height:1.7;scroll-behavior:smooth}
+  a{color:var(--primary-2);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .bg-canvas{position:fixed;inset:0;z-index:-1;pointer-events:none}
+  .bg-canvas::before{content:"";position:absolute;inset:0;
+    background:radial-gradient(60% 50% at 50% 0%,rgba(124,58,237,0.18) 0%,transparent 60%)}
+
+  nav.top{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(7,7,12,0.7);border-bottom:1px solid var(--border)}
+  nav.top .row{max-width:1280px;margin:0 auto;padding:0 28px;height:64px;display:flex;align-items:center;justify-content:space-between}
+  a.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:0.02em;font-size:18px;color:#fff;transition:opacity .15s}
+  a.brand:hover{opacity:0.85;text-decoration:none}
+  a.brand .mark{width:36px;height:36px;border-radius:10px;overflow:hidden;flex-shrink:0;box-shadow:0 8px 24px -8px rgba(124,58,237,0.6)}
+  a.brand .mark svg{display:block;width:100%;height:100%}
+  .nav-actions{display:flex;align-items:center;gap:10px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:10px;font-weight:600;font-size:14px;border:1px solid var(--border);color:var(--muted);transition:.15s;white-space:nowrap}
+  .btn:hover{color:var(--text);border-color:var(--border-strong);background:rgba(255,255,255,0.03);text-decoration:none}
+  .btn.primary{background:linear-gradient(135deg,#8b5cf6,#7C3AED 50%,#6d28d9);color:#fff;border-color:transparent;box-shadow:0 10px 30px -10px rgba(124,58,237,0.7)}
+  .btn.primary:hover{box-shadow:0 14px 40px -10px rgba(124,58,237,0.85)}
+
+  .hero{padding:80px 28px 32px;text-align:center;max-width:880px;margin:0 auto}
+  .eyebrow{display:inline-block;padding:6px 14px;border-radius:999px;background:var(--primary-soft);border:1px solid rgba(124,58,237,0.3);color:var(--primary-2);font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;margin-bottom:18px}
+  .hero h1{font-size:clamp(40px,5vw,60px);font-weight:800;letter-spacing:-0.025em;line-height:1.1}
+  .hero h1 .accent{background:linear-gradient(120deg,#fff,#a78bfa);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero p{color:var(--muted);font-size:17px;margin-top:18px;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.6}
+
+  .container{max-width:880px;margin:0 auto;padding:32px 28px 80px}
+
+  .release{margin-bottom:42px;border-left:2px solid var(--border-strong);padding-left:32px;position:relative}
+  .release::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--primary);
+    box-shadow:0 0 0 4px rgba(124,58,237,0.18)}
+  .release.minor::before{background:var(--teal);box-shadow:0 0 0 4px rgba(20,184,166,0.18)}
+  .release.patch::before{background:var(--blue);box-shadow:0 0 0 4px rgba(59,130,246,0.18)}
+  .release-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:8px}
+  .version{font-family:var(--mono);font-weight:700;font-size:24px;color:#fff;letter-spacing:-0.01em}
+  .release.minor .version{color:#fff}
+  .date{font-family:var(--mono);font-size:13px;color:var(--dim)}
+  .badge{font-size:10px;letter-spacing:0.14em;text-transform:uppercase;font-weight:700;padding:3px 9px;border-radius:5px}
+  .badge.major{background:var(--primary-soft);color:var(--primary-2);border:1px solid rgba(124,58,237,0.3)}
+  .badge.minor{background:var(--teal-soft);color:var(--teal);border:1px solid rgba(20,184,166,0.3)}
+  .badge.patch{background:var(--blue-soft);color:#60a5fa;border:1px solid rgba(59,130,246,0.3)}
+  .release h3{font-size:20px;font-weight:700;margin-bottom:10px;color:#fff}
+  .release p.intro{color:var(--muted);font-size:15px;margin-bottom:14px}
+
+  .changes{display:grid;gap:6px}
+  .change{display:flex;gap:12px;align-items:flex-start;padding:8px 12px;border-radius:8px;
+    background:rgba(255,255,255,0.02);border:1px solid var(--border)}
+  .tag{flex-shrink:0;font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:0.08em;
+    padding:2px 8px;border-radius:5px;text-transform:uppercase;line-height:1.6}
+  .tag.new{background:var(--teal-soft);color:var(--teal);border:1px solid rgba(20,184,166,0.3)}
+  .tag.improved{background:var(--primary-soft);color:var(--primary-2);border:1px solid rgba(124,58,237,0.3)}
+  .tag.fixed{background:var(--blue-soft);color:#60a5fa;border:1px solid rgba(59,130,246,0.3)}
+  .tag.removed{background:var(--red-soft);color:var(--red);border:1px solid rgba(239,68,68,0.3)}
+  .tag.security{background:var(--amber-soft);color:var(--amber);border:1px solid rgba(245,158,11,0.3)}
+  .change p{font-size:14px;color:rgba(255,255,255,0.85);margin:0}
+  .change p b{color:#fff;font-weight:600}
+
+  footer{border-top:1px solid var(--border);margin-top:60px;padding:40px 28px}
+  .foot-row{max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px;color:var(--dim);font-size:13px}
+  .foot-links{display:flex;gap:24px;flex-wrap:wrap}
+  .foot-links a{color:var(--muted)}
+  .foot-links a:hover{color:#fff}
+
+  @media (max-width: 700px){
+    .hero{padding:60px 20px 24px}
+    .container{padding:20px 20px 60px}
+    .release{padding-left:24px}
+    .change{flex-direction:column;gap:6px}
+  }
+  @media (max-width: 540px){
+    nav.top .nav-actions .btn{padding:7px 11px;font-size:12.5px;gap:4px}
+    nav.top .row{padding-left:14px;padding-right:14px}
+  }
+
+</style>
+</head>
+<body>
+<div class="bg-canvas"></div>
+
+<nav class="top">
+  <div class="row">
+    <a class="brand" href="index.html" aria-label="Tradevada home">
+      <div class="mark">
+        <img src="logo-mark.png" alt="Tradevada" style="width:100%;height:100%;object-fit:contain;display:block;">
+      </div>
+      <span>TRADEVADA</span>
+    </a>
+    <div class="nav-actions">
+      <a class="btn" href="https://app.tradevada.com/login">Sign in</a>
+      <a class="btn primary" href="https://app.tradevada.com/signup">Start free →</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <span class="eyebrow">Changelog</span>
+  <h1>What's <span class="accent">new</span>.</h1>
+  <p>Every release, fix, and improvement we ship — in reverse chronological order. Subscribe via RSS or follow us on X for live updates.</p>
+</header>
+
+<div class="container">
+
+  <!-- v3.0 -->
+  <div class="release">
+    <div class="release-head">
+      <span class="version">v3.0</span>
+      <span class="date">May 3, 2026</span>
+      <span class="badge major">MAJOR</span>
+    </div>
+    <h3>The wheel update</h3>
+    <p class="intro">A complete rebuild of the wheel-strategy view, plus a much faster journal and brand-new analytics. This is the biggest release we've ever shipped.</p>
+    <div class="changes">
+      <div class="change"><span class="tag new">NEW</span><p><b>Wheel-strategy tracker.</b> Cycle-aware accounting for CSP→Assigned→CC→Called Away. Tracks every premium ever collected against your true breakeven on the underlying.</p></div>
+      <div class="change"><span class="tag new">NEW</span><p><b>Next-move simulator.</b> Pick a target yield (% / month), get a suggested strike with projected new breakeven and contract count.</p></div>
+      <div class="change"><span class="tag new">NEW</span><p><b>Profit projection ladder.</b> Drag the price slider to see total P&amp;L if called away at any strike. Breakeven highlighted.</p></div>
+      <div class="change"><span class="tag new">NEW</span><p><b>Per-symbol performance breakdown.</b> Win rate, profit factor, best/worst trade per ticker.</p></div>
+      <div class="change"><span class="tag improved">IMPROVED</span><p><b>3× faster journal.</b> Pagination, search, and filtering now run client-side after first load.</p></div>
+      <div class="change"><span class="tag improved">IMPROVED</span><p><b>Light/dark theme switcher.</b> Match your OS, plus a "Monk Mode" toggle that hides dollar values for screenshot sharing.</p></div>
+      <div class="change"><span class="tag improved">IMPROVED</span><p>Equity curve now shades drawdown periods.</p></div>
+      <div class="change"><span class="tag fixed">FIXED</span><p>Calendar heatmap showed wrong colors for break-even days. Now renders neutral correctly.</p></div>
+    </div>
+  </div>
+
+  <!-- v2.4 -->
+  <div class="release minor">
+    <div class="release-head">
+      <span class="version">v2.4</span>
+      <span class="date">April 18, 2026</span>
+      <span class="badge minor">MINOR</span>
+    </div>
+    <h3>News terminal &amp; events calendar</h3>
+    <div class="changes">
+      <div class="change"><span class="tag new">NEW</span><p><b>News Terminal.</b> Curated market headlines with severity flags (Low / Medium / High / Critical), filterable to tickers in your portfolio.</p></div>
+      <div class="change"><span class="tag new">NEW</span><p><b>Events calendar.</b> Earnings, dividends, FOMC, and economic releases — all in one timeline. "On Your Radar" widget surfaces events touching your open positions.</p></div>
+      <div class="change"><span class="tag new">NEW</span><p>Configurable market banner — pick which tickers scroll across the top.</p></div>
+      <div class="change"><span class="tag improved">IMPROVED</span><p>Notification bell now shows broker-sync status and unresolved alerts.</p></div>
+      <div class="change"><span class="tag fixed">FIXED</span><p>Tab reordering modal didn't persist between sessions. Now stored in your account.</p></div>
+    </div>
+  </div>
+
+  <!-- v2.3 -->
+  <div class="release minor">
+    <div class="release-head">
+      <span class="version">v2.3</span>
+      <span class="date">March 27, 2026</span>
+      <span class="badge minor">MINOR</span>
+    </div>
+    <h3>Calendar trio</h3>
+    <div class="changes">
+      <div class="change"><span class="tag new">NEW</span><p>Three calendars in one place: P&amp;L heatmap, options expirations grouped by date, and dividend ex-dates from your holdings.</p></div>
+      <div class="change"><span class="tag new">NEW</span><p>Click any day in the P&amp;L calendar to drill into the trades that closed that day.</p></div>
+      <div class="change"><span class="tag improved">IMPROVED</span><p>Options-calendar contracts color-coded by status: Expired/BTC, Assigned/ITM, Open.</p></div>
+    </div>
+  </div>
+
+  <!-- v2.2 -->
+  <div class="release patch">
+    <div class="release-head">
+      <span class="version">v2.2</span>
+      <span class="date">March 8, 2026</span>
+      <span class="badge patch">PATCH</span>
+    </div>
+    <div class="changes">
+      <div class="change"><span class="tag fixed">FIXED</span><p>Moomoo broker sync occasionally missed pre-market trades. Re-syncs now backfill from the previous close.</p></div>
+      <div class="change"><span class="tag fixed">FIXED</span><p>Sharpe ratio calculation rounded incorrectly for short trade histories.</p></div>
+      <div class="change"><span class="tag fixed">FIXED</span><p>Day-of-week × hour heatmap now respects your account time zone.</p></div>
+      <div class="change"><span class="tag security">SECURITY</span><p>Upgraded session-token rotation from 30 days to 7 days for better security posture.</p></div>
+    </div>
+  </div>
+
+  <!-- v2.0 -->
+  <div class="release">
+    <div class="release-head">
+      <span class="version">v2.0</span>
+      <span class="date">February 14, 2026</span>
+      <span class="badge major">MAJOR</span>
+    </div>
+    <h3>Real broker sync</h3>
+    <p class="intro">CSV imports were getting old. v2 introduces direct read-only broker integration so your trades flow into Tradevada automatically.</p>
+    <div class="changes">
+      <div class="change"><span class="tag new">NEW</span><p><b>Direct Moomoo integration.</b> Read-only OAuth — connect once and trades sync within seconds of execution.</p></div>
+      <div class="change"><span class="tag new">NEW</span><p>Multi-account support. Track personal, IRA, and margin accounts side-by-side.</p></div>
+      <div class="change"><span class="tag new">NEW</span><p>Live Trades widget on the dashboard.</p></div>
+      <div class="change"><span class="tag improved">IMPROVED</span><p>Account-level P&amp;L now respects deposits and withdrawals.</p></div>
+      <div class="change"><span class="tag removed">REMOVED</span><p>Legacy CSV import (replaced by broker sync; CSV still available as fallback in Settings).</p></div>
+    </div>
+  </div>
+
+  <!-- v1.5 -->
+  <div class="release minor">
+    <div class="release-head">
+      <span class="version">v1.5</span>
+      <span class="date">January 22, 2026</span>
+      <span class="badge minor">MINOR</span>
+    </div>
+    <div class="changes">
+      <div class="change"><span class="tag new">NEW</span><p>Profit factor, expectancy, and recovery factor metrics on the analytics dashboard.</p></div>
+      <div class="change"><span class="tag new">NEW</span><p>Hold-time analysis: scalp / day / short swing / swing / position / long-term breakdowns.</p></div>
+      <div class="change"><span class="tag improved">IMPROVED</span><p>Trade detail modal now shows entry / exit chart context.</p></div>
+    </div>
+  </div>
+
+  <!-- v1.0 -->
+  <div class="release">
+    <div class="release-head">
+      <span class="version">v1.0</span>
+      <span class="date">November 1, 2025</span>
+      <span class="badge major">LAUNCH</span>
+    </div>
+    <h3>Tradevada is live 🚀</h3>
+    <p class="intro">After 8 months of building in private beta with a small group of wheel traders, Tradevada is open to the public.</p>
+    <div class="changes">
+      <div class="change"><span class="tag new">NEW</span><p>Trade journal with strategy tagging, search, filter, and pagination.</p></div>
+      <div class="change"><span class="tag new">NEW</span><p>Performance analytics: net P&amp;L, win rate, equity curve, and basic risk metrics.</p></div>
+      <div class="change"><span class="tag new">NEW</span><p>CSV import for any U.S. broker.</p></div>
+      <div class="change"><span class="tag new">NEW</span><p>Calendar P&amp;L view (12-month heatmap).</p></div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="foot-row">
+    <span>© 2026 Tradevada, LLC · Texas, USA</span>
+    <span style="display:block;width:100%;margin-top:10px;font-size:12px;line-height:1.55;color:rgba(255,255,255,.45)">Tradevada is a trading journal and analytics tool — not a broker, financial adviser, or signal service, and nothing here is financial advice. You are solely responsible for your own trading decisions. See our <a href="disclaimer.html" style="color:inherit;text-decoration:underline">full disclaimer</a>.</span>
+    <div class="foot-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="about.html">About</a>
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact — Tradevada</title>
+<meta name="description" content="Get in touch with Tradevada — support, billing, security disclosures, press, and partnerships. We answer every email." />
+
+<link rel="icon" type="image/png" href="favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --bg:#07070c;--panel:#11111c;--border:rgba(255,255,255,0.06);
+    --border-strong:rgba(255,255,255,0.12);--text:#ffffff;
+    --muted:rgba(255,255,255,0.7);--dim:rgba(255,255,255,0.42);
+    --primary:#7C3AED;--primary-2:#a78bfa;--primary-soft:rgba(124,58,237,0.14);
+    --teal:#14b8a6;--teal-soft:rgba(20,184,166,0.14);
+    --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+    --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--bg);color:var(--text);font-family:var(--sans);
+    -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;line-height:1.7;scroll-behavior:smooth}
+  a{color:var(--primary-2);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  .bg-canvas{position:fixed;inset:0;z-index:-1;pointer-events:none}
+  .bg-canvas::before{content:"";position:absolute;inset:0;
+    background:radial-gradient(60% 50% at 50% 0%,rgba(124,58,237,0.18) 0%,transparent 60%),
+               radial-gradient(40% 30% at 85% 30%,rgba(20,184,166,0.06) 0%,transparent 60%)}
+
+  /* NAV */
+  nav.top{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);
+    background:rgba(7,7,12,0.7);border-bottom:1px solid var(--border)}
+  nav.top .row{max-width:1280px;margin:0 auto;padding:0 28px;height:64px;
+    display:flex;align-items:center;justify-content:space-between}
+  a.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:0.02em;font-size:18px;color:#fff;transition:opacity .15s}
+  a.brand:hover{opacity:0.85;text-decoration:none}
+  a.brand .mark{width:36px;height:36px;border-radius:10px;overflow:hidden;flex-shrink:0;
+    box-shadow:0 8px 24px -8px rgba(124,58,237,0.6)}
+  .nav-actions{display:flex;align-items:center;gap:10px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:10px;
+    font-weight:600;font-size:14px;border:1px solid var(--border);color:var(--muted);transition:.15s;cursor:pointer;white-space:nowrap}
+  .btn:hover{color:var(--text);border-color:var(--border-strong);background:rgba(255,255,255,0.03);text-decoration:none}
+  .btn.primary{background:linear-gradient(135deg,#8b5cf6,#7C3AED 50%,#6d28d9);color:#fff;border-color:transparent;
+    box-shadow:0 10px 30px -10px rgba(124,58,237,0.7)}
+  .btn.primary:hover{box-shadow:0 14px 40px -10px rgba(124,58,237,0.85)}
+
+  /* HERO */
+  .hero{padding:96px 28px 48px;text-align:center;max-width:880px;margin:0 auto}
+  .eyebrow{display:inline-block;padding:6px 14px;border-radius:999px;
+    background:var(--primary-soft);border:1px solid rgba(124,58,237,0.3);color:var(--primary-2);
+    font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;margin-bottom:18px}
+  .hero h1{font-size:clamp(40px,5.4vw,68px);font-weight:800;letter-spacing:-0.03em;line-height:1.05}
+  .hero h1 .accent{background:linear-gradient(120deg,#fff,#a78bfa,#14b8a6);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero p{color:var(--muted);font-size:18px;margin-top:22px;max-width:640px;margin-left:auto;margin-right:auto;line-height:1.6}
+
+  /* CONTENT */
+  .content{max-width:1080px;margin:0 auto;padding:24px 28px 80px}
+  section{margin-bottom:64px}
+  section h2{font-size:30px;font-weight:800;letter-spacing:-0.02em;margin-bottom:12px;line-height:1.2;color:#fff}
+  section h2 .accent{background:linear-gradient(120deg,#fff,#a78bfa);-webkit-background-clip:text;background-clip:text;color:transparent}
+  section .sub{color:var(--muted);font-size:15px;margin-bottom:28px}
+
+  /* Email tiles */
+  .channel-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  @media (max-width:760px){.channel-grid{grid-template-columns:1fr}}
+  .channel{padding:24px;border-radius:14px;border:1px solid var(--border);
+    background:linear-gradient(180deg,rgba(255,255,255,0.025),rgba(255,255,255,0.005));
+    transition:.18s;display:flex;gap:16px}
+  .channel:hover{border-color:var(--border-strong);transform:translateY(-1px)}
+  .channel .ico{width:42px;height:42px;border-radius:11px;flex-shrink:0;
+    display:flex;align-items:center;justify-content:center;
+    background:var(--primary-soft);color:var(--primary-2);
+    border:1px solid rgba(124,58,237,0.25)}
+  .channel.teal .ico{background:var(--teal-soft);color:var(--teal);border-color:rgba(20,184,166,0.25)}
+  .channel.amber .ico{background:rgba(245,158,11,0.14);color:#f59e0b;border-color:rgba(245,158,11,0.25)}
+  .channel h3{font-size:16px;font-weight:700;color:#fff;margin-bottom:4px}
+  .channel p{font-size:13.5px;color:var(--muted);margin-bottom:10px;line-height:1.55}
+  .channel .email-link{font-family:var(--mono);font-size:13.5px;color:var(--primary-2);font-weight:600;display:inline-flex;align-items:center;gap:6px}
+  .channel .sla{display:inline-block;margin-top:8px;font-size:11px;color:var(--dim);letter-spacing:0.06em;text-transform:uppercase;font-weight:600}
+
+  /* Two-column section (form + sidebar) */
+  .form-layout{display:grid;grid-template-columns:1.4fr 1fr;gap:32px;align-items:start}
+  @media (max-width:880px){.form-layout{grid-template-columns:1fr}}
+
+  /* Form */
+  .form-card{padding:32px;border-radius:16px;border:1px solid var(--border);
+    background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.008))}
+  .form-card label{display:block;font-size:13px;font-weight:600;color:var(--muted);margin:0 0 8px 0;letter-spacing:0.02em}
+  .form-card .field-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media (max-width:560px){.form-card .field-grid{grid-template-columns:1fr}}
+  .field{width:100%;padding:12px 14px;border-radius:10px;
+    background:rgba(255,255,255,0.04);border:1px solid var(--border);
+    color:#fff;font-family:var(--sans);font-size:14px;outline:none;transition:.15s;
+    margin-bottom:18px}
+  .field:focus{border-color:var(--primary-2);background:rgba(124,58,237,0.06);
+    box-shadow:0 0 0 3px rgba(124,58,237,0.18)}
+  .field::placeholder{color:var(--dim)}
+  textarea.field{resize:vertical;min-height:140px;font-family:var(--sans);line-height:1.55}
+  select.field{appearance:none;background-image:url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'%3e%3cpath d='M1 1l5 5 5-5' stroke='%23a78bfa' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+    background-repeat:no-repeat;background-position:right 14px center;padding-right:36px}
+  .submit-btn{width:100%;padding:14px 18px;border-radius:11px;font-weight:700;font-size:15px;
+    background:linear-gradient(135deg,#8b5cf6,#7C3AED 50%,#6d28d9);color:#fff;border:0;
+    box-shadow:0 14px 30px -10px rgba(124,58,237,0.55);cursor:pointer;transition:.15s;font-family:var(--sans)}
+  .submit-btn:hover{box-shadow:0 18px 40px -10px rgba(124,58,237,0.75);transform:translateY(-1px)}
+  .submit-btn:disabled{opacity:0.6;cursor:not-allowed;transform:none}
+  .form-foot{font-size:12px;color:var(--dim);text-align:center;margin-top:14px;line-height:1.5}
+  .form-success{display:none;padding:20px;border-radius:12px;
+    background:rgba(20,184,166,0.10);border:1px solid rgba(20,184,166,0.30);
+    color:#5eead4;font-size:14px;text-align:center;margin-bottom:18px}
+  .form-success.show{display:block}
+  .form-error{display:none;padding:14px;border-radius:10px;
+    background:rgba(239,68,68,0.10);border:1px solid rgba(239,68,68,0.30);
+    color:#fca5a5;font-size:13px;text-align:center;margin-bottom:18px}
+  .form-error.show{display:block}
+
+  /* Side info card */
+  .info-card{padding:24px;border-radius:14px;border:1px solid var(--border);
+    background:linear-gradient(180deg,rgba(255,255,255,0.025),rgba(255,255,255,0.005));
+    margin-bottom:16px}
+  .info-card h4{font-size:13px;color:var(--dim);letter-spacing:0.14em;text-transform:uppercase;
+    font-weight:600;margin-bottom:14px}
+  .info-row{display:flex;justify-content:space-between;gap:12px;font-size:13.5px;
+    padding:8px 0;border-bottom:1px dashed rgba(255,255,255,0.06)}
+  .info-row:last-child{border-bottom:0}
+  .info-row .lbl{color:var(--muted)}
+  .info-row .val{color:#fff;font-weight:500;text-align:right;font-family:var(--mono);font-size:12.5px}
+
+  /* Self-serve / before-you-email block */
+  .self-serve{padding:22px;border-radius:14px;border:1px solid var(--border);
+    background:linear-gradient(180deg,rgba(124,58,237,0.04),rgba(124,58,237,0.01))}
+  .self-serve h4{font-size:14px;color:#fff;margin-bottom:8px;font-weight:700}
+  .self-serve p{font-size:13px;color:var(--muted);margin-bottom:14px;line-height:1.55}
+  .self-serve a{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;
+    margin-right:14px}
+
+  /* FOOTER */
+  footer{border-top:1px solid var(--border);background:rgba(0,0,0,0.3);margin-top:40px}
+  .foot-row{max-width:1280px;margin:0 auto;padding:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;color:var(--dim);font-size:13px}
+  .foot-links{display:flex;gap:18px}
+  .foot-links a{color:var(--dim)}
+  .foot-links a:hover{color:var(--text);text-decoration:none}
+
+  @media (max-width:760px){
+    .hero{padding:60px 20px 32px}
+    .content{padding:20px 20px 60px}
+    .form-card{padding:22px}
+  }
+  @media (max-width: 540px){
+    nav.top .nav-actions .btn{padding:7px 11px;font-size:12.5px;gap:4px}
+    nav.top .row{padding-left:14px;padding-right:14px}
+  }
+
+</style>
+</head>
+<body>
+<div class="bg-canvas"></div>
+
+<nav class="top">
+  <div class="row">
+    <a class="brand" href="index.html" aria-label="Tradevada home">
+      <div class="mark">
+        <img src="logo-mark.png" alt="Tradevada" style="width:100%;height:100%;object-fit:contain;display:block;">
+      </div>
+      <span>TRADEVADA</span>
+    </a>
+    <div class="nav-actions">
+      <a class="btn" href="https://app.tradevada.com/login">Sign in</a>
+      <a class="btn primary" href="https://app.tradevada.com/signup">Start free →</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <span class="eyebrow">Contact</span>
+  <h1>We answer<br/><span class="accent">every email.</span></h1>
+  <p>Support, billing, security disclosures, press, or just feedback — pick a channel below or drop us a message. A real person reads every inbox.</p>
+</header>
+
+<div class="content">
+
+  <!-- ============== CONTACT CHANNELS ============== -->
+  <section>
+    <h2>Direct channels</h2>
+    <p class="sub">Each inbox is monitored by a real person. Pick the one that matches your inquiry — it'll get to the right place faster.</p>
+
+    <div class="channel-grid">
+
+      <div class="channel">
+        <div class="ico">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <div>
+          <h3>Customer support</h3>
+          <p>Account issues, broker sync problems, missing trades, feature questions, or anything else about using Tradevada.</p>
+          <a class="email-link" href="mailto:support@tradevada.com">support@tradevada.com →</a>
+          <div class="sla">Response within 24 business hours</div>
+        </div>
+      </div>
+
+      <div class="channel teal">
+        <div class="ico">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="14" rx="2"/><path d="M2 11h20"/><path d="M6 16h2"/></svg>
+        </div>
+        <div>
+          <h3>Billing &amp; subscriptions</h3>
+          <p>Invoice requests, refunds, plan changes, payment problems, tax documents, or VAT/GST questions.</p>
+          <a class="email-link" href="mailto:billing@tradevada.com">billing@tradevada.com →</a>
+          <div class="sla">Response within 24 business hours</div>
+        </div>
+      </div>
+
+      <div class="channel amber">
+        <div class="ico">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L3 7v6c0 5 4 9 9 11 5-2 9-6 9-11V7l-9-5z"/></svg>
+        </div>
+        <div>
+          <h3>Security disclosures</h3>
+          <p>Found a vulnerability, suspect a breach, or want to coordinate disclosure? Reach our security team directly. PGP available on request.</p>
+          <a class="email-link" href="mailto:security@tradevada.com">security@tradevada.com →</a>
+          <div class="sla">Acknowledged within 24 hours</div>
+        </div>
+      </div>
+
+      <div class="channel">
+        <div class="ico">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        </div>
+        <div>
+          <h3>Press &amp; partnerships</h3>
+          <p>Media inquiries, broker integrations, affiliate program, podcast appearances, or partnership proposals.</p>
+          <a class="email-link" href="mailto:press@tradevada.com">press@tradevada.com →</a>
+          <div class="sla">Response within 1 week</div>
+        </div>
+      </div>
+
+      <div class="channel teal">
+        <div class="ico">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9 9 0 0 1 9 9c0 5-9 13-9 13s-9-8-9-13z"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <div>
+          <h3>Privacy &amp; data requests</h3>
+          <p>Data export, deletion requests, GDPR/CCPA inquiries, or questions about how we handle your trade data.</p>
+          <a class="email-link" href="mailto:privacy@tradevada.com">privacy@tradevada.com →</a>
+          <div class="sla">Response within 30 days (GDPR/CCPA)</div>
+        </div>
+      </div>
+
+      <div class="channel">
+        <div class="ico">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div>
+          <h3>Everything else</h3>
+          <p>Product feedback, feature ideas, founder reachable for anything that doesn't fit a specific channel.</p>
+          <a class="email-link" href="mailto:hello@tradevada.com">hello@tradevada.com →</a>
+          <div class="sla">Response within 2–3 business days</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============== CONTACT FORM ============== -->
+  <section>
+    <h2>Send us a <span class="accent">message</span></h2>
+    <p class="sub">Prefer a form? Fill this out and we'll route it to the right inbox automatically.</p>
+
+    <div class="form-layout">
+
+      <!-- Form -->
+      <div class="form-card">
+        <div class="form-success" id="formSuccess">
+          ✓ Got it. We'll get back to you at the email you provided. Check your inbox (and spam) over the next few days.
+        </div>
+        <div class="form-error" id="formError">
+          Something went wrong sending that. Email us at <a href="mailto:support@tradevada.com">support@tradevada.com</a> instead.
+        </div>
+
+        <form id="contactForm" onsubmit="return submitContact(event)">
+
+          <label for="name">Your name</label>
+          <input class="field" type="text" id="name" name="name" placeholder="Jane Trader" required />
+
+          <div class="field-grid">
+            <div>
+              <label for="email">Email address</label>
+              <input class="field" type="email" id="email" name="email" placeholder="you@example.com" required />
+            </div>
+            <div>
+              <label for="topic">What's this about?</label>
+              <select class="field" id="topic" name="topic" required>
+                <option value="">Choose one…</option>
+                <option value="Support">Customer support</option>
+                <option value="Billing">Billing &amp; subscriptions</option>
+                <option value="Security">Security disclosure</option>
+                <option value="Privacy">Privacy / data request</option>
+                <option value="Press">Press &amp; partnerships</option>
+                <option value="Feedback">Product feedback</option>
+                <option value="Other">Something else</option>
+              </select>
+            </div>
+          </div>
+
+          <label for="subject">Subject</label>
+          <input class="field" type="text" id="subject" name="subject" placeholder="Brief description of your inquiry" required />
+
+          <label for="message">Message</label>
+          <textarea class="field" id="message" name="message" placeholder="Tell us what's going on. Include any error messages, screenshots, or account email so we can help faster." required></textarea>
+
+          <!-- Honeypot field (spam protection — hidden from real users) -->
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+          <button class="submit-btn" type="submit" id="submitBtn">Send message →</button>
+
+          <div class="form-foot">
+            By submitting, you agree to our <a href="privacy.html">Privacy Policy</a>.
+            We'll only use your email to respond to this inquiry.
+          </div>
+        </form>
+      </div>
+
+      <!-- Sidebar info -->
+      <div>
+        <div class="info-card">
+          <h4>Response times</h4>
+          <div class="info-row"><span class="lbl">Customer support</span><span class="val">&lt; 24h</span></div>
+          <div class="info-row"><span class="lbl">Billing inquiries</span><span class="val">&lt; 24h</span></div>
+          <div class="info-row"><span class="lbl">Security disclosures</span><span class="val">&lt; 24h ack</span></div>
+          <div class="info-row"><span class="lbl">Press &amp; partnerships</span><span class="val">&lt; 7 days</span></div>
+          <div class="info-row"><span class="lbl">Privacy requests</span><span class="val">&lt; 30 days</span></div>
+        </div>
+
+        <div class="info-card">
+          <h4>Business details</h4>
+          <div class="info-row"><span class="lbl">Legal entity</span><span class="val">Tradevada, LLC</span></div>
+          <div class="info-row"><span class="lbl">Jurisdiction</span><span class="val">Texas, USA</span></div>
+          <div class="info-row"><span class="lbl">Founded</span><span class="val">2026</span></div>
+          <div class="info-row"><span class="lbl">Support hours</span><span class="val">Async · Email-only</span></div>
+        </div>
+
+        <div class="self-serve">
+          <h4>Before you email…</h4>
+          <p>Most common questions are covered in our documentation. You may find your answer faster there.</p>
+          <a href="docs.html">Help docs →</a>
+          <a href="status.html">System status →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="foot-row">
+    <span>© 2026 Tradevada, LLC · Texas, USA</span>
+    <span style="display:block;width:100%;margin-top:10px;font-size:12px;line-height:1.55;color:rgba(255,255,255,.45)">Tradevada is a trading journal and analytics tool — not a broker, financial adviser, or signal service, and nothing here is financial advice. You are solely responsible for your own trading decisions. See our <a href="disclaimer.html" style="color:inherit;text-decoration:underline">full disclaimer</a>.</span>
+    <div class="foot-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Routes contact-form submissions through Formspree (same endpoint as the newsletter,
+  // tagged differently so they're easy to filter into folders).
+  const FORMSPREE_URL = 'https://formspree.io/f/xaqvpeqa';
+
+  async function submitContact(ev){
+    ev.preventDefault();
+    const form = document.getElementById('contactForm');
+    const btn = document.getElementById('submitBtn');
+    const success = document.getElementById('formSuccess');
+    const error = document.getElementById('formError');
+
+    success.classList.remove('show');
+    error.classList.remove('show');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+
+    const data = new FormData(form);
+    data.append('_subject', 'Contact form: ' + (data.get('topic') || 'General') + ' — ' + (data.get('subject') || ''));
+    data.append('source', 'contact.html');
+
+    try {
+      const resp = await fetch(FORMSPREE_URL, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (resp.ok) {
+        form.reset();
+        success.classList.add('show');
+        btn.textContent = 'Send message →';
+        success.scrollIntoView({behavior:'smooth', block:'center'});
+      } else {
+        throw new Error('Bad response');
+      }
+    } catch (e) {
+      error.classList.add('show');
+      btn.textContent = 'Send message →';
+    } finally {
+      btn.disabled = false;
+    }
+    return false;
+  }
+</script>
+</body>
+</html>
