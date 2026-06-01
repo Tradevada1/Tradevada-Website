@@ -17,16 +17,16 @@
 
 <style>
   :root{
-    --bg:#07070c;
-    --bg-2:#0b0b13;
-    --panel:#11111c;
-    --panel-2:#161624;
-    --ink:#ffffff;
-    --border:rgba(255,255,255,0.06);
-    --border-strong:rgba(255,255,255,0.12);
-    --text:#ffffff;
-    --muted:rgba(255,255,255,0.62);
-    --dim:rgba(255,255,255,0.38);
+    --bg:#f5f6fa;
+    --bg-2:#ebedf3;
+    --panel:#ffffff;
+    --panel-2:#f2f3f8;
+    --ink:#0e0e16;
+    --border:rgba(12,14,38,0.10);
+    --border-strong:rgba(12,14,38,0.16);
+    --text:#15151e;
+    --muted:rgba(21,21,30,0.62);
+    --dim:rgba(21,21,30,0.42);
     --primary:#7C3AED;
     --primary-2:#a78bfa;
     --primary-3:#c4b5fd;
@@ -44,6 +44,9 @@
     --maxw:1240px;
   }
 
+  /* keep app-UI mockups dark so they pop on the light page */
+  .app-mock,.floating-card,.show-card,.sc-visual,.deep-visual,.wheel-mock,.trade-card{--bg:#07070c;--bg-2:#0b0b13;--panel:#11111c;--panel-2:#161624;--ink:#ffffff;--border:rgba(255,255,255,0.06);--border-strong:rgba(255,255,255,0.12);--text:#ffffff;--muted:rgba(255,255,255,0.62);--dim:rgba(255,255,255,0.38);color:var(--text)}
+
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   html,body{background:var(--bg);color:var(--text);font-family:var(--sans);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;line-height:1.55;overflow-x:hidden}
@@ -57,15 +60,15 @@
   .bg-canvas::before{
     content:"";position:absolute;inset:0;
     background:
-      radial-gradient(70% 55% at 70% -5%, rgba(124,58,237,0.22) 0%, transparent 55%),
+      radial-gradient(70% 55% at 70% -5%, rgba(124,58,237,0.13) 0%, transparent 55%),
       radial-gradient(45% 35% at 12% 25%, rgba(20,184,166,0.13) 0%, transparent 60%),
       radial-gradient(55% 45% at 88% 70%, rgba(124,58,237,0.12) 0%, transparent 60%);
   }
   .bg-canvas::after{
     content:"";position:absolute;inset:0;opacity:0.5;
     background-image:
-      linear-gradient(to right, rgba(255,255,255,0.035) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(255,255,255,0.035) 1px, transparent 1px);
+      linear-gradient(to right, rgba(20,22,55,0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(20,22,55,0.05) 1px, transparent 1px);
     background-size:56px 56px;
     mask-image:radial-gradient(ellipse 95% 75% at 60% 20%, black 25%, transparent 78%);
     -webkit-mask-image:radial-gradient(ellipse 95% 75% at 60% 20%, black 25%, transparent 78%);
@@ -105,12 +108,12 @@
   .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 19px;border-radius:11px;font-weight:600;font-size:14px;
     transition:transform .16s ease,background .2s,box-shadow .2s,border-color .2s;border:1px solid transparent;white-space:nowrap}
   .btn-ghost{color:var(--muted);border-color:var(--border)}
-  .btn-ghost:hover{color:var(--text);border-color:var(--border-strong);background:rgba(255,255,255,0.03)}
+  .btn-ghost:hover{color:var(--text);border-color:var(--border-strong);background:rgba(0,0,0,0.04)}
   .btn-primary{background:linear-gradient(135deg,#9b6cff 0%,#7C3AED 52%,#6516d9 100%);color:#fff;
     box-shadow:0 12px 32px -12px rgba(124,58,237,0.85),inset 0 1px 0 rgba(255,255,255,0.22)}
   .btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 44px -12px rgba(124,58,237,0.95),inset 0 1px 0 rgba(255,255,255,0.3)}
   .btn-lg{padding:15px 26px;font-size:15px;border-radius:13px}
-  .btn-secondary{background:rgba(255,255,255,0.04);color:var(--text);border-color:var(--border-strong)}
+  .btn-secondary{background:rgba(0,0,0,0.05);color:var(--text);border-color:var(--border-strong)}
   .btn-secondary:hover{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.24)}
   @media(max-width:880px){.nav-links{display:none}}
   @media(max-width:540px){nav.top .nav-cta .btn{padding:9px 13px;font-size:13px;gap:4px}nav.top .container{padding:0 16px}}
@@ -407,7 +410,7 @@
   .nl-wrap h2{font-size:clamp(28px,3.6vw,42px);margin-bottom:12px}
   .nl-wrap p{color:var(--muted);max-width:520px;margin:0 auto 28px;font-size:16px}
   #newsletter-form{display:flex;gap:10px;max-width:520px;margin:0 auto;flex-wrap:wrap;justify-content:center}
-  #newsletter-form input{flex:1;min-width:180px;padding:14px 16px;border-radius:12px;background:rgba(0,0,0,0.3);
+  #newsletter-form input{flex:1;min-width:180px;padding:14px 16px;border-radius:12px;background:#ffffff;
     border:1px solid var(--border-strong);color:var(--text);font-family:var(--sans);font-size:14px;outline:none;transition:border-color .2s}
   #newsletter-form input:focus{border-color:var(--primary-2)}
   #nl-submit{padding:14px 24px;border-radius:12px;font-weight:600;font-size:14px;
@@ -445,7 +448,7 @@
   .price-card ul li b{color:var(--text)}
   .pcta{display:block;text-align:center;padding:13px;border-radius:12px;font-weight:600;font-size:14px;transition:.2s;
     background:rgba(255,255,255,0.05);color:var(--text);border:1px solid var(--border-strong)}
-  .pcta:hover{background:rgba(255,255,255,0.09)}
+  .pcta:hover{background:rgba(0,0,0,0.06)}
   .price-card.featured .pcta,.price-card.free .pcta{background:linear-gradient(135deg,#9b6cff,#7C3AED);color:#fff;border-color:transparent;
     box-shadow:0 12px 30px -12px rgba(124,58,237,0.8)}
   .price-card.featured .pcta:hover,.price-card.free .pcta:hover{transform:translateY(-1px)}
@@ -579,7 +582,7 @@
   .founders .fhead p + p{margin-top:14px}
   .founders-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
   @media(max-width:700px){.founders-grid{grid-template-columns:1fr}}
-  .founder{display:flex;gap:16px;align-items:center;background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:16px;padding:20px}
+  .founder{display:flex;gap:16px;align-items:center;background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:20px}
   .founder .av{width:58px;height:58px;border-radius:14px;flex-shrink:0;display:grid;place-items:center;
     font-family:var(--sans);font-weight:800;font-size:24px;color:#fff}
   .founder .av.b{background:linear-gradient(135deg,#9b6cff,#6516d9)}
@@ -1268,7 +1271,7 @@
     const heat=document.getElementById('cal-heat');
     if(!heat) return;
     const data=[0,0,0,0,0,0,0.2,0.1,0,0,0,0,0,0,0,0,0.1,0,0,0,0,0,0,0.3,0,0,0,0.4,0,0,0,0,0.6,0.2,0,0.1,0,0,0,0,0,0,0,0.5,0.3,0,0.8,0.6,0,0,0,0.2,0,0,0,0.4,0,0.7,0.9,0.4,0,0,0.1,0,0.3,0,0,0,0.5,1.0,0.6,0.3,0,0,0,0,0,0.2,0,0.3,0.7,0.5,0.3,0.2];
-    const colors=['rgba(255,255,255,0.03)','rgba(124,58,237,0.22)','rgba(124,58,237,0.4)','rgba(124,58,237,0.62)','rgba(124,58,237,0.88)'];
+    const colors=['rgba(255,255,255,0.03)','rgba(124,58,237,0.13)','rgba(124,58,237,0.4)','rgba(124,58,237,0.62)','rgba(124,58,237,0.88)'];
     data.forEach(v=>{const c=document.createElement('div');c.className='cell';const i=v===0?0:v<0.25?1:v<0.5?2:v<0.75?3:4;c.style.background=colors[i];heat.appendChild(c);});
   })();
 
