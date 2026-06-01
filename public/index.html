@@ -611,6 +611,21 @@
   .hero-load.d1{animation-delay:.05s}.hero-load.d2{animation-delay:.15s}.hero-load.d3{animation-delay:.25s}
   .hero-load.d4{animation-delay:.35s}.hero-load.d5{animation-delay:.45s}
   @keyframes heroIn{to{opacity:1;transform:none}}
+
+  /* ---- mobile: collapse widget grids so nothing is cramped ---- */
+  @media(max-width:560px){
+    .stat-row{grid-template-columns:1fr 1fr}
+    .app-stats.c4{grid-template-columns:1fr 1fr}
+    .app-stats.c6{grid-template-columns:repeat(3,1fr)}
+    .metric-grid{grid-template-columns:1fr 1fr}
+    .mp-counters{grid-template-columns:1fr 1fr}
+    .wheel-foot2{grid-template-columns:1fr}
+    .section{padding:56px 0}
+  }
+  @media(max-width:400px){
+    .app-stats.c6{grid-template-columns:1fr 1fr}
+    .bt-stats{grid-template-columns:1fr 1fr}
+  }
 </style>
 </head>
 <body id="top">
