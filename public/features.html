@@ -35,6 +35,20 @@
   .nav-links{display:flex;align-items:center;gap:4px}
   .nav-links a{padding:9px 15px;border-radius:9px;color:var(--muted);font-size:14px;font-weight:500}
   .nav-links a:hover,.nav-links a.active{color:#7C3AED}
+  .nav-drop{position:relative}
+  .nav-drop-btn{display:inline-flex;align-items:center;gap:6px;padding:9px 15px;border-radius:9px;color:var(--muted);font-size:14px;font-weight:500;background:none;border:none;cursor:pointer;font-family:inherit;transition:.18s}
+  .nav-drop-btn svg{transition:transform .2s}
+  .nav-drop:hover .nav-drop-btn{color:#7C3AED}
+  .nav-drop:hover .nav-drop-btn svg{transform:rotate(180deg)}
+  .nav-menu{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(6px);min-width:210px;background:#fff;border:1px solid rgba(12,14,38,0.16);border-radius:13px;box-shadow:0 20px 44px -18px rgba(20,22,55,0.32);padding:8px;display:flex;flex-direction:column;opacity:0;visibility:hidden;transition:.18s;z-index:60}
+  .nav-drop:hover .nav-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+  .nav-menu a{padding:10px 12px;border-radius:9px;color:rgba(21,21,30,0.62);font-size:14px;font-weight:500;white-space:nowrap}
+  .nav-menu a::after{display:none!important}
+  .nav-menu a:hover{background:#f2f3f8;color:#7C3AED}
+  .nav-links>a.active{color:#7C3AED}
+  #mnav .msub{font-family:var(--mono);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(21,21,30,0.45);padding:14px 6px 4px}
+  #mnav a.sub{padding:11px 6px 11px 16px;font-size:15px;color:rgba(21,21,30,0.62);border-bottom:1px solid rgba(12,14,38,0.10)}
+
   .nav-cta{display:flex;align-items:center;gap:10px}
   .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 19px;border-radius:11px;font-weight:600;font-size:14px;border:1px solid var(--border);transition:.15s}
   .btn-ghost{color:var(--muted);border-color:var(--border)}
@@ -128,12 +142,7 @@
         <div class="mark"><img src="logo-mark.png" alt="" /></div>
         <span class="wordmark"><span class="w-trade">TRADE</span><span class="w-vada">VADA</span></span>
       </a>
-      <div class="nav-links">
-        <a href="features.html" class="active">Features</a>
-        <a href="index.html#wheel">Wheel</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="wheel-guide.html">Guide</a>
-      </div>
+      <div class="nav-links"><a href="features.html" class="active">Features</a><a href="pricing.html">Pricing</a><div class="nav-drop"><button class="nav-drop-btn" type="button">Resources <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button><div class="nav-menu"><a href="wheel-guide.html">Wheel guide</a><a href="changelog.html">Changelog</a><a href="docs.html">Documentation</a><a href="status.html">Status</a></div></div><a href="brokers.html">Supported Brokers</a></div>
       <button class="nav-burger" aria-label="Open menu" onclick="this.classList.toggle('open');document.getElementById('mnav').classList.toggle('open')"><span></span><span></span><span></span></button>
       <div class="nav-cta">
         <a class="btn btn-ghost" href="https://app.tradevada.com/login">Sign In</a>
@@ -141,13 +150,7 @@
       </div>
     </div>
   </div>
-  <div id="mnav"><div class="inner">
-    <a class="ml" href="features.html">Features</a>
-    <a class="ml" href="index.html#wheel">Wheel</a>
-    <a class="ml" href="pricing.html">Pricing</a>
-    <a class="ml" href="wheel-guide.html">Guide</a>
-    <div class="mrow"><a class="si" href="https://app.tradevada.com/login">Sign In</a><a class="gs" href="https://app.tradevada.com/signup">Get Started →</a></div>
-  </div></div>
+  <div id="mnav"><div class="inner"><a class="ml" href="features.html">Features</a><a class="ml" href="pricing.html">Pricing</a><a class="ml" href="brokers.html">Supported Brokers</a><div class="msub">Resources</div><a class="sub" href="wheel-guide.html">Wheel guide</a><a class="sub" href="changelog.html">Changelog</a><a class="sub" href="docs.html">Documentation</a><a class="sub" href="status.html">Status</a><div class="mrow"><a class="si" href="https://app.tradevada.com/login">Sign In</a><a class="gs" href="https://app.tradevada.com/signup">Get Started →</a></div></div></div>
 </nav>
 
 <div class="container">
