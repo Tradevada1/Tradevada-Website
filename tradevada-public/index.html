@@ -154,6 +154,8 @@
   .hero-title{font-family:var(--sans);font-size:clamp(44px,6.4vw,82px);font-weight:800;line-height:1.0;letter-spacing:-0.03em;margin:0}
   .hero-title .l2{display:block}
   .hero-sub{color:var(--muted);font-size:18.5px;line-height:1.62;margin:26px 0 0;max-width:540px}
+  .hero-actions .btn-secondary{background:#fff;color:var(--text);border:1px solid var(--border-strong)}
+  .hero-actions .btn-secondary:hover{border-color:#7C3AED;color:#7C3AED}
   .hero-actions{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
   .hero-meta{display:flex;flex-direction:column;gap:10px;margin-top:30px}
   .hero-meta .item{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:14px}
@@ -728,8 +730,27 @@
   /* mobile back-to-top */
   #toTop{position:fixed;right:16px;bottom:16px;z-index:55;width:46px;height:46px;border-radius:50%;border:1px solid var(--border-strong);background:rgba(255,255,255,0.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 12px 30px -12px rgba(20,22,55,0.3);display:none;align-items:center;justify-content:center;cursor:pointer;color:#7C3AED;font-size:20px;font-weight:700}
   @media(max-width:760px){#toTop.show{display:flex}}
+  /* trust strip */
+  .trust-strip{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--panel-2,#f2f3f8)}
+  .trust-strip .inner{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 34px;padding:22px 24px;max-width:1100px;margin:0 auto}
+  .trust-strip .ti{display:flex;align-items:center;gap:9px;font-size:13.5px;color:var(--muted);font-weight:500}
+  .trust-strip .ti svg{width:17px;height:17px;color:#0d9488;flex-shrink:0}
+  /* faq */
+  .faq{max-width:760px;margin:0 auto;padding:64px 24px}
+  .faq h2{font-size:clamp(28px,3.4vw,40px);font-weight:800;text-align:center;letter-spacing:-0.02em;margin-bottom:10px}
+  .faq .fsub{text-align:center;color:var(--muted);margin-bottom:34px;font-size:16px}
+  .faq details{border:1px solid var(--border);border-radius:14px;background:var(--panel);margin-bottom:12px;overflow:hidden}
+  .faq details[open]{border-color:var(--border-strong)}
+  .faq summary{list-style:none;cursor:pointer;padding:18px 20px;font-size:16px;font-weight:600;color:var(--text);display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary .pl{flex-shrink:0;font-size:22px;line-height:1;color:#7C3AED;transition:transform .2s}
+  .faq details[open] summary .pl{transform:rotate(45deg)}
+  .faq .ans{padding:0 20px 18px;color:var(--muted);font-size:14.5px;line-height:1.62}
+  .faq .ans a{color:#7C3AED;font-weight:600}
 </style>
 <link rel="icon" type="image/png" href="favicon.png" />
+<link rel="canonical" href="https://tradevada.com/" />
+<link rel="icon" href="favicon.ico" sizes="any" />
 </head>
 <body id="top">
 <div class="bg-canvas"></div>
@@ -762,6 +783,7 @@
       <p class="hero-sub hero-load d3">A precision trading journal for retail options traders running cash-secured puts, covered calls, and the wheel. Quantify your edge, project your true breakeven, and compound with confidence.</p>
       <div class="hero-actions hero-load d4">
         <a class="btn btn-primary btn-lg" href="https://app.tradevada.com/signup">Get Started →</a>
+        <a class="btn btn-lg btn-secondary" href="https://app.tradevada.com/demo">View Demo</a>
       </div>
       <div class="hero-meta hero-load d5">
         <div class="item"><span class="check">✓</span> Free forever · No card required</div>
@@ -1257,6 +1279,23 @@
   </div>
 </section>
 
+<!-- ============== TRUST STRIP ============== -->
+<div class="trust-strip"><div class="inner">
+  <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Read-only broker connection</div><div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>SnapTrade · SOC 2 secured</div><div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>No ads, no data selling</div><div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Cancel anytime</div><div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Free forever tier</div>
+</div></div>
+
+<!-- ============== FAQ ============== -->
+<section class="section faq" id="faq">
+  <h2>Questions, <span class="accent">answered</span>.</h2>
+  <p class="fsub">Everything worth knowing before you start.</p>
+  <details><summary>Is my brokerage data safe?<span class="pl">+</span></summary><div class="ans">Yes. Tradevada connects through <b>SnapTrade</b>, a SOC&nbsp;2-certified aggregation layer, over a strictly <b>read-only</b> connection — we can see your fills and positions, but can never place, move, or modify a trade. You log in on your broker’s own page, so Tradevada never sees your broker password.</div></details>
+  <details><summary>Do I have to pay to start?<span class="pl">+</span></summary><div class="ans">No. The Free plan is free forever — manual trade entry and CSV import from any broker are included, with no credit card required.</div></details>
+  <details><summary>Which brokers can I auto-sync?<span class="pl">+</span></summary><div class="ans">Robinhood, Webull, moomoo, and E*TRADE are live today, with more on the way. Any other broker works through CSV import. See the full list on the <a href="brokers.html">Supported Brokers</a> page.</div></details>
+  <details><summary>Can I cancel anytime?<span class="pl">+</span></summary><div class="ans">Yes. Pro is billed monthly or yearly and you can cancel whenever you like — you keep access through the end of your current billing period.</div></details>
+  <details><summary>What exactly is the wheel strategy?<span class="pl">+</span></summary><div class="ans">Selling cash-secured puts, getting assigned shares, then selling covered calls against them — repeating the cycle to collect premium. Tradevada tracks the full cycle and your true breakeven across every premium collected. New to it? Read the <a href="wheel-guide.html">Wheel Strategy Guide</a>.</div></details>
+  <details><summary>Will you show ads or sell my data?<span class="pl">+</span></summary><div class="ans">Never. Tradevada is a paid tool — no ads, no data selling. Your trade data is yours, and you can export it as CSV anytime.</div></details>
+</section>
+
 <!-- ============== NEWSLETTER ============== -->
 <section class="section" id="newsletter" style="padding-top:0;padding-bottom:60px">
   <div class="container">
@@ -1320,7 +1359,7 @@
           <li><b>SnapTrade broker auto-sync</b></li>
           <li>Trades flow in instantly — no manual entry</li>
           <li>Multiple portfolios</li>
-          <li>Advanced analytics &amp; news terminal</li>
+          <li>Market Pulse news terminal</li>
           <li>Wheel cycle tracker &amp; projections</li>
           <li>Custom accent colors &amp; themes</li>
           <li>Priority email support</li>
