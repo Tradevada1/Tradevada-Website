@@ -170,6 +170,14 @@
   .stat .label{font-size:9.5px;color:var(--dim);text-transform:uppercase;letter-spacing:0.08em;font-family:var(--mono)}
   .stat .value{font-size:16px;font-weight:700;margin-top:4px;font-family:var(--mono)}
   .stat.profit .value{color:var(--teal-2)}.stat.loss .value{color:var(--red)}.stat.purple .value{color:var(--primary-2)}
+  .stat .sub{font-size:8px;color:var(--dim);margin-top:2px;font-family:var(--sans);line-height:1.2}
+  .stat .sub.up{color:var(--teal-2)}
+  .stat .cash-row{display:flex;align-items:center;gap:6px;margin-top:3px}
+  .stat .ring{width:26px;height:26px;flex-shrink:0}
+  .stat .ring .rb{fill:none;stroke:rgba(255,255,255,0.16);stroke-width:4}
+  .stat .ring .rf{fill:none;stroke:#5eead4;stroke-width:4;stroke-linecap:round}
+  .stat .cash-v .value{margin-top:0;font-size:12.5px}
+  .stat .cash-v .sub{margin-top:1px}
   .chart-card{background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:12px;padding:13px;margin-bottom:12px}
   .chart-card .row-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
   .chart-card .row-h .t{font-size:11px;color:var(--muted);font-family:var(--mono)}
@@ -667,10 +675,10 @@
             <span class="pill">● Live · 1:07 AM</span>
           </div>
           <div class="stat-row">
-            <div class="stat profit"><div class="label">Total Value</div><div class="value">$14,258.57</div></div>
-            <div class="stat"><div class="label">Cash · 67%</div><div class="value">$9,553.75</div></div>
-            <div class="stat profit"><div class="label">Day P&L</div><div class="value">+$249.00</div></div>
-            <div class="stat loss"><div class="label">Unrealized</div><div class="value">-$533.18</div></div>
+            <div class="stat"><div class="label">Total Value</div><div class="value">$14,258.57</div><div class="sub">Market value</div></div>
+            <div class="stat"><div class="label">Cash</div><div class="cash-row"><svg class="ring" viewBox="0 0 36 36"><circle class="rb" cx="18" cy="18" r="15"/><circle class="rf" cx="18" cy="18" r="15" stroke-dasharray="63 94" transform="rotate(-90 18 18)"/></svg><div class="cash-v"><div class="value">$9,553.75</div><div class="sub">67% · Available</div></div></div></div>
+            <div class="stat profit"><div class="label">Day P&amp;L</div><div class="value">$249.00</div><div class="sub up">+1.78%</div></div>
+            <div class="stat loss"><div class="label">Unrealized P&amp;L</div><div class="value">-$533.18</div><div class="sub">Unrealized</div></div>
           </div>
           <div class="chart-card">
             <div class="row-h">
