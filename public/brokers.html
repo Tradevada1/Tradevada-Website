@@ -245,10 +245,17 @@
   document.querySelectorAll('#mnav a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('mnav').classList.remove('open');var b=document.querySelector('.nav-burger');if(b)b.classList.remove('open')})});
   document.querySelectorAll('.logo[data-domain]').forEach(function(el){
     el.innerHTML='<span class="mn" style="background:'+el.dataset.mc+'">'+el.dataset.mn+'</span>';
-    var img=new Image();
-    img.alt=(el.dataset.dn||'')+' logo';
-    img.onload=function(){el.innerHTML='';el.appendChild(img);};
-    img.src='https://logo.clearbit.com/'+el.dataset.domain;
+    var d=el.dataset.domain;
+    var sources=['https://icons.duckduckgo.com/ip3/'+d+'.ico','https://www.google.com/s2/favicons?sz=128&domain='+d,'https://logo.clearbit.com/'+d];
+    var i=0;
+    (function load(){
+      if(i>=sources.length)return;
+      var img=new Image();
+      img.alt=(el.dataset.dn||'')+' logo';
+      img.onload=function(){ if(img.naturalWidth>=14){el.innerHTML='';el.appendChild(img);} else {i++;load();} };
+      img.onerror=function(){i++;load();};
+      img.src=sources[i];
+    })();
   });
   var tt=document.getElementById('toTop');
   window.addEventListener('scroll',function(){if(window.scrollY>600)tt.classList.add('show');else tt.classList.remove('show')},{passive:true});
