@@ -34,17 +34,17 @@
 
   /* NAV */
   nav.top{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);
-    background:rgba(7,7,12,0.7);border-bottom:1px solid var(--border)}
+    background:rgba(0,0,0,0.72);border-bottom:1px solid var(--border)}
   nav.top .row{max-width:1280px;margin:0 auto;padding:0 28px;height:64px;
     display:flex;align-items:center;justify-content:space-between}
-  a.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:0.02em;font-size:18px;color:#fff;transition:opacity .15s}
+  a.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:0.02em;font-size:18px;color:#15151e;transition:opacity .15s}
   a.brand:hover{opacity:0.85;text-decoration:none}
   a.brand .mark{width:36px;height:36px;border-radius:10px;overflow:hidden;flex-shrink:0;
     box-shadow:0 8px 24px -8px rgba(124,58,237,0.6)}
   .nav-actions{display:flex;align-items:center;gap:10px}
   .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:10px;
     font-weight:600;font-size:14px;border:1px solid var(--border);color:var(--muted);transition:.15s;cursor:pointer;white-space:nowrap}
-  .btn:hover{color:var(--text);border-color:var(--border-strong);background:rgba(255,255,255,0.03);text-decoration:none}
+  .btn:hover{color:var(--text);border-color:var(--border-strong);background:rgba(0,0,0,0.03);text-decoration:none}
   .btn.primary{background:linear-gradient(135deg,#8b5cf6,#7C3AED 50%,#6d28d9);color:#fff;border-color:transparent;
     box-shadow:0 10px 30px -10px rgba(124,58,237,0.7)}
   .btn.primary:hover{box-shadow:0 14px 40px -10px rgba(124,58,237,0.85)}
@@ -55,13 +55,13 @@
     background:var(--primary-soft);border:1px solid rgba(124,58,237,0.3);color:var(--primary-2);
     font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;margin-bottom:18px}
   .hero h1{font-size:clamp(40px,5.4vw,68px);font-weight:800;letter-spacing:-0.03em;line-height:1.05}
-  .hero h1 .accent{background:linear-gradient(120deg,#fff,#a78bfa,#14b8a6);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero h1 .accent{background:linear-gradient(120deg,#7C3AED,#8b5cf6,#0d9488);-webkit-background-clip:text;background-clip:text;color:transparent}
   .hero p{color:var(--muted);font-size:18px;margin-top:22px;max-width:640px;margin-left:auto;margin-right:auto;line-height:1.6}
 
   /* CONTENT */
   .content{max-width:1080px;margin:0 auto;padding:24px 28px 80px}
   section{margin-bottom:64px}
-  section h2{font-size:30px;font-weight:800;letter-spacing:-0.02em;margin-bottom:12px;line-height:1.2;color:#fff}
+  section h2{font-size:30px;font-weight:800;letter-spacing:-0.02em;margin-bottom:12px;line-height:1.2;color:#15151e}
   section h2 .accent{background:linear-gradient(120deg,#fff,#a78bfa);-webkit-background-clip:text;background-clip:text;color:transparent}
   section .sub{color:var(--muted);font-size:15px;margin-bottom:28px}
 
@@ -69,7 +69,7 @@
   .channel-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
   @media (max-width:760px){.channel-grid{grid-template-columns:1fr}}
   .channel{padding:24px;border-radius:14px;border:1px solid var(--border);
-    background:linear-gradient(180deg,rgba(255,255,255,0.025),rgba(255,255,255,0.005));
+    background:linear-gradient(180deg,rgba(0,0,0,0.03),rgba(0,0,0,0.01));
     transition:.18s;display:flex;gap:16px}
   .channel:hover{border-color:var(--border-strong);transform:translateY(-1px)}
   .channel .ico{width:42px;height:42px;border-radius:11px;flex-shrink:0;
@@ -78,7 +78,7 @@
     border:1px solid rgba(124,58,237,0.25)}
   .channel.teal .ico{background:var(--teal-soft);color:var(--teal);border-color:rgba(20,184,166,0.25)}
   .channel.amber .ico{background:rgba(245,158,11,0.14);color:#f59e0b;border-color:rgba(245,158,11,0.25)}
-  .channel h3{font-size:16px;font-weight:700;color:#fff;margin-bottom:4px}
+  .channel h3{font-size:16px;font-weight:700;color:#15151e;margin-bottom:4px}
   .channel p{font-size:13.5px;color:var(--muted);margin-bottom:10px;line-height:1.55}
   .channel .email-link{font-family:var(--mono);font-size:13.5px;color:var(--primary-2);font-weight:600;display:inline-flex;align-items:center;gap:6px}
   .channel .sla{display:inline-block;margin-top:8px;font-size:11px;color:var(--dim);letter-spacing:0.06em;text-transform:uppercase;font-weight:600}
@@ -94,8 +94,8 @@
   .form-card .field-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
   @media (max-width:560px){.form-card .field-grid{grid-template-columns:1fr}}
   .field{width:100%;padding:12px 14px;border-radius:10px;
-    background:rgba(255,255,255,0.04);border:1px solid var(--border);
-    color:#fff;font-family:var(--sans);font-size:14px;outline:none;transition:.15s;
+    background:rgba(0,0,0,0.04);border:1px solid var(--border);
+    color:#15151e;font-family:var(--sans);font-size:14px;outline:none;transition:.15s;
     margin-bottom:18px}
   .field:focus{border-color:var(--primary-2);background:rgba(124,58,237,0.06);
     box-shadow:0 0 0 3px rgba(124,58,237,0.18)}
@@ -120,7 +120,7 @@
 
   /* Side info card */
   .info-card{padding:24px;border-radius:14px;border:1px solid var(--border);
-    background:linear-gradient(180deg,rgba(255,255,255,0.025),rgba(255,255,255,0.005));
+    background:linear-gradient(180deg,rgba(0,0,0,0.03),rgba(0,0,0,0.01));
     margin-bottom:16px}
   .info-card h4{font-size:13px;color:var(--dim);letter-spacing:0.14em;text-transform:uppercase;
     font-weight:600;margin-bottom:14px}
@@ -128,12 +128,12 @@
     padding:8px 0;border-bottom:1px dashed rgba(255,255,255,0.06)}
   .info-row:last-child{border-bottom:0}
   .info-row .lbl{color:var(--muted)}
-  .info-row .val{color:#fff;font-weight:500;text-align:right;font-family:var(--mono);font-size:12.5px}
+  .info-row .val{color:#15151e;font-weight:500;text-align:right;font-family:var(--mono);font-size:12.5px}
 
   /* Self-serve / before-you-email block */
   .self-serve{padding:22px;border-radius:14px;border:1px solid var(--border);
     background:linear-gradient(180deg,rgba(124,58,237,0.04),rgba(124,58,237,0.01))}
-  .self-serve h4{font-size:14px;color:#fff;margin-bottom:8px;font-weight:700}
+  .self-serve h4{font-size:14px;color:#15151e;margin-bottom:8px;font-weight:700}
   .self-serve p{font-size:13px;color:var(--muted);margin-bottom:14px;line-height:1.55}
   .self-serve a{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;
     margin-right:14px}
@@ -359,7 +359,7 @@
 <footer>
   <div class="foot-row">
     <span>© 2026 Tradevada, LLC · Texas, USA</span>
-    <span style="display:block;width:100%;margin-top:10px;font-size:12px;line-height:1.55;color:rgba(255,255,255,.45)">Tradevada is a trading journal and analytics tool — not a broker, financial adviser, or signal service, and nothing here is financial advice. You are solely responsible for your own trading decisions. See our <a href="disclaimer.html" style="color:inherit;text-decoration:underline">full disclaimer</a>.</span>
+    <span style="display:block;width:100%;margin-top:10px;font-size:12px;line-height:1.55;color:rgba(21,21,30,.45)">Tradevada is a trading journal and analytics tool — not a broker, financial adviser, or signal service, and nothing here is financial advice. You are solely responsible for your own trading decisions. See our <a href="disclaimer.html" style="color:inherit;text-decoration:underline">full disclaimer</a>.</span>
     <div class="foot-links">
       <a href="index.html">Home</a>
       <a href="index.html#pricing">Pricing</a>
