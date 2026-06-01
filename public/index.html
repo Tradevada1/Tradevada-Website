@@ -626,6 +626,19 @@
     .app-stats.c6{grid-template-columns:1fr 1fr}
     .bt-stats{grid-template-columns:1fr 1fr}
   }
+
+  /* sticky mobile convert bar */
+  .mcta{display:none}
+  @media(max-width:760px){
+    .mcta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;gap:10px;
+      padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+      background:rgba(255,255,255,0.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+      border-top:1px solid var(--border-strong)}
+    .mcta a{flex:1;text-align:center;padding:13px 10px;border-radius:12px;font-weight:700;font-size:14px;white-space:nowrap}
+    .mcta .m1{background:linear-gradient(135deg,#9b6cff,#7C3AED);color:#fff;box-shadow:0 10px 26px -10px rgba(124,58,237,0.7)}
+    .mcta .m2{background:rgba(0,0,0,0.05);color:var(--text);border:1px solid var(--border-strong)}
+    body{padding-bottom:72px}
+  }
 </style>
 </head>
 <body id="top">
@@ -1392,5 +1405,6 @@
   var rt; window.addEventListener('resize',function(){clearTimeout(rt); rt=setTimeout(init,150);});
 })();
 </script>
+<div class="mcta"><a class="m2" href="#pricing">See Pricing</a><a class="m1" href="https://app.tradevada.com/signup">Get Started →</a></div>
 </body>
 </html>
