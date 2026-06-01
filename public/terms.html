@@ -66,18 +66,17 @@
   .layout{max-width:1280px;margin:0 auto;padding:32px 28px 80px;
     display:grid;grid-template-columns:240px 1fr;gap:60px;align-items:start}
   /* TOC */
-  aside.toc{position:sticky;top:90px;align-self:flex-start;
-    border:1px solid var(--border);border-radius:14px;padding:20px 18px;
-    background:linear-gradient(180deg,rgba(0,0,0,0.03),rgba(0,0,0,0.01))}
-  aside.toc h4{font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--dim);
-    font-weight:700;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+  aside.toc{position:sticky;top:90px;align-self:flex-start;border:1px solid var(--border);border-radius:16px;padding:20px 16px;background:#ffffff;box-shadow:0 20px 44px -26px rgba(20,22,55,0.20)}
+  aside.toc h4{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#7C3AED;font-weight:700;margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:9px}
+  aside.toc h4::before{content:"";width:16px;height:3px;border-radius:3px;background:linear-gradient(90deg,#7C3AED,#0d9488)}
   aside.toc ol{list-style:none;counter-reset:toc;padding:0;margin:0}
-  aside.toc ol li{counter-increment:toc;margin-bottom:2px}
-  aside.toc ol li a{display:block;padding:6px 8px;border-radius:6px;color:var(--muted);
-    font-size:13px;font-weight:500;line-height:1.4;transition:.15s}
-  aside.toc ol li a::before{content:counter(toc,decimal-leading-zero) " · ";color:var(--dim);
-    font-family:var(--mono);font-size:11px}
-  aside.toc ol li a:hover{color:var(--text);background:rgba(0,0,0,0.04);text-decoration:none}
+  aside.toc ol li{counter-increment:toc;margin-bottom:1px}
+  aside.toc ol li a{display:flex;gap:10px;align-items:baseline;padding:8px 11px;border-radius:9px;color:var(--muted);font-size:13px;font-weight:500;line-height:1.4;transition:.18s;border-left:2px solid transparent}
+  aside.toc ol li a::before{content:counter(toc,decimal-leading-zero);color:var(--dim);font-family:var(--mono);font-size:10.5px;font-weight:600;flex-shrink:0;min-width:16px}
+  aside.toc ol li a:hover{color:#7C3AED;background:rgba(124,58,237,0.06);text-decoration:none}
+  aside.toc ol li a:hover::before{color:#7C3AED}
+  aside.toc ol li a.active{color:#7C3AED;font-weight:700;background:rgba(124,58,237,0.10);border-left-color:#7C3AED}
+  aside.toc ol li a.active::before{color:#7C3AED}
 
   /* CONTENT */
   article{max-width:780px;font-size:15.5px;color:rgba(21,21,30,0.85)}
@@ -385,5 +384,20 @@
     </div>
   </div>
 </footer>
+<script>
+(function(){
+  var links=[].slice.call(document.querySelectorAll('aside.toc ol li a'));
+  if(!links.length) return;
+  var map=links.map(function(a){var h=a.getAttribute('href'); return {a:a, el:(h&&h.charAt(0)==='#')?document.getElementById(h.slice(1)):null};}).filter(function(x){return x.el;});
+  function onScroll(){
+    var y=window.scrollY+150, cur=map.length?map[0]:null;
+    for(var i=0;i<map.length;i++){ if(map[i].el.offsetTop<=y) cur=map[i]; }
+    links.forEach(function(a){a.classList.remove('active');});
+    if(cur) cur.a.classList.add('active');
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll); onScroll();
+})();
+</script>
 </body>
 </html>
