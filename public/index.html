@@ -636,7 +636,7 @@
 <section class="hero"><canvas id="netbg"></canvas>
   <div class="container hero-grid">
     <div>
-      <h1 class="hero-title hero-load d2">Track every wheel.<span class="l2 accent">Master every cycle.</span></h1>
+      <h1 class="hero-title hero-load d2">Track Every Wheel.<span class="l2 accent">Master Every Cycle.</span></h1>
       <p class="hero-sub hero-load d3">A precision trading journal for retail options traders running cash-secured puts, covered calls, and the wheel. Quantify your edge, project your true breakeven, and compound with confidence.</p>
       <div class="hero-actions hero-load d4">
         <a class="btn btn-primary btn-lg" href="https://app.tradevada.com/signup">Create free account →</a>
@@ -1348,19 +1348,21 @@
   var c=document.getElementById('netbg'); if(!c) return;
   var hero=c.parentElement;
   var ctx=c.getContext('2d'), w,h,dpr,parts=[], mx=-9999,my=-9999;
+  function lerp(a,b,t){return Math.round(a+(b-a)*t);}
+  function col(x,al){var t=Math.max(0,Math.min(1,x/w)),r,g,b,k; if(t<0.5){k=t/0.5;r=lerp(124,139,k);g=lerp(58,92,k);b=lerp(237,246,k);}else{k=(t-0.5)/0.5;r=lerp(139,20,k);g=lerp(92,184,k);b=lerp(246,166,k);} return 'rgba('+r+','+g+','+b+','+al+')';}
   function size(){dpr=Math.min(window.devicePixelRatio||1,2); var r=hero.getBoundingClientRect(); w=c.width=Math.max(1,Math.round(r.width*dpr)); h=c.height=Math.max(1,Math.round(r.height*dpr)); c.style.width=r.width+'px'; c.style.height=r.height+'px';}
-  function init(){size(); var area=(w*h)/(dpr*dpr); var n=Math.min(70,Math.floor(area/16000)); parts=[]; for(var i=0;i<n;i++){parts.push({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-0.5)*0.22*dpr,vy:(Math.random()-0.5)*0.22*dpr});}}
+  function init(){size(); var area=(w*h)/(dpr*dpr); var n=Math.min(90,Math.floor(area/12000)); parts=[]; for(var i=0;i<n;i++){parts.push({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-0.5)*0.24*dpr,vy:(Math.random()-0.5)*0.24*dpr});}}
   hero.addEventListener('mousemove',function(e){var r=hero.getBoundingClientRect(); mx=(e.clientX-r.left)*dpr; my=(e.clientY-r.top)*dpr;});
   hero.addEventListener('mouseleave',function(){mx=-9999; my=-9999;});
   function step(){
     ctx.clearRect(0,0,w,h);
-    var R=150*dpr, MR=190*dpr, i, j;
+    var R=160*dpr, MR=200*dpr, i, j;
     for(i=0;i<parts.length;i++){ var p=parts[i]; p.x+=p.vx; p.y+=p.vy; if(p.x<0||p.x>w)p.vx*=-1; if(p.y<0||p.y>h)p.vy*=-1;
       var ddx=mx-p.x, ddy=my-p.y, dm=Math.sqrt(ddx*ddx+ddy*ddy);
-      if(dm<MR){ p.x+=ddx/dm*0.5*dpr; p.y+=ddy/dm*0.5*dpr; ctx.strokeStyle='rgba(124,58,237,'+(0.32*(1-dm/MR))+')'; ctx.lineWidth=1*dpr; ctx.beginPath(); ctx.moveTo(p.x,p.y); ctx.lineTo(mx,my); ctx.stroke(); } }
+      if(dm<MR){ p.x+=ddx/dm*0.6*dpr; p.y+=ddy/dm*0.6*dpr; ctx.strokeStyle=col(p.x,0.5*(1-dm/MR)); ctx.lineWidth=1.2*dpr; ctx.beginPath(); ctx.moveTo(p.x,p.y); ctx.lineTo(mx,my); ctx.stroke(); } }
     for(i=0;i<parts.length;i++){ for(j=i+1;j<parts.length;j++){ var a=parts[i], b=parts[j], dx=a.x-b.x, dy=a.y-b.y, d=Math.sqrt(dx*dx+dy*dy);
-      if(d<R){ ctx.strokeStyle='rgba(74,64,134,'+(0.2*(1-d/R))+')'; ctx.lineWidth=1*dpr; ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke(); } } }
-    for(i=0;i<parts.length;i++){ ctx.fillStyle='rgba(124,58,237,0.6)'; ctx.beginPath(); ctx.arc(parts[i].x,parts[i].y,1.7*dpr,0,6.3); ctx.fill(); }
+      if(d<R){ ctx.strokeStyle=col((a.x+b.x)/2,0.3*(1-d/R)); ctx.lineWidth=1*dpr; ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke(); } } }
+    for(i=0;i<parts.length;i++){ var q=parts[i]; ctx.fillStyle=col(q.x,0.9); ctx.beginPath(); ctx.arc(q.x,q.y,2*dpr,0,6.3); ctx.fill(); }
     requestAnimationFrame(step);
   }
   init(); step();
