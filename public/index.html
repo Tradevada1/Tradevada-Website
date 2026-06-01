@@ -681,6 +681,9 @@
 
   /* desktop: longer Get Started pill */
   .hero-actions .btn-primary{min-width:248px;justify-content:center}
+
+  #toTop{position:fixed;right:16px;bottom:16px;z-index:55;width:46px;height:46px;border-radius:50%;border:1px solid var(--border-strong);background:rgba(255,255,255,0.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 12px 30px -12px rgba(20,22,55,0.3);display:none;align-items:center;justify-content:center;cursor:pointer;color:#7C3AED;font-size:20px;font-weight:700}
+  @media(max-width:760px){#toTop.show{display:flex}}
 </style>
 </head>
 <body id="top">
@@ -699,7 +702,7 @@
         <a href="#features">Features</a>
         <a href="#modules">Modules</a>
         <a href="#wheel">Wheel</a>
-        <a href="#pricing">Pricing</a>
+        <a href="pricing.html">Pricing</a>
         <a href="wheel-guide.html">Guide</a>
       </div>
       <button class="nav-burger" aria-label="Open menu" onclick="this.classList.toggle('open');document.getElementById('mnav').classList.toggle('open')"><span></span><span></span><span></span></button>
@@ -709,7 +712,7 @@
       </div>
     </div>
   </div>
-  <div id="mnav"><div class="inner"><a class="ml" href="#features">Features</a><a class="ml" href="#modules">Modules</a><a class="ml" href="#wheel">Wheel</a><a class="ml" href="#pricing">Pricing</a><a class="ml" href="wheel-guide.html">Guide</a><div class="mrow"><a class="si" href="https://app.tradevada.com/login">Sign In</a><a class="gs" href="https://app.tradevada.com/signup">Get Started →</a></div></div></div>
+  <div id="mnav"><div class="inner"><a class="ml" href="#features">Features</a><a class="ml" href="#modules">Modules</a><a class="ml" href="#wheel">Wheel</a><a class="ml" href="pricing.html">Pricing</a><a class="ml" href="wheel-guide.html">Guide</a><div class="mrow"><a class="si" href="https://app.tradevada.com/login">Sign In</a><a class="gs" href="https://app.tradevada.com/signup">Get Started →</a></div></div></div>
 </nav>
 
 <!-- ============== HERO ============== -->
@@ -1331,7 +1334,7 @@
       <p>Create a free account and start tracking trades today with manual entry or CSV import. When you're ready, upgrade to Pro and let SnapTrade auto-sync trades from your broker the moment they execute.</p>
       <div class="actions">
         <a class="btn btn-primary btn-lg" href="https://app.tradevada.com/signup">Create free account →</a>
-        <a class="btn btn-secondary btn-lg" href="#pricing">See pricing</a>
+        <a class="btn btn-secondary btn-lg" href="pricing.html">See pricing</a>
       </div>
       <div style="margin-top:24px;font-size:12px;color:var(--dim)">Free forever · No card required · Upgrade only when you want auto-sync</div>
     </div>
@@ -1350,7 +1353,7 @@
         <p style="margin-top:14px;color:var(--muted);font-size:13.5px;line-height:1.6">Tradevada — the trading journal built for the wheel. Made for retail options traders who treat it like a business.</p>
       </div>
       <div class="col"><h5>Product</h5>
-        <a href="#features">Features</a><a href="#wheel">Wheel Strategy</a><a href="#showcase">Analytics</a><a href="#pricing">Pricing</a>
+        <a href="#features">Features</a><a href="#wheel">Wheel Strategy</a><a href="#showcase">Analytics</a><a href="pricing.html">Pricing</a>
       </div>
       <div class="col"><h5>Resources</h5>
         <a href="wheel-guide.html">Wheel guide</a><a href="changelog.html">Changelog</a><a href="docs.html">Documentation</a><a href="status.html">Status</a>
@@ -1449,5 +1452,7 @@
 })();
 </script>
 <script>document.querySelectorAll("#mnav a").forEach(function(a){a.addEventListener("click",function(){document.getElementById("mnav").classList.remove("open");var b=document.querySelector(".nav-burger");if(b)b.classList.remove("open")})});</script>
+<div id="toTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</div>
+<script>(function(){var t=document.getElementById("toTop");window.addEventListener("scroll",function(){if(window.scrollY>600)t.classList.add("show");else t.classList.remove("show")},{passive:true});})();</script>
 </body>
 </html>
