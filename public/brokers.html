@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Supported Brokers — Tradevada</title>
-<meta name="description" content="Tradevada connects to 30+ brokers with secure, read-only auto-sync — Robinhood, Webull, Schwab, Fidelity, E*TRADE, tastytrade, Interactive Brokers, moomoo and more. Any broker also works with CSV import." />
+<meta name="description" content="The brokers Tradevada supports — Robinhood, Webull, moomoo, and E*TRADE are live now with read-only auto-sync; Schwab, Fidelity, tastytrade, IBKR, Tradier, Public, and SoFi coming soon. Any broker works with CSV import." />
 <link rel="icon" href="favicon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -79,6 +79,16 @@
   .bcard .bn{font-size:14.5px;font-weight:700;line-height:1.15}
   .bcard .bt{font-size:11.5px;color:var(--dim);font-family:var(--mono);margin-top:2px}
 
+  .bcard{position:relative}
+  .bcard .bmeta{flex:1;min-width:0}
+  .logo{width:46px;height:46px;border-radius:12px;background:#fff;border:1px solid var(--border);display:grid;place-items:center;overflow:hidden;flex-shrink:0;box-shadow:0 2px 6px -3px rgba(20,22,55,0.2)}
+  .logo img{width:30px;height:30px;object-fit:contain}
+  .logo .mn{width:100%;height:100%;display:grid;place-items:center;color:#fff;font-weight:800;font-size:15px;letter-spacing:-0.02em}
+  .pill{font-family:var(--mono);font-size:9.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:3px 9px;border-radius:999px;flex-shrink:0}
+  .pill.live{background:rgba(13,148,136,0.14);color:#0d9488}
+  .pill.soon{background:rgba(180,83,9,0.14);color:#b45309}
+  .bcard.soon{opacity:0.92}
+  .bcard.soon .logo{filter:grayscale(0.35)}
   .note{text-align:center;color:var(--dim);font-size:13px;margin:26px auto 0;max-width:680px;line-height:1.6}
 
   .fcta{text-align:center;padding:64px 24px 12px}
@@ -166,7 +176,7 @@
   <header class="phead">
     <span class="eyebrow">Supported Brokers</span>
     <h1>Connect your broker. <span class="accent">Trades flow in.</span></h1>
-    <p>Tradevada auto-syncs with 30+ brokers through a secure, read-only connection — your trades land in your journal automatically, no spreadsheets required. Don't see yours? Manual entry and CSV import work with any broker on earth.</p>
+    <p>Tradevada syncs directly with your broker through a secure, read-only connection. Four brokers are live today and more land every month — and if yours isn't here yet, manual entry and CSV import work with any broker on earth.</p>
   </header>
 
   <section class="ways">
@@ -186,46 +196,26 @@
     </div>
   </section>
 
-  <div class="seclabel"><h2>Auto-sync brokers</h2><span class="ln"></span><span class="ct">read-only · secure</span></div>
+  <div class="seclabel"><h2>Live now</h2><span class="ln"></span><span class="ct">read-only auto-sync</span></div>
   <section class="bgrid">
-    <div class="bcard"><div class="mono" style="background:#00C805">Rh</div><div><div class="bn">Robinhood</div><div class="bt">US · Options</div></div></div>
-    <div class="bcard"><div class="mono" style="background:#1462E0">We</div><div><div class="bn">Webull</div><div class="bt">US · Options</div></div></div>
-    <div class="bcard"><div class="mono" style="background:#00A0DF">Sc</div><div><div class="bn">Charles Schwab</div><div class="bt">thinkorswim · Options</div></div></div>
-    <div class="bcard"><div class="mono" style="background:#00945E">Fi</div><div><div class="bn">Fidelity</div><div class="bt">US · Options</div></div></div>
-    <div class="bcard"><div class="mono" style="background:#6633CC">E*</div><div><div class="bn">E*TRADE</div><div class="bt">Power E*TRADE · Options</div></div></div>
-    <div class="bcard"><div class="mono" style="background:#00C2A8">tt</div><div><div class="bn">tastytrade</div><div class="bt">US · Options</div></div></div>
-    <div class="bcard"><div class="mono" style="background:#D81222">IB</div><div><div class="bn">Interactive Brokers</div><div class="bt">Global · Options</div></div></div>
-    <div class="bcard"><div class="mono" style="background:#0A2A66">TS</div><div><div class="bn">TradeStation</div><div class="bt">US · Options</div></div></div>
-    <div class="bcard"><div class="mono" style="background:#0EA5E9">Td</div><div><div class="bn">Tradier</div><div class="bt">US · Options</div></div></div>
-    <div class="bcard"><div class="mono" style="background:#FF6A00">mm</div><div><div class="bn">moomoo</div><div class="bt">US · Options</div></div></div>
-    <div class="bcard"><div class="mono" style="background:#5B47E0">Pu</div><div><div class="bn">Public</div><div class="bt">US · Options</div></div></div>
-    <div class="bcard"><div class="mono" style="background:#C20430">Va</div><div><div class="bn">Vanguard</div><div class="bt">US · Stocks · ETFs</div></div></div>
-    <div class="bcard"><div class="mono" style="background:#117ACA">Ch</div><div><div class="bn">Chase</div><div class="bt">US · Stocks · ETFs</div></div></div>
-    <div class="bcard"><div class="mono" style="background:#D71E2B">WF</div><div><div class="bn">Wells Fargo</div><div class="bt">US · Stocks · ETFs</div></div></div>
-    <div class="bcard"><div class="mono" style="background:#0F1419">Al</div><div><div class="bn">Alpaca</div><div class="bt">US · Stocks · Options</div></div></div>
-    <div class="bcard"><div class="mono" style="background:#D2233C">Em</div><div><div class="bn">Empower</div><div class="bt">US · Retirement</div></div></div>
-    <div class="bcard"><div class="mono" style="background:#0052FF">Co</div><div><div class="bn">Coinbase</div><div class="bt">Global · Crypto</div></div></div>
-    <div class="bcard"><div class="mono" style="background:#5741D9">Kr</div><div><div class="bn">Kraken</div><div class="bt">Global · Crypto</div></div></div>
-    <div class="bcard"><div class="mono" style="background:#F0B90B">Bi</div><div><div class="bn">Binance</div><div class="bt">Global · Crypto</div></div></div>
-    <div class="bcard"><div class="mono" style="background:#11A04B">Qu</div><div><div class="bn">Questrade</div><div class="bt">Canada · Options</div></div></div>
-    <div class="bcard"><div class="mono" style="background:#54B848">TD</div><div><div class="bn">TD Direct Investing</div><div class="bt">Canada · Stocks</div></div></div>
-    <div class="bcard"><div class="mono" style="background:#2F2C29">Ws</div><div><div class="bn">Wealthsimple</div><div class="bt">Canada · Stocks</div></div></div>
-    <div class="bcard"><div class="mono" style="background:#1462E0">Wc</div><div><div class="bn">Webull Canada</div><div class="bt">Canada · Options</div></div></div>
-    <div class="bcard"><div class="mono" style="background:#13C636">eT</div><div><div class="bn">eToro</div><div class="bt">Global · Multi-asset</div></div></div>
-    <div class="bcard"><div class="mono" style="background:#00AAD2">T2</div><div><div class="bn">Trading 212</div><div class="bt">Europe · Stocks</div></div></div>
-    <div class="bcard"><div class="mono" style="background:#0072CE">AJ</div><div><div class="bn">AJ Bell</div><div class="bt">UK · Stocks · ETFs</div></div></div>
-    <div class="bcard"><div class="mono" style="background:#1456A0">DG</div><div><div class="bn">DEGIRO</div><div class="bt">Europe · Stocks</div></div></div>
-    <div class="bcard"><div class="mono" style="background:#0F1E3D">Bx</div><div><div class="bn">BUX</div><div class="bt">Europe · Stocks</div></div></div>
-    <div class="bcard"><div class="mono" style="background:#1A1A2E">St</div><div><div class="bn">Stake</div><div class="bt">Australia · Stocks</div></div></div>
-    <div class="bcard"><div class="mono" style="background:#FDB813">Cm</div><div><div class="bn">CommSec</div><div class="bt">Australia · Stocks</div></div></div>
-    <div class="bcard"><div class="mono" style="background:#EB5B25">Up</div><div><div class="bn">Upstox</div><div class="bt">India · Stocks</div></div></div>
-    <div class="bcard"><div class="mono" style="background:#387ED1">Ze</div><div><div class="bn">Zerodha</div><div class="bt">India · Stocks</div></div></div>
+    <div class="bcard"><div class="logo" data-domain="robinhood.com" data-mc="#00C805" data-mn="Rh" data-dn="Robinhood"></div><div class="bmeta"><div class="bn">Robinhood</div><div class="bt">US · Options</div></div><span class="pill live">Live</span></div>
+    <div class="bcard"><div class="logo" data-domain="webull.com" data-mc="#1462E0" data-mn="We" data-dn="Webull"></div><div class="bmeta"><div class="bn">Webull</div><div class="bt">US · Options</div></div><span class="pill live">Live</span></div>
+    <div class="bcard"><div class="logo" data-domain="moomoo.com" data-mc="#FF6A00" data-mn="mm" data-dn="moomoo"></div><div class="bmeta"><div class="bn">moomoo</div><div class="bt">US · Options</div></div><span class="pill live">Live</span></div>
+    <div class="bcard"><div class="logo" data-domain="etrade.com" data-mc="#6633CC" data-mn="E*" data-dn="E*TRADE"></div><div class="bmeta"><div class="bn">E*TRADE</div><div class="bt">Power E*TRADE · Options</div></div><span class="pill live">Live</span></div>
   </section>
 
-  <p class="note">Broker connections are powered by a SOC 2-certified, bank-grade aggregation layer and are strictly read-only — Tradevada receives your positions and fills, and can never place or modify a trade. Broker availability and supported asset classes are set by each brokerage and can change.</p>
+  <div class="seclabel"><h2>Coming soon</h2><span class="ln"></span><span class="ct">on the roadmap</span></div>
+  <section class="bgrid">
+    <div class="bcard soon"><div class="logo" data-domain="schwab.com" data-mc="#00A0DF" data-mn="Sc" data-dn="Charles Schwab"></div><div class="bmeta"><div class="bn">Charles Schwab</div><div class="bt">thinkorswim · Options</div></div><span class="pill soon">Soon</span></div>
+    <div class="bcard soon"><div class="logo" data-domain="fidelity.com" data-mc="#00945E" data-mn="Fi" data-dn="Fidelity"></div><div class="bmeta"><div class="bn">Fidelity</div><div class="bt">US · Options</div></div><span class="pill soon">Soon</span></div>
+    <div class="bcard soon"><div class="logo" data-domain="tastytrade.com" data-mc="#00C2A8" data-mn="tt" data-dn="tastytrade"></div><div class="bmeta"><div class="bn">tastytrade</div><div class="bt">US · Options</div></div><span class="pill soon">Soon</span></div>
+    <div class="bcard soon"><div class="logo" data-domain="interactivebrokers.com" data-mc="#D81222" data-mn="IB" data-dn="Interactive Brokers"></div><div class="bmeta"><div class="bn">Interactive Brokers</div><div class="bt">Global · Options</div></div><span class="pill soon">Soon</span></div>
+    <div class="bcard soon"><div class="logo" data-domain="tradier.com" data-mc="#0EA5E9" data-mn="Td" data-dn="Tradier"></div><div class="bmeta"><div class="bn">Tradier</div><div class="bt">US · Options</div></div><span class="pill soon">Soon</span></div>
+    <div class="bcard soon"><div class="logo" data-domain="public.com" data-mc="#5B47E0" data-mn="Pu" data-dn="Public"></div><div class="bmeta"><div class="bn">Public</div><div class="bt">US · Options</div></div><span class="pill soon">Soon</span></div>
+    <div class="bcard soon"><div class="logo" data-domain="sofi.com" data-mc="#1B98E0" data-mn="So" data-dn="SoFi"></div><div class="bmeta"><div class="bn">SoFi</div><div class="bt">US · Options</div></div><span class="pill soon">Soon</span></div>
+  </section>
 
-  <div class="seclabel"><h2>Everyone else</h2><span class="ln"></span><span class="ct">CSV · manual</span></div>
-  <p class="note" style="margin-top:0">Trade somewhere that isn't on the list yet? You're still covered. Export a CSV from your broker — or add fills by hand — and Tradevada maps it into clean wheel cycles with true breakeven, premium captured, and full analytics. Manual entry and CSV import are free, forever.</p>
+  <p class="note">Broker connections are read-only — Tradevada receives your positions and fills, and can never place or modify a trade. Don't see your broker? Export a CSV — or add fills by hand — and Tradevada maps it into clean wheel cycles with true breakeven, premium captured, and full analytics. Manual entry and CSV import are free, forever.</p>
 
   <section class="fcta">
     <h2>Get your trades flowing in.</h2>
@@ -253,6 +243,13 @@
 
 <script>
   document.querySelectorAll('#mnav a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('mnav').classList.remove('open');var b=document.querySelector('.nav-burger');if(b)b.classList.remove('open')})});
+  document.querySelectorAll('.logo[data-domain]').forEach(function(el){
+    el.innerHTML='<span class="mn" style="background:'+el.dataset.mc+'">'+el.dataset.mn+'</span>';
+    var img=new Image();
+    img.alt=(el.dataset.dn||'')+' logo';
+    img.onload=function(){el.innerHTML='';el.appendChild(img);};
+    img.src='https://logo.clearbit.com/'+el.dataset.domain;
+  });
   var tt=document.getElementById('toTop');
   window.addEventListener('scroll',function(){if(window.scrollY>600)tt.classList.add('show');else tt.classList.remove('show')},{passive:true});
 </script>
