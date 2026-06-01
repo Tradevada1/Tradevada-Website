@@ -639,6 +639,16 @@
     .mcta .m2{background:rgba(0,0,0,0.05);color:var(--text);border:1px solid var(--border-strong)}
     body{padding-bottom:72px}
   }
+
+  /* mobile: 2-up feature cards to save vertical space */
+  @media(max-width:480px){
+    .feature-grid{grid-template-columns:1fr 1fr;gap:10px}
+    .feature-card{padding:16px 13px}
+    .feature-card h3{font-size:14.5px;margin-bottom:5px}
+    .feature-card p{font-size:11.5px;line-height:1.45}
+    .feature-card .stamp{top:13px;right:13px;font-size:10.5px}
+    .feature-card .ico{width:34px;height:34px;margin-bottom:9px;border-radius:10px}
+  }
 </style>
 </head>
 <body id="top">
