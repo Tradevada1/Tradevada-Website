@@ -134,6 +134,39 @@
     nav.top .row{padding-left:14px;padding-right:14px}
   }
 
+  .nav-links{display:flex;align-items:center;gap:2px}
+  .nav-links>a,.nav-drop-btn{padding:9px 14px;border-radius:9px;color:var(--muted);font-size:14px;font-weight:500;transition:.18s;text-decoration:none}
+  .nav-links>a:hover{color:#7C3AED}
+  .nav-drop{position:relative}
+  .nav-drop-btn{display:inline-flex;align-items:center;gap:6px;background:none;border:none;cursor:pointer;font-family:inherit}
+  .nav-drop-btn svg{transition:transform .2s}
+  .nav-drop:hover .nav-drop-btn{color:#7C3AED}
+  .nav-drop:hover .nav-drop-btn svg{transform:rotate(180deg)}
+  .nav-menu{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(6px);min-width:200px;background:#fff;border:1px solid var(--border-strong);border-radius:13px;box-shadow:0 20px 44px -18px rgba(20,22,55,0.32);padding:8px;display:flex;flex-direction:column;opacity:0;visibility:hidden;transition:.18s;z-index:60}
+  .nav-drop:hover .nav-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+  .nav-menu a{padding:10px 12px;border-radius:9px;color:var(--muted);font-size:14px;font-weight:500;white-space:nowrap;text-decoration:none}
+  .nav-menu a:hover{background:#f2f3f8;color:#7C3AED}
+  .nav-burger{display:none}
+  #mnav{display:none}
+  #mnav .msub{font-family:var(--mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(21,21,30,0.4);font-weight:700;padding:18px 6px 8px;margin-top:6px;border-top:1px solid var(--border)}
+  #mnav a.sub{padding:14px 6px;font-size:16px;font-weight:500;color:var(--text);border-bottom:1px solid var(--border);text-decoration:none}
+  @media(max-width:880px){
+    .nav-links{display:none}
+    nav.top .nav-actions{display:none}
+    .nav-burger{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;width:42px;height:38px;border-radius:10px;border:1px solid var(--border-strong);background:rgba(0,0,0,0.03);cursor:pointer;padding:0}
+    .nav-burger span{display:block;width:18px;height:2px;border-radius:2px;background:var(--text);transition:.22s}
+    .nav-burger.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+    .nav-burger.open span:nth-child(2){opacity:0}
+    .nav-burger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+    #mnav{display:block;position:absolute;left:0;right:0;top:100%;background:rgba(255,255,255,0.98);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border-strong);box-shadow:0 24px 44px -22px rgba(20,22,55,0.3);max-height:0;overflow:hidden;transition:max-height .3s ease}
+    #mnav.open{max-height:480px}
+    #mnav .inner{padding:8px 18px 20px;display:flex;flex-direction:column}
+    #mnav a.ml{padding:14px 6px;font-size:16px;font-weight:600;color:var(--text);border-bottom:1px solid var(--border);text-decoration:none}
+    #mnav .mrow{display:flex;gap:10px;margin-top:14px}
+    #mnav .mrow a{flex:1;text-align:center;padding:14px;border-radius:12px;font-weight:700;font-size:15px;text-decoration:none}
+    #mnav .mrow .si{background:rgba(0,0,0,0.05);color:var(--text);border:1px solid var(--border-strong)}
+    #mnav .mrow .gs{background:linear-gradient(135deg,#9b6cff,#7C3AED);color:#fff}
+  }
 </style>
 <link rel="icon" type="image/png" href="favicon.png" />
 </head>
@@ -149,11 +182,19 @@
       </div>
       <span class="wordmark"><span class="w-trade">TRADE</span><span class="w-vada">VADA</span></span>
     </a>
-    <div class="nav-actions">
+    <div class="nav-links">
+        <a href="features.html">Features</a>
+        <a href="pricing.html">Pricing</a>
+        <div class="nav-drop"><button class="nav-drop-btn" type="button">Resources <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button><div class="nav-menu"><a href="wheel-guide.html">Wheel Guide</a><a href="docs.html">Documentation</a><a href="status.html">Status</a></div></div>
+        <a href="brokers.html">Supported Brokers</a>
+      </div>
+      <button class="nav-burger" aria-label="Open menu" onclick="this.classList.toggle('open');document.getElementById('mnav').classList.toggle('open')"><span></span><span></span><span></span></button>
+      <div class="nav-actions">
       <a class="btn" href="https://app.tradevada.com/login">Sign In</a>
       <a class="btn primary" href="https://app.tradevada.com/signup">Get Started →</a>
     </div>
   </div>
+  <div id="mnav"><div class="inner"><a class="ml" href="features.html">Features</a><a class="ml" href="pricing.html">Pricing</a><a class="ml" href="brokers.html">Supported Brokers</a><div class="msub">Resources</div><a class="sub" href="wheel-guide.html">Wheel Guide</a><a class="sub" href="docs.html">Documentation</a><a class="sub" href="status.html">Status</a><div class="mrow"><a class="si" href="https://app.tradevada.com/login">Sign In</a><a class="gs" href="https://app.tradevada.com/signup">Get Started →</a></div></div></div>
 </nav>
 
 <!-- HERO -->
@@ -424,5 +465,6 @@
   window.addEventListener('resize',onScroll); onScroll();
 })();
 </script>
+<script>document.querySelectorAll('#mnav a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('mnav').classList.remove('open');var b=document.querySelector('.nav-burger');if(b)b.classList.remove('open')})});</script>
 </body>
 </html>
