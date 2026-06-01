@@ -684,6 +684,9 @@
 
   #toTop{position:fixed;right:16px;bottom:16px;z-index:55;width:46px;height:46px;border-radius:50%;border:1px solid var(--border-strong);background:rgba(255,255,255,0.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 12px 30px -12px rgba(20,22,55,0.3);display:none;align-items:center;justify-content:center;cursor:pointer;color:#7C3AED;font-size:20px;font-weight:700}
   @media(max-width:760px){#toTop.show{display:flex}}
+
+  #toTop{position:fixed;right:16px;bottom:16px;z-index:55;width:46px;height:46px;border-radius:50%;border:1px solid var(--border-strong);background:rgba(255,255,255,0.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 12px 30px -12px rgba(20,22,55,0.3);display:none;align-items:center;justify-content:center;cursor:pointer;color:#7C3AED;font-size:20px;font-weight:700}
+  @media(max-width:760px){#toTop.show{display:flex}}
 </style>
 </head>
 <body id="top">
@@ -1452,6 +1455,8 @@
 })();
 </script>
 <script>document.querySelectorAll("#mnav a").forEach(function(a){a.addEventListener("click",function(){document.getElementById("mnav").classList.remove("open");var b=document.querySelector(".nav-burger");if(b)b.classList.remove("open")})});</script>
+<div id="toTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</div>
+<script>(function(){var t=document.getElementById("toTop");window.addEventListener("scroll",function(){if(window.scrollY>600)t.classList.add("show");else t.classList.remove("show")},{passive:true});})();</script>
 <div id="toTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</div>
 <script>(function(){var t=document.getElementById("toTop");window.addEventListener("scroll",function(){if(window.scrollY>600)t.classList.add("show");else t.classList.remove("show")},{passive:true});})();</script>
 </body>
