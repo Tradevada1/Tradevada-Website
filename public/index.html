@@ -661,7 +661,12 @@
   /* ---- mobile: collapse widget grids so nothing is cramped ---- */
   @media(max-width:560px){
     .stat-row{grid-template-columns:1fr 1fr}
-  .app-side{display:none}
+  .app-side{width:104px;padding:12px 7px}
+    .app-hero .toggle{display:none}
+    .side-nav a{font-size:9.5px;padding:6px 7px;gap:7px}
+    .side-nav a svg{width:11px;height:11px}
+    .side-brand span{font-size:9px}
+    .side-user .nm{font-size:9px}
     .app-stats.c4{grid-template-columns:1fr 1fr}
     .app-stats.c6{grid-template-columns:repeat(3,1fr)}
     .metric-grid{grid-template-columns:1fr 1fr}
@@ -715,7 +720,7 @@
   }
 
   /* tighten hero top gap on mobile */
-  @media(max-width:600px){.hero{padding:20px 0 26px}.hero-grid{gap:32px}}
+  @media(max-width:600px){.hero{padding:20px 0 26px}.hero-grid{gap:32px}.app-wrap{margin-top:30px}.fc-1{top:-14px;left:4px}.fc-2{bottom:-14px;right:4px}}
 
   /* desktop: longer Get Started pill */
   .hero-actions .btn-primary{min-width:248px;justify-content:center}
@@ -985,7 +990,7 @@
         </div>
         <div class="app-stats c4" style="margin-bottom:12px">
           <div class="app-stat"><div class="k">Premium</div><div class="val up">$127</div></div>
-          <div class="app-stat"><div class="k">Velocity</div><div class="val up">$16/d</div></div>
+          <div class="app-stat"><div class="k">Decay/day</div><div class="val up">$16</div></div>
           <div class="app-stat"><div class="k">Deployed</div><div class="val wt">33%</div></div>
           <div class="app-stat"><div class="k">Alerts</div><div class="val" style="color:var(--amber)">3</div></div>
         </div>
@@ -1180,7 +1185,7 @@
     <div class="sc-row flip reveal">
       <div>
         <div class="sc-tag">Calendars</div>
-        <h3>Three calendars, <span class="accent">one truth</span>.</h3>
+        <h3>Two calendars, <span class="accent">one truth</span>.</h3>
         <p class="lead">Scan your monthly performance at a glance, see every option expiration grouped by date, and never miss a dividend ex-date that touches your positions.</p>
         <ul class="sc-checks">
           <li>Color-coded P&L heatmap by trading day</li>
@@ -1294,7 +1299,7 @@
         <div class="pdivider"></div>
         <ul>
           <li>Demo workspace with sample data</li>
-          <li>Manual trade entry (unlimited)</li>
+          <li>Manual trade entry</li>
           <li>CSV import from any broker</li>
           <li>Wheel-strategy tracker</li>
           <li>Core analytics &amp; equity curve</li>
@@ -1317,6 +1322,7 @@
           <li>Multiple portfolios</li>
           <li>Advanced analytics &amp; news terminal</li>
           <li>Wheel cycle tracker &amp; projections</li>
+          <li>Custom accent colors &amp; themes</li>
           <li>Priority email support</li>
         </ul>
         <a class="pcta" href="#newsletter">Notify me at launch →</a>
