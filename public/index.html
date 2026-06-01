@@ -208,11 +208,11 @@
   @media(max-width:680px){.stats-bar{grid-template-columns:1fr 1fr}}
 
   /* ================== FEATURES ================== */
-  .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .feature-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(216px,1fr));gap:16px}
   @media(max-width:960px){.feature-grid{grid-template-columns:1fr 1fr}}
   @media(max-width:600px){.feature-grid{grid-template-columns:1fr}}
   .feature-card{position:relative;background:linear-gradient(180deg,var(--panel),var(--bg-2));
-    border:1px solid var(--border);border-radius:18px;padding:30px 26px 28px;overflow:hidden;
+    border:1px solid var(--border);border-radius:18px;padding:24px 22px 22px;overflow:hidden;
     transition:transform .3s cubic-bezier(.2,.8,.2,1),border-color .3s,box-shadow .3s}
   .feature-card::before{content:"";position:absolute;inset:0;border-radius:18px;padding:1px;
     background:linear-gradient(135deg,transparent 40%,var(--gc,var(--primary)) 120%);
@@ -221,10 +221,10 @@
   .feature-card:hover{transform:translateY(-6px);border-color:transparent;box-shadow:0 30px 60px -30px rgba(0,0,0,0.7)}
   .feature-card:hover::before{opacity:0.7}
   .feature-card .stamp{position:absolute;top:22px;right:24px;font-family:var(--mono);font-size:13px;color:var(--dim)}
-  .feature-card .ico{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;margin-bottom:18px;
+  .feature-card .ico{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;margin-bottom:14px;
     background:var(--gc-soft,rgba(124,58,237,0.14));color:var(--gc,var(--primary-2))}
-  .feature-card h3{font-size:21px;margin-bottom:9px;font-weight:700}
-  .feature-card p{color:var(--muted);font-size:14px;line-height:1.62}
+  .feature-card h3{font-size:17px;margin-bottom:7px;font-weight:700;line-height:1.2}
+  .feature-card p{color:var(--muted);font-size:13px;line-height:1.55}
   .c-purple{--gc:#a78bfa;--gc-soft:rgba(124,58,237,0.16)}
   .c-teal{--gc:#5eead4;--gc-soft:rgba(20,184,166,0.16)}
   .c-blue{--gc:#60a5fa;--gc-soft:rgba(59,130,246,0.16)}
@@ -721,33 +721,53 @@
     <div class="feature-grid">
       <div class="feature-card c-purple reveal"><span class="stamp">01</span>
         <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-        <h3>Real-time Dashboard</h3>
-        <p>Total value, unrealized P&L, day P&L, premium collected, cash, and a live cumulative chart — auto-synced from your broker.</p>
+        <h3>Dashboard</h3>
+        <p>Live account value, day &amp; unrealized P&amp;L, premium collected, and a cumulative equity curve.</p>
       </div>
       <div class="feature-card c-teal reveal"><span class="stamp">02</span>
         <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 6-6"/></svg></div>
-        <h3>Deep Analytics</h3>
-        <p>Win rate, profit factor, Sharpe ratio, expectancy, max drawdown, recovery factor, equity curves, and a full day-of-week × hour heatmap.</p>
+        <h3>Analytics</h3>
+        <p>Win rate, profit factor, Sharpe, expectancy, drawdown, and performance heatmaps.</p>
       </div>
-      <div class="feature-card c-blue reveal"><span class="stamp">03</span>
-        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg></div>
-        <h3>Trade Journal</h3>
-        <p>Every fill tagged, filtered, and searchable — by symbol, strategy, date, P&L, open vs closed. Pagination that doesn't make you cry.</p>
-      </div>
-      <div class="feature-card c-amber reveal"><span class="stamp">04</span>
+      <div class="feature-card c-amber reveal"><span class="stamp">03</span>
         <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2v20M2 12h20"/></svg></div>
-        <h3>Wheel Strategy Tracker</h3>
-        <p>The one feature no other journal has — full wheel-cycle accounting. CSP → assigned → CC → called away. Tracks true breakeven across infinite premium collections.</p>
+        <h3>Wheel Strategy</h3>
+        <p>Plan every leg — pick strikes, simulate rolls, project profits, track true breakeven.</p>
+      </div>
+      <div class="feature-card c-blue reveal"><span class="stamp">04</span>
+        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6"/><path d="M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9V3"/></svg></div>
+        <h3>Backtest</h3>
+        <p>Replay closed trades and simulate wheel plays on historical IV &amp; Black-Scholes pricing.</p>
       </div>
       <div class="feature-card c-pink reveal"><span class="stamp">05</span>
-        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
-        <h3>Multi-Calendar View</h3>
-        <p>P&L calendar, options expirations grouped by date, and a dividend calendar — every catalyst that touches your portfolio in one timeline.</p>
+        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg></div>
+        <h3>Journal</h3>
+        <p>Every fill tagged, filtered, and searchable by symbol, strategy, date, and status.</p>
       </div>
       <div class="feature-card c-red reveal"><span class="stamp">06</span>
-        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg></div>
-        <h3>News & Events Terminal</h3>
-        <p>Curated market news with severity flags, plus an earnings, dividend, FOMC, and economic-release calendar — filtered to tickers you actually hold.</p>
+        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+        <h3>Calendars</h3>
+        <p>P&amp;L calendar, option expirations, and dividend ex-dates on one timeline.</p>
+      </div>
+      <div class="feature-card c-amber reveal"><span class="stamp">07</span>
+        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <h3>Market Pulse</h3>
+        <p>Real-time news with severity flags plus earnings, dividend, and Fed-event calendars.</p>
+      </div>
+      <div class="feature-card c-purple reveal"><span class="stamp">08</span>
+        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+        <h3>Playbooks</h3>
+        <p>Name your strategies, tag trades, and see which playbooks actually print.</p>
+      </div>
+      <div class="feature-card c-teal reveal"><span class="stamp">09</span>
+        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg></div>
+        <h3>Learn</h3>
+        <p>Guides and breakdowns of the wheel — from CSP basics to rolling and assignment.</p>
+      </div>
+      <div class="feature-card c-blue reveal"><span class="stamp">10</span>
+        <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
+        <h3>Pack Watch</h3>
+        <p>Live assignment-risk, DTE windows, and custom alerts — plus The Hunt for top CSPs.</p>
       </div>
     </div>
   </div>
