@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Contact — Tradevada</title>
-<meta name="description" content="Get in touch with Tradevada — support, billing, security disclosures, press, and partnerships. We answer every email." />
+<meta name="description" content="Get in touch with Tradevada customer support. Email us or send a message and we'll respond within 24 business hours." />
 
 <link rel="icon" type="image/png" href="favicon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -87,6 +87,26 @@
   /* Two-column section (form + sidebar) */
   .form-layout{display:grid;grid-template-columns:1.4fr 1fr;gap:32px;align-items:start}
   @media (max-width:880px){.form-layout{grid-template-columns:1fr}}
+
+  /* Support hero panel (single channel, feature treatment) */
+  .support-panel{position:relative;overflow:hidden;padding:32px;border-radius:18px;
+    border:1px solid rgba(124,58,237,0.28);
+    background:linear-gradient(135deg,rgba(124,58,237,0.10),rgba(20,184,166,0.05) 70%,rgba(124,58,237,0.02));
+    display:flex;gap:22px;align-items:flex-start}
+  .support-panel::after{content:"";position:absolute;right:-60px;top:-60px;width:200px;height:200px;
+    border-radius:50%;background:radial-gradient(circle,rgba(124,58,237,0.16),transparent 70%);pointer-events:none}
+  .support-panel .ico{width:54px;height:54px;border-radius:14px;flex-shrink:0;
+    display:flex;align-items:center;justify-content:center;
+    background:linear-gradient(135deg,#8b5cf6,#7C3AED);color:#fff;
+    box-shadow:0 12px 30px -10px rgba(124,58,237,0.6)}
+  .support-panel h3{font-size:20px;font-weight:800;letter-spacing:-0.01em;color:#15151e;margin-bottom:6px}
+  .support-panel p{font-size:14px;color:var(--muted);margin-bottom:16px;line-height:1.6;max-width:520px}
+  .support-panel .email-link{font-family:var(--mono);font-size:15px;color:var(--primary-2);font-weight:600;
+    display:inline-flex;align-items:center;gap:8px}
+  .support-panel .sla{display:inline-block;margin-left:16px;font-size:11px;color:var(--dim);
+    letter-spacing:0.06em;text-transform:uppercase;font-weight:600}
+  @media (max-width:560px){.support-panel{flex-direction:column;gap:16px;padding:24px}
+    .support-panel .sla{margin-left:0;margin-top:8px;display:block}}
 
   /* Form */
   .form-card{padding:32px;border-radius:16px;border:1px solid var(--border);
@@ -195,12 +215,12 @@
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Tradevada" />
 <meta property="og:title" content="Contact — Tradevada" />
-<meta property="og:description" content="Get in touch with Tradevada — support, billing, security disclosures, press, and partnerships. We answer every email." />
+<meta property="og:description" content="Get in touch with Tradevada customer support. Email us or send a message and we'll respond within 24 business hours." />
 <meta property="og:url" content="https://tradevada.com/contact.html" />
 <meta property="og:image" content="https://tradevada.com/og-image.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Contact — Tradevada" />
-<meta name="twitter:description" content="Get in touch with Tradevada — support, billing, security disclosures, press, and partnerships. We answer every email." />
+<meta name="twitter:description" content="Get in touch with Tradevada customer support. Email us or send a message and we'll respond within 24 business hours." />
 <meta name="twitter:image" content="https://tradevada.com/og-image.png" />
 </head>
 <body>
@@ -232,104 +252,35 @@
 <header class="hero">
   <span class="eyebrow">Contact</span>
   <h1>We answer<br/><span class="accent">every email.</span></h1>
-  <p>Support, billing, security disclosures, press, or just feedback — pick a channel below or drop us a message. A real person reads every inbox.</p>
+  <p>Questions, account issues, billing, feedback — whatever it is, our support team is one message away. A real person reads every email.</p>
 </header>
 
 <div class="content">
 
-  <!-- ============== CONTACT CHANNELS ============== -->
+  <!-- ============== CONTACT ============== -->
   <section>
-    <h2>Direct channels</h2>
-    <p class="sub">Each inbox is monitored by a real person. Pick the one that matches your inquiry — it'll get to the right place faster.</p>
+    <h2>Get in <span class="accent">touch</span></h2>
+    <p class="sub">One inbox, one team. Email us directly or send a message below — we'll get back to you within 24 business hours.</p>
 
-    <div class="channel-grid">
-
-      <div class="channel">
-        <div class="ico">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-        </div>
-        <div>
-          <h3>Customer support</h3>
-          <p>Account issues, broker sync problems, missing trades, feature questions, or anything else about using Tradevada.</p>
-          <a class="email-link" href="mailto:support@tradevada.com">support@tradevada.com →</a>
-          <div class="sla">Response within 24 business hours</div>
-        </div>
+    <!-- Customer support panel -->
+    <div class="support-panel" style="margin-bottom:32px">
+      <div class="ico">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
       </div>
-
-      <div class="channel teal">
-        <div class="ico">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="14" rx="2"/><path d="M2 11h20"/><path d="M6 16h2"/></svg>
-        </div>
-        <div>
-          <h3>Billing &amp; subscriptions</h3>
-          <p>Invoice requests, refunds, plan changes, payment problems, tax documents, or VAT/GST questions.</p>
-          <a class="email-link" href="mailto:billing@tradevada.com">billing@tradevada.com →</a>
-          <div class="sla">Response within 24 business hours</div>
-        </div>
+      <div>
+        <h3>Customer support</h3>
+        <p>Account issues, broker sync problems, missing trades, billing questions, feature requests, or anything else about using Tradevada — it all comes to one place.</p>
+        <a class="email-link" href="mailto:support@tradevada.com">support@tradevada.com →</a>
+        <span class="sla">Response within 24 business hours</span>
       </div>
-
-      <div class="channel amber">
-        <div class="ico">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L3 7v6c0 5 4 9 9 11 5-2 9-6 9-11V7l-9-5z"/></svg>
-        </div>
-        <div>
-          <h3>Security disclosures</h3>
-          <p>Found a vulnerability, suspect a breach, or want to coordinate disclosure? Reach our security team directly. PGP available on request.</p>
-          <a class="email-link" href="mailto:security@tradevada.com">security@tradevada.com →</a>
-          <div class="sla">Acknowledged within 24 hours</div>
-        </div>
-      </div>
-
-      <div class="channel">
-        <div class="ico">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-        </div>
-        <div>
-          <h3>Press &amp; partnerships</h3>
-          <p>Media inquiries, broker integrations, affiliate program, podcast appearances, or partnership proposals.</p>
-          <a class="email-link" href="mailto:press@tradevada.com">press@tradevada.com →</a>
-          <div class="sla">Response within 1 week</div>
-        </div>
-      </div>
-
-      <div class="channel teal">
-        <div class="ico">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9 9 0 0 1 9 9c0 5-9 13-9 13s-9-8-9-13z"/><circle cx="12" cy="12" r="3"/></svg>
-        </div>
-        <div>
-          <h3>Privacy &amp; data requests</h3>
-          <p>Data export, deletion requests, GDPR/CCPA inquiries, or questions about how we handle your trade data.</p>
-          <a class="email-link" href="mailto:privacy@tradevada.com">privacy@tradevada.com →</a>
-          <div class="sla">Response within 30 days (GDPR/CCPA)</div>
-        </div>
-      </div>
-
-      <div class="channel">
-        <div class="ico">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        </div>
-        <div>
-          <h3>Everything else</h3>
-          <p>Product feedback, feature ideas, founder reachable for anything that doesn't fit a specific channel.</p>
-          <a class="email-link" href="mailto:hello@tradevada.com">hello@tradevada.com →</a>
-          <div class="sla">Response within 2–3 business days</div>
-        </div>
-      </div>
-
     </div>
-  </section>
-
-  <!-- ============== CONTACT FORM ============== -->
-  <section>
-    <h2>Send us a <span class="accent">message</span></h2>
-    <p class="sub">Prefer a form? Fill this out and we'll route it to the right inbox automatically.</p>
 
     <div class="form-layout">
 
       <!-- Form -->
       <div class="form-card">
         <div class="form-success" id="formSuccess">
-          ✓ Got it. We'll get back to you at the email you provided. Check your inbox (and spam) over the next few days.
+          ✓ Got it. We'll get back to you at the email you provided. Check your inbox (and spam) over the next 24 business hours.
         </div>
         <div class="form-error" id="formError">
           Something went wrong sending that. Email us at <a href="mailto:support@tradevada.com">support@tradevada.com</a> instead.
@@ -349,12 +300,10 @@
               <label for="topic">What's this about?</label>
               <select class="field" id="topic" name="topic" required>
                 <option value="">Choose one…</option>
-                <option value="Support">Customer support</option>
+                <option value="Account">Account &amp; sign-in</option>
+                <option value="Broker sync">Broker sync / missing trades</option>
                 <option value="Billing">Billing &amp; subscriptions</option>
-                <option value="Security">Security disclosure</option>
-                <option value="Privacy">Privacy / data request</option>
-                <option value="Press">Press &amp; partnerships</option>
-                <option value="Feedback">Product feedback</option>
+                <option value="Feature">Feature request / feedback</option>
                 <option value="Other">Something else</option>
               </select>
             </div>
@@ -381,12 +330,10 @@
       <!-- Sidebar info -->
       <div>
         <div class="info-card">
-          <h4>Response times</h4>
-          <div class="info-row"><span class="lbl">Customer support</span><span class="val">&lt; 24h</span></div>
-          <div class="info-row"><span class="lbl">Billing inquiries</span><span class="val">&lt; 24h</span></div>
-          <div class="info-row"><span class="lbl">Security disclosures</span><span class="val">&lt; 24h ack</span></div>
-          <div class="info-row"><span class="lbl">Press &amp; partnerships</span><span class="val">&lt; 7 days</span></div>
-          <div class="info-row"><span class="lbl">Privacy requests</span><span class="val">&lt; 30 days</span></div>
+          <h4>What to expect</h4>
+          <div class="info-row"><span class="lbl">First response</span><span class="val">&lt; 24h</span></div>
+          <div class="info-row"><span class="lbl">Support hours</span><span class="val">Mon–Fri</span></div>
+          <div class="info-row"><span class="lbl">Channel</span><span class="val">Email-only</span></div>
         </div>
 
         <div class="info-card">
@@ -394,7 +341,6 @@
           <div class="info-row"><span class="lbl">Legal entity</span><span class="val">Tradevada, LLC</span></div>
           <div class="info-row"><span class="lbl">Jurisdiction</span><span class="val">Texas, USA</span></div>
           <div class="info-row"><span class="lbl">Founded</span><span class="val">2026</span></div>
-          <div class="info-row"><span class="lbl">Support hours</span><span class="val">Async · Email-only</span></div>
         </div>
 
         <div class="self-serve">
