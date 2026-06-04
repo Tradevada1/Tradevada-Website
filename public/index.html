@@ -1469,7 +1469,7 @@
     });
   })();
 
-  // Newsletter (Formspree)
+  // Newsletter -> Resend (via /api/subscribe)
   function subscribeEmail(ev){
     ev.preventDefault();
     const email=document.getElementById('nl-email');
@@ -1479,11 +1479,9 @@
     const re=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if(!re.test(email.value.trim())){email.style.borderColor='#ef4444';return false;}
     email.style.borderColor='';
-    fetch('https://formspree.io/f/xaqvpeqa',{
-      method:'POST',
-      headers:{'Accept':'application/json'},
-      body:new FormData(form)
-    }).then(()=>{form.style.display='none';success.style.display='block';}).catch(()=>{form.style.display='none';success.style.display='block';});
+    fetch('/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email.value.trim(),name:name.value.trim()})})
+      .then(()=>{form.style.display='none';success.style.display='block';})
+      .catch(()=>{form.style.display='none';success.style.display='block';});
     return false;
   }
 

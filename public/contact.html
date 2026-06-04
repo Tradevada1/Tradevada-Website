@@ -373,45 +373,30 @@
 </footer>
 
 <script>
-  // Routes contact-form submissions through Formspree (same endpoint as the newsletter,
-  // tagged differently so they're easy to filter into folders).
-  const FORMSPREE_URL = 'https://formspree.io/f/xaqvpeqa';
-
   async function submitContact(ev){
     ev.preventDefault();
-    const form = document.getElementById('contactForm');
-    const btn = document.getElementById('submitBtn');
-    const success = document.getElementById('formSuccess');
-    const error = document.getElementById('formError');
-
-    success.classList.remove('show');
-    error.classList.remove('show');
-    btn.disabled = true;
-    btn.textContent = 'Sending…';
-
-    const data = new FormData(form);
-    data.append('_subject', 'Contact form: ' + (data.get('topic') || 'General') + ' — ' + (data.get('subject') || ''));
-    data.append('source', 'contact.html');
-
-    try {
-      const resp = await fetch(FORMSPREE_URL, {
-        method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      });
-      if (resp.ok) {
-        form.reset();
-        success.classList.add('show');
-        btn.textContent = 'Send message →';
-        success.scrollIntoView({behavior:'smooth', block:'center'});
-      } else {
-        throw new Error('Bad response');
-      }
-    } catch (e) {
+    const form=document.getElementById('contactForm');
+    const btn=document.getElementById('submitBtn');
+    const success=document.getElementById('formSuccess');
+    const error=document.getElementById('formError');
+    success.classList.remove('show'); error.classList.remove('show');
+    btn.disabled=true; btn.textContent='Sending…';
+    const payload={
+      name:form.name.value, email:form.email.value, topic:form.topic.value,
+      subject:form.subject.value, message:form.message.value, _gotcha:form._gotcha.value
+    };
+    try{
+      const resp=await fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+      if(!resp.ok) throw new Error('bad response');
+      form.reset();
+      success.classList.add('show');
+      btn.textContent='Send message →';
+      success.scrollIntoView({behavior:'smooth',block:'center'});
+    }catch(e){
       error.classList.add('show');
-      btn.textContent = 'Send message →';
-    } finally {
-      btn.disabled = false;
+      btn.textContent='Send message →';
+    }finally{
+      btn.disabled=false;
     }
     return false;
   }
