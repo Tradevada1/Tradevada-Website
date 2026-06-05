@@ -13,6 +13,6 @@ not_found_handling = "404-page"
 # requires the RESEND_API_KEY secret to have FULL access — adding contacts
 # isn't allowed with a Sending-only key.
 [vars]
-# RESEND_AUDIENCE_ID = "aud_xxxxxxxxxxxxxxxx"
+RESEND_AUDIENCE_ID = "3e5c7c86-20ee-49a6-8595-c62a56cd1588"
 # CONTACT_TO = "support@tradevada.com"
 # MAIL_FROM = "Tradevada <noreply@tradevada.com>"
