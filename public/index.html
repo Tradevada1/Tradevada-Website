@@ -471,7 +471,7 @@
   #nl-submit{padding:14px 24px;border-radius:12px;font-weight:600;font-size:14px;
     background:linear-gradient(135deg,#9b6cff,#7C3AED);color:#fff;white-space:nowrap;
     box-shadow:0 12px 32px -12px rgba(124,58,237,0.85)}
-  .success-state{display:none;padding:18px;color:var(--teal-2);font-weight:600}
+  .success-state{display:none;padding:18px;color:#0f766e;font-weight:600}
   .nl-fine{margin-top:16px;font-size:12px;color:var(--dim)}
 
   /* ================== PRICING ================== */
@@ -1314,6 +1314,7 @@
       </form>
       <div class="nl-fine">By subscribing, you agree to receive emails from Tradevada. Unsubscribe at any time. Read our <a href="privacy.html" style="color:var(--primary-2);text-decoration:underline;text-underline-offset:2px">Privacy Policy</a>.</div>
       <div class="success-state" id="nl-success">✓ You're on the list. We'll email you the moment Tradevada is open for sign-ups.</div>
+      <div class="nl-fine" id="nl-error" style="display:none;color:#dc2626;font-weight:600;margin-top:10px">Hmm, that didn't go through. Email us at <a href="mailto:support@tradevada.com" style="color:#7c3aed;text-decoration:underline">support@tradevada.com</a> and we'll add you.</div>
     </div>
   </div>
 </section>
@@ -1470,18 +1471,27 @@
   })();
 
   // Newsletter -> Resend (via /api/subscribe)
-  function subscribeEmail(ev){
+  async function subscribeEmail(ev){
     ev.preventDefault();
     const email=document.getElementById('nl-email');
     const name=document.getElementById('nl-name');
     const success=document.getElementById('nl-success');
+    const error=document.getElementById('nl-error');
     const form=document.getElementById('newsletter-form');
+    const btn=document.getElementById('nl-submit');
     const re=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if(error)error.style.display='none';
     if(!re.test(email.value.trim())){email.style.borderColor='#ef4444';return false;}
     email.style.borderColor='';
-    fetch('/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email.value.trim(),name:name.value.trim()})})
-      .then(()=>{form.style.display='none';success.style.display='block';})
-      .catch(()=>{form.style.display='none';success.style.display='block';});
+    if(btn){btn.disabled=true;btn.textContent='Subscribing…';}
+    try{
+      const resp=await fetch('/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email.value.trim(),name:name.value.trim()})});
+      if(!resp.ok) throw new Error('bad response');
+      form.style.display='none';success.style.display='block';
+    }catch(e){
+      if(error)error.style.display='block';
+      if(btn){btn.disabled=false;btn.textContent='Subscribe →';}
+    }
     return false;
   }
 
