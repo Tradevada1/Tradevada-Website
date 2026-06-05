@@ -39,7 +39,7 @@ function welcomeHtml(name) {
   const hi = name ? `Hi ${escapeHtml(name)},` : "Hey there,";
   return `
     <div style="font-family:Arial,Helvetica,sans-serif;max-width:560px;margin:0 auto;color:#15151e;line-height:1.6">
-      <h2 style="color:#15151e">Welcome to Tradevada 🐺</h2>
+      <h2 style="color:#15151e">Welcome to Tradevada</h2>
       <p>${hi}</p>
       <p>Thanks for joining. As promised, here&rsquo;s your <strong>Trading Playbook</strong> — it&rsquo;s attached to this email, and you can also download it here:</p>
       <p style="text-align:center;margin:28px 0">
