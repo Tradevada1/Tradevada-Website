@@ -7,3 +7,12 @@ main = "src/index.js"
 directory = "./public"
 binding = "ASSETS"
 not_found_handling = "404-page"
+
+# Optional vars. Uncomment + fill to auto-add newsletter subscribers to a
+# Resend Audience (your contact list for conversion campaigns). NOTE: this
+# requires the RESEND_API_KEY secret to have FULL access — adding contacts
+# isn't allowed with a Sending-only key.
+[vars]
+# RESEND_AUDIENCE_ID = "aud_xxxxxxxxxxxxxxxx"
+# CONTACT_TO = "support@tradevada.com"
+# MAIL_FROM = "Tradevada <noreply@tradevada.com>"
