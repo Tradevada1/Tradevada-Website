@@ -31,6 +31,26 @@ const DEFAULTS = {
   MAIL_FROM: "Tradevada <noreply@tradevada.com>",
 };
 
+// Public URL of the Trading Playbook PDF (lives in ./public). New newsletter
+// subscribers get it emailed to them automatically (attached + a download link).
+const PLAYBOOK_URL = "https://www.tradevada.com/playbook.pdf";
+
+function welcomeHtml(name) {
+  const hi = name ? `Hi ${escapeHtml(name)},` : "Hey there,";
+  return `
+    <div style="font-family:Arial,Helvetica,sans-serif;max-width:560px;margin:0 auto;color:#15151e;line-height:1.6">
+      <h2 style="color:#15151e">Welcome to Tradevada 🐺</h2>
+      <p>${hi}</p>
+      <p>Thanks for joining. As promised, here&rsquo;s your <strong>Trading Playbook</strong> — it&rsquo;s attached to this email, and you can also download it here:</p>
+      <p style="text-align:center;margin:28px 0">
+        <a href="${PLAYBOOK_URL}" style="background:#7c3aed;color:#fff;text-decoration:none;font-weight:700;padding:14px 28px;border-radius:10px;display:inline-block">Download the Playbook →</a>
+      </p>
+      <p>We&rsquo;ll send practical, no-spam trading insights — only when it&rsquo;s worth it.</p>
+      <p style="margin-top:24px">— The Tradevada team<br>
+      <a href="https://www.tradevada.com" style="color:#7c3aed;text-decoration:none">tradevada.com</a></p>
+    </div>`;
+}
+
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
@@ -200,6 +220,23 @@ async function handleSubscribe(request, env) {
   } catch (err) {
     console.error("subscribe notify failed:", err);
     return json({ error: "send_failed" }, 502);
+  }
+
+  // 3) Send the subscriber their welcome email + the Trading Playbook.
+  //    Resend fetches the PDF from `path` and attaches it. Non-fatal: the
+  //    subscription already succeeded, so a delivery hiccup never errors the form.
+  try {
+    await sendResendEmail(env, {
+      from,
+      to: [email],
+      subject: "Your Tradevada Trading Playbook 📈",
+      html: welcomeHtml(name),
+      attachments: [
+        { filename: "Tradevada-Trading-Playbook.pdf", path: PLAYBOOK_URL },
+      ],
+    });
+  } catch (err) {
+    console.error("playbook welcome email failed:", err);
   }
 
   return json({ ok: true });
