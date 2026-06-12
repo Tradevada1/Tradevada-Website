@@ -51,6 +51,9 @@ const BLOG_CSS = `<style>
 .blog-hero h1{font-size:46px;font-weight:800;letter-spacing:-0.035em;margin:0 0 12px;color:var(--text);line-height:1.12}
 .blog-hero h1 .accent{background:linear-gradient(135deg,#9b6cff 0,#7c3aed 55%,#6516d9 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .blog-hero p{color:var(--muted);font-size:16px;margin:0}
+.blog-hero-banner{margin:0 0 36px;border-radius:18px;overflow:hidden;border:1px solid var(--border);box-shadow:0 22px 54px -22px rgba(12,14,38,0.35)}
+.blog-hero-banner img{width:100%;height:300px;object-fit:cover;display:block}
+@media (max-width:599px){.blog-hero-banner img{height:170px}}
 .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:36px}
 .blog-card{display:flex;flex-direction:column;gap:10px;background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:22px;box-shadow:0 14px 38px -18px rgba(12,14,38,0.18);transition:border-color .15s,transform .15s,box-shadow .15s;text-decoration:none;position:relative;overflow:hidden}
 .blog-card-img{margin:-22px -22px 4px;height:170px;overflow:hidden;border-bottom:1px solid var(--border)}
@@ -206,12 +209,16 @@ ${p.tag ? `<span class="blog-tag">${esc(p.tag)}</span>` : ''}
 <p>${esc(p.description)}</p>
 <div class="blog-card-meta">${fmtDate(p.date)} · ${p.readMinutes} min read</div>
 </a>`).join('\n');
+  const mainHero = heroExists('/img/blog/blog-hero.jpg')
+    ? `<div class="blog-hero-banner"><img src="/img/blog/blog-hero.jpg" alt="The Tradevada Blog" loading="eager"></div>`
+    : '';
   const body = `<main class="blog-main">
 <section class="blog-hero">
 <span class="blog-eyebrow">The Tradevada Blog</span>
 <h1>Journal smarter. <span class="accent">Trade the data.</span></h1>
 <p>Journaling, analytics, and the wheel — for traders who track.</p>
 </section>
+${mainHero}
 <section class="blog-grid">
 ${cards}
 </section>

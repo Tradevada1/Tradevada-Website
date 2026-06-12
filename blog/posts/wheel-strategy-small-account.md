@@ -5,6 +5,7 @@ description: How much money you need for the wheel strategy, which stocks fit a 
 date: 2026-06-05
 tag: Wheel Strategy
 read_minutes: 7
+hero_image: /img/blog/wheel-strategy-small-account.jpg
 ---
 
 "How much money do I need for the wheel strategy?" is the most asked question in every options income community, and the honest answer is: enough to secure one put on a stock you'd genuinely own — for many traders that's $2,000–5,000 — plus the discipline to treat a small account differently than a big one.
