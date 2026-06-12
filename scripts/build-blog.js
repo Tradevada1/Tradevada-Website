@@ -45,8 +45,8 @@ function loadShell() {
 }
 
 const BLOG_CSS = `<style>
-.blog-main{max-width:1060px;margin:0 auto;padding:46px 22px 70px}
-.blog-hero{text-align:center;padding:16px 0 44px;position:relative}
+.blog-main{max-width:1060px;margin:0 auto;padding:36px 22px 70px}
+.blog-hero{text-align:center;padding:16px 0 26px;position:relative}
 .blog-hero .blog-eyebrow{display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:0.22em;text-transform:uppercase;color:var(--primary);background:var(--primary-soft);border:1px solid rgba(124,58,237,.25);border-radius:999px;padding:6px 14px;margin-bottom:16px}
 .blog-hero h1{font-size:46px;font-weight:800;letter-spacing:-0.035em;margin:0 0 12px;color:var(--text);line-height:1.12}
 .blog-hero h1 .accent{background:linear-gradient(135deg,#9b6cff 0,#7c3aed 55%,#6516d9 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
