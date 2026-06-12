@@ -1,0 +1,11 @@
+{
+  "name": "tradevada-website",
+  "private": true,
+  "scripts": {
+    "build:blog": "node scripts/build-blog.js",
+    "deploy": "node scripts/build-blog.js && wrangler deploy"
+  },
+  "devDependencies": {
+    "marked": "^15.0.0"
+  }
+}
