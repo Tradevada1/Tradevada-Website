@@ -5,7 +5,7 @@ description: Rolling feels like defense, but sometimes it's just postponing a de
 date: 2026-06-10
 tag: Wheel Strategy
 read_minutes: 7
-hero_image: /img/blog/hero-roll-csp.png
+hero_image: /img/blog/when-to-roll-cash-secured-put.jpg
 ---
 
 Your short put is in the money, expiry is close, and you have two honest choices: roll the position out (and maybe down) for a credit, or let the shares come to you. Both are legitimate. The mistake is not choosing — rolling on autopilot every time the strike gets touched.

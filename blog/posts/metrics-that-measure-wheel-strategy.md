@@ -5,6 +5,7 @@ description: Premium sellers win most of their trades and can still lose money. 
 date: 2026-06-06
 tag: Trade Analysis
 read_minutes: 6
+hero_image: /img/blog/metrics-that-measure-wheel-strategy.jpg
 ---
 
 Every premium seller has a great win rate. Selling options at a 30 delta means winning roughly 70% of the time before you've shown any skill at all. That's why win rate is the most quoted and least useful number in wheel trading — the wins are small and frequent, and one unmanaged loser can erase twenty of them.

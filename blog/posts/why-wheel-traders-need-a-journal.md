@@ -5,6 +5,7 @@ description: The wheel produces more bookkeeping per dollar than almost any stra
 date: 2026-06-14
 tag: Journaling
 read_minutes: 7
+hero_image: /img/blog/why-wheel-traders-need-a-journal.jpg
 ---
 
 A single wheel cycle can produce a dozen records: the put you sold, the roll, the assignment, three covered calls, a buyback, the call-away. Multiply by ten tickers and a year of trading, and you have hundreds of fills that all relate to each other. That relationship is where the insight lives — and it's exactly what a spreadsheet quietly loses.

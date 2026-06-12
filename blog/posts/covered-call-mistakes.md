@@ -5,6 +5,7 @@ description: The call side of the wheel looks easy. These five habits are why mo
 date: 2026-06-08
 tag: Covered Calls
 read_minutes: 7
+hero_image: /img/blog/covered-call-mistakes.jpg
 ---
 
 Covered calls feel like free money right up until the stock does something. Then every weakness in your process shows up at once. These are the five mistakes that come up over and over in real journals — and what the fix looks like.

@@ -147,6 +147,11 @@ function fmtDate(d) {
   return `${months[parseInt(m[2], 10) - 1]} ${parseInt(m[3], 10)}, ${m[1]}`;
 }
 
+function heroExists(rel) {
+  if (!rel) return false;
+  return fs.existsSync(path.join(ROOT, 'public', rel.replace(/^\//, '')));
+}
+
 function loadPosts() {
   const posts = [];
   for (const fn of fs.readdirSync(POSTS_DIR).sort()) {
@@ -165,8 +170,8 @@ function loadPosts() {
       date: meta.date || '',
       tag: meta.tag || '',
       readMinutes: parseInt(meta.read_minutes, 10) || 5,
-      ogImage: meta.og_image || meta.hero_image || DEFAULT_OG,
-      heroImage: meta.hero_image || '',
+      ogImage: heroExists(meta.og_image) ? meta.og_image : (heroExists(meta.hero_image) ? meta.hero_image : DEFAULT_OG),
+      heroImage: heroExists(meta.hero_image) ? meta.hero_image : '',
       html: injectMidCta(marked.parse(body)),
     });
   }

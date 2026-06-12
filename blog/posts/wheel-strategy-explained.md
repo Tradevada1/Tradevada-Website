@@ -5,7 +5,7 @@ description: Sell puts, take assignment, sell calls, repeat. How the wheel actua
 date: 2026-06-12
 tag: Wheel Strategy
 read_minutes: 8
-hero_image: /img/blog/hero-wheel-explained.png
+hero_image: /img/blog/wheel-strategy-explained.jpg
 ---
 
 The wheel is the rare options strategy that's easy to describe and hard to execute with discipline. You sell cash-secured puts on a stock you'd be happy to own. If you get assigned, you sell covered calls against the shares. If the shares get called away, you start over. Every turn of the wheel collects premium.
