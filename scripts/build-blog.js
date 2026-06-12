@@ -110,13 +110,6 @@ const CTA_HTML = `<div class="blog-cta">
 <a class="btn primary" href="${SIGNUP_URL}">Get Started →</a>
 </div>`;
 
-function injectMidCta(html) {
-  const matches = [...html.matchAll(/<h2[\s>]/g)];
-  if (matches.length < 2) return html;
-  const i = matches[1].index;
-  return html.slice(0, i) + CTA_HTML + '\n' + html.slice(i);
-}
-
 function page(shell, {title, metaHtml, bodyHtml}) {
   return `<!DOCTYPE html>
 <html lang="en">
@@ -172,7 +165,7 @@ function loadPosts() {
       readMinutes: parseInt(meta.read_minutes, 10) || 5,
       ogImage: heroExists(meta.og_image) ? meta.og_image : (heroExists(meta.hero_image) ? meta.hero_image : DEFAULT_OG),
       heroImage: heroExists(meta.hero_image) ? meta.hero_image : '',
-      html: injectMidCta(marked.parse(body)),
+      html: marked.parse(body),
     });
   }
   posts.sort((a, b) => b.date.localeCompare(a.date));
