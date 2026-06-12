@@ -1,5 +1,6 @@
 ---
 title: Managing a Losing Cash-Secured Put — The Defense Playbook
+seo_title: Managing a Losing Cash-Secured Put
 slug: managing-losing-cash-secured-put
 description: Your short put is deep in the money. Roll, take assignment, or cut? A decision framework for managing losing cash-secured puts without making it worse.
 date: 2026-05-30

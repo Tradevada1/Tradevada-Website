@@ -1,5 +1,6 @@
 ---
 title: Win Rate Lies — The Metrics That Actually Measure a Wheel Strategy
+seo_title: Wheel Strategy Metrics That Matter
 slug: metrics-that-measure-wheel-strategy
 description: Premium sellers win most of their trades and can still lose money. Here are the numbers that tell the truth about a wheel.
 date: 2026-06-06

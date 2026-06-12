@@ -1,5 +1,6 @@
 ---
 title: Why Every Wheel Trader Needs a Real Journal (Not a Spreadsheet)
+seo_title: Why Wheel Traders Need a Trading Journal
 slug: why-wheel-traders-need-a-journal
 description: The wheel produces more bookkeeping per dollar than almost any strategy. What to track, why spreadsheets break, and what good tracking gives you back.
 date: 2026-06-14

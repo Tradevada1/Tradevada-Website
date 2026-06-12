@@ -1,5 +1,6 @@
 ---
 title: A Weekly Routine for Wheel Traders (That Takes Under an Hour)
+seo_title: Weekly Routine for Wheel Traders
 slug: wheel-trading-weekly-routine
 description: The weekly options trading routine that keeps a wheel portfolio managed — what to check, when to roll, and the review habit that compounds skill.
 date: 2026-06-04

@@ -1,5 +1,6 @@
 ---
 title: Options Greeks for Wheel Traders — Delta, Theta, and DTE in Plain English
+seo_title: Options Greeks for Wheel Traders
 slug: options-greeks-for-wheel-traders
 description: The options Greeks that actually matter for cash-secured puts and covered calls — how delta sets your odds, theta sets your pay, and DTE sets the terms.
 date: 2026-06-03

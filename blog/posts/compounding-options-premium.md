@@ -1,5 +1,6 @@
 ---
 title: Compounding Options Premium — Turning Small Credits Into Real Capital
+seo_title: Compounding Options Premium
 slug: compounding-options-premium
 description: How reinvesting options premium compounds a wheel account, the snowball math at 1.5–2.5% a month, and the habits that protect the curve.
 date: 2026-06-01

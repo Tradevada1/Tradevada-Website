@@ -1,5 +1,6 @@
 ---
 title: Monthly Income From Selling Options — What's Realistic
+seo_title: Monthly Income From Selling Options
 slug: monthly-income-selling-options
 description: Can you generate monthly income selling options? Realistic return targets for cash-secured puts and covered calls, and the lifestyle math nobody posts.
 date: 2026-06-13

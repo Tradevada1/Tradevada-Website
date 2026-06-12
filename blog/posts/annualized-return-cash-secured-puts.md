@@ -1,5 +1,6 @@
 ---
 title: How to Calculate Annualized Return on Cash-Secured Puts
+seo_title: Annualized Return on Cash-Secured Puts
 slug: annualized-return-cash-secured-puts
 description: The formula wheel traders should use, with worked examples.
 date: 2026-06-15

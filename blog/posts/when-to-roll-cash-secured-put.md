@@ -1,5 +1,6 @@
 ---
 title: When to Roll a Cash-Secured Put — and When to Take Assignment
+seo_title: When to Roll a Cash-Secured Put
 slug: when-to-roll-cash-secured-put
 description: Rolling feels like defense, but sometimes it's just postponing a decision. A framework for choosing between the roll and the shares.
 date: 2026-06-10

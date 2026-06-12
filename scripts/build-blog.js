@@ -100,6 +100,10 @@ const BLOG_CSS = `<style>
 .blog-cta-head{font-size:20px;font-weight:800;letter-spacing:-0.02em;color:var(--text);margin-bottom:8px}
 .blog-cta-body{color:var(--muted);font-size:14.5px;line-height:1.6;margin-bottom:16px}
 .blog-cta .btn.primary{display:inline-flex}
+.blog-related{margin-top:6px}
+.blog-related h2{font-size:15px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--text);margin:0 0 10px}
+.blog-related a{display:block;color:var(--primary);font-size:14.5px;font-weight:600;text-decoration:none;padding:7px 0;border-bottom:1px solid var(--border)}
+.blog-related a:hover{text-decoration:underline}
 .blog-pagenav{display:flex;justify-content:space-between;gap:14px;margin-top:34px;padding-top:22px;border-top:1px solid var(--border)}
 .blog-pagenav a{color:var(--muted);font-size:13.5px;font-weight:600;max-width:46%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-decoration:none}
 .blog-pagenav a:hover{color:var(--primary)}
@@ -162,6 +166,7 @@ function loadPosts() {
     posts.push({
       slug,
       title: meta.title || slug.replace(/-/g, ' '),
+      seoTitle: meta.seo_title || meta.title || slug.replace(/-/g, ' '),
       description: meta.description || '',
       date: meta.date || '',
       tag: meta.tag || '',
@@ -237,7 +242,19 @@ ${CTA_HTML}
   });
 }
 
-function buildPost(shell, p, older, newer) {
+function relatedHtml(p, posts) {
+  const sameTag = posts.filter(x => x.slug !== p.slug && x.tag === p.tag);
+  const rest = posts.filter(x => x.slug !== p.slug && x.tag !== p.tag);
+  const picks = sameTag.concat(rest).slice(0, 3);
+  if (!picks.length) return '';
+  const items = picks.map(x => `<a href="/blog/${x.slug}">${esc(x.title)}</a>`).join('\n');
+  return `<section class="blog-related">
+<h2>Keep reading</h2>
+${items}
+</section>`;
+}
+
+function buildPost(shell, p, older, newer, posts) {
   const ld = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -261,6 +278,7 @@ ${p.heroImage ? `<div class="blog-article-hero"><img src="${p.heroImage}" alt="$
 ${p.html}
 </div>
 ${CTA_HTML}
+${relatedHtml(p, posts)}
 </article>
 <nav class="blog-pagenav">
 ${older ? `<a href="/blog/${older.slug}">← ${esc(older.title)}</a>` : '<span></span>'}
@@ -268,7 +286,7 @@ ${newer ? `<a href="/blog/${newer.slug}">${esc(newer.title)} →</a>` : ''}
 </nav>
 </main>`;
   return page(shell, {
-    title: `${p.title} | Tradevada`,
+    title: `${p.seoTitle} | Tradevada`,
     metaHtml: seoMeta({
       title: p.title,
       description: p.description,
@@ -300,7 +318,7 @@ function main() {
   posts.forEach((p, i) => {
     const newer = i > 0 ? posts[i - 1] : null;
     const older = i + 1 < posts.length ? posts[i + 1] : null;
-    fs.writeFileSync(path.join(OUT_DIR, `${p.slug}.html`), buildPost(shell, p, older, newer));
+    fs.writeFileSync(path.join(OUT_DIR, `${p.slug}.html`), buildPost(shell, p, older, newer, posts));
   });
   updateSitemap(posts);
   console.log(`built ${posts.length} post(s) + index into public/blog/`);

@@ -1,5 +1,6 @@
 ---
 title: Trading Psychology for Premium Sellers — Discipline Beats Conviction
+seo_title: Trading Psychology for Premium Sellers
 slug: trading-psychology-discipline
 description: Why options sellers blow up less from bad strategy and more from broken discipline — revenge trading, oversizing, and the systems that prevent both.
 date: 2026-05-28

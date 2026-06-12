@@ -1,5 +1,6 @@
 ---
 title: IV Rank Explained — When Implied Volatility Pays Premium Sellers
+seo_title: IV Rank Explained for Premium Sellers
 slug: iv-rank-for-premium-sellers
 description: What implied volatility and IV rank actually measure, why premium sellers care, and how to use IV rank to time cash-secured puts and covered calls.
 date: 2026-06-11
