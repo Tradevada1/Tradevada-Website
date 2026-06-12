@@ -5,7 +5,6 @@ description: The formula wheel traders should use, with worked examples.
 date: 2026-06-15
 tag: Wheel Strategy
 read_minutes: 6
-hero_image: /img/blog/annualized-return-cash-secured-puts.jpg
 ---
 
 Selling a cash-secured put for $44 sounds small until you ask the only question that matters: what is that premium worth as a rate of return on the cash you parked to secure it? Two trades with identical premiums can have wildly different answers, and the difference is time.
