@@ -53,21 +53,29 @@ const BLOG_CSS = `<style>
 .blog-hero p{color:var(--muted);font-size:16px;margin:0}
 .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:36px}
 .blog-card{display:flex;flex-direction:column;gap:10px;background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:22px;box-shadow:0 14px 38px -18px rgba(12,14,38,0.18);transition:border-color .15s,transform .15s,box-shadow .15s;text-decoration:none;position:relative;overflow:hidden}
+.blog-card-img{margin:-22px -22px 4px;height:170px;overflow:hidden;border-bottom:1px solid var(--border)}
+.blog-card-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .25s}
+.blog-card:hover .blog-card-img img{transform:scale(1.04)}
 .blog-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#9b6cff,#7c3aed 60%,transparent);opacity:0;transition:opacity .15s}
 .blog-card:hover{border-color:var(--primary);transform:translateY(-3px);box-shadow:0 22px 48px -16px rgba(124,58,237,.35)}
 .blog-card:hover::before{opacity:1}
 .blog-card h2{font-size:19px;font-weight:800;letter-spacing:-0.02em;line-height:1.3;color:var(--text);margin:0}
 .blog-card p{color:var(--muted);font-size:13.5px;line-height:1.55;margin:0;flex:1}
 .blog-card-meta{color:var(--dim);font-size:11.5px;font-weight:600}
-.blog-card.featured{grid-column:1 / -1;flex-direction:row;align-items:center;gap:26px;padding:30px 32px;background:linear-gradient(135deg,rgba(124,58,237,.07),var(--panel) 55%)}
-.blog-card.featured .blog-feat-body{flex:1;display:flex;flex-direction:column;gap:12px}
+.blog-card.featured{grid-column:1 / -1;flex-direction:row;align-items:stretch;gap:0;padding:0;background:linear-gradient(135deg,rgba(124,58,237,.07),var(--panel) 55%)}
+.blog-card.featured .blog-feat-img{flex:0 0 42%;overflow:hidden}
+.blog-card.featured .blog-feat-img img{width:100%;height:100%;object-fit:cover;display:block;min-height:280px;transition:transform .25s}
+.blog-card.featured:hover .blog-feat-img img{transform:scale(1.03)}
+.blog-card.featured .blog-feat-body{flex:1;display:flex;flex-direction:column;justify-content:center;gap:12px;padding:30px 32px}
 .blog-card.featured h2{font-size:28px;letter-spacing:-0.03em;line-height:1.2}
 .blog-card.featured p{font-size:15px;line-height:1.6}
 .blog-card.featured .blog-feat-arrow{flex-shrink:0;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#9b6cff 0,#7c3aed 52%,#6516d9 100%);color:#fff;font-size:22px;box-shadow:0 12px 32px -12px rgba(124,58,237,.85)}
-@media (max-width:899px){.blog-card.featured{flex-direction:column;align-items:flex-start}.blog-card.featured .blog-feat-arrow{display:none}.blog-card.featured h2{font-size:22px}}
+@media (max-width:899px){.blog-card.featured{flex-direction:column;align-items:stretch}.blog-card.featured .blog-feat-img{flex:none;max-height:220px}.blog-card.featured .blog-feat-img img{min-height:0;height:220px}.blog-card.featured .blog-feat-arrow{display:none}.blog-card.featured h2{font-size:22px}}
 .blog-tag{align-self:flex-start;display:inline-block;padding:3px 10px;border-radius:999px;font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:var(--primary-soft);color:var(--primary);border:1px solid rgba(124,58,237,.30)}
 .blog-article{max-width:700px;margin:0 auto;padding:46px 22px 70px}
 .blog-article-head{margin-bottom:26px}
+.blog-article-hero{margin:0 0 28px;border-radius:16px;overflow:hidden;border:1px solid var(--border);box-shadow:0 14px 38px -18px rgba(12,14,38,0.18)}
+.blog-article-hero img{width:100%;height:auto;display:block}
 .blog-article-head h1{font-size:34px;font-weight:800;line-height:1.22;letter-spacing:-0.03em;margin:12px 0 10px;color:var(--text)}
 .blog-article-meta{color:var(--dim);font-size:13px}
 .blog-article-body{font-size:18px;line-height:1.7;color:rgba(21,21,30,.8)}
@@ -98,8 +106,8 @@ const BLOG_CSS = `<style>
 
 const CTA_HTML = `<div class="blog-cta">
 <div class="blog-cta-head">Tradevada tracks this automatically.</div>
-<div class="blog-cta-body">Win rate by strategy, premium collected, annualized returns — imported straight from your broker. Beta opens soon.</div>
-<a class="btn primary" href="${SIGNUP_URL}">Join the beta waitlist</a>
+<div class="blog-cta-body">Win rate by strategy, premium collected, annualized returns — imported straight from your broker.</div>
+<a class="btn primary" href="${SIGNUP_URL}">Get Started →</a>
 </div>`;
 
 function injectMidCta(html) {
@@ -157,7 +165,8 @@ function loadPosts() {
       date: meta.date || '',
       tag: meta.tag || '',
       readMinutes: parseInt(meta.read_minutes, 10) || 5,
-      ogImage: meta.og_image || DEFAULT_OG,
+      ogImage: meta.og_image || meta.hero_image || DEFAULT_OG,
+      heroImage: meta.hero_image || '',
       html: injectMidCta(marked.parse(body)),
     });
   }
@@ -184,15 +193,16 @@ function seoMeta({title, description, url, ogImage, type, published}) {
 function buildIndex(shell, posts) {
   const cards = posts.map((p, i) => i === 0
     ? `<a class="blog-card featured" href="/blog/${p.slug}">
+${p.heroImage ? `<div class="blog-feat-img"><img src="${p.heroImage}" alt="${esc(p.title)}" loading="eager"></div>` : ''}
 <div class="blog-feat-body">
 ${p.tag ? `<span class="blog-tag">${esc(p.tag)}</span>` : ''}
 <h2>${esc(p.title)}</h2>
 <p>${esc(p.description)}</p>
 <div class="blog-card-meta">${fmtDate(p.date)} · ${p.readMinutes} min read</div>
 </div>
-<span class="blog-feat-arrow">→</span>
 </a>`
     : `<a class="blog-card" href="/blog/${p.slug}">
+${p.heroImage ? `<div class="blog-card-img"><img src="${p.heroImage}" alt="${esc(p.title)}" loading="lazy"></div>` : ''}
 ${p.tag ? `<span class="blog-tag">${esc(p.tag)}</span>` : ''}
 <h2>${esc(p.title)}</h2>
 <p>${esc(p.description)}</p>
@@ -241,6 +251,7 @@ ${p.tag ? `<span class="blog-tag">${esc(p.tag)}</span>` : ''}
 <h1>${esc(p.title)}</h1>
 <div class="blog-article-meta">${fmtDate(p.date)} · ${p.readMinutes} min read</div>
 </header>
+${p.heroImage ? `<div class="blog-article-hero"><img src="${p.heroImage}" alt="${esc(p.title)}"></div>` : ''}
 <div class="blog-article-body">
 ${p.html}
 </div>
