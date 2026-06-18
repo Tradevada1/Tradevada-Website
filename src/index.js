@@ -55,6 +55,11 @@ export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
 
+    if (url.hostname === "tradevada.com") {
+      url.hostname = "www.tradevada.com";
+      return Response.redirect(url.toString(), 301);
+    }
+
     if (url.pathname === "/api/contact") {
       return handleContact(request, env);
     }
