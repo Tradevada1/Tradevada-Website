@@ -183,6 +183,7 @@ function loadPosts() {
 function seoMeta({title, description, url, ogImage, type, published}) {
   let m = `<meta name="description" content="${esc(description)}">
 <link rel="canonical" href="${url}">
+<meta property="og:site_name" content="Tradevada">
 <meta property="og:type" content="${type}">
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(description)}">
