@@ -55,8 +55,9 @@ export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
 
-    if (url.hostname === "tradevada.com") {
+    if (url.hostname === "tradevada.com" || url.protocol === "http:") {
       url.hostname = "www.tradevada.com";
+      url.protocol = "https:";
       return Response.redirect(url.toString(), 301);
     }
 
