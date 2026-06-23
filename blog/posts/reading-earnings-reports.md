@@ -1,7 +1,7 @@
 ---
 title: Reading earnings reports: what actually moves the stock
 slug: reading-earnings-reports
-description: EPS beats don't move stocks — guidance, margins, and forward commentary do. A practical guide to skimming earnings for what matters in the next 24 hours.
+description: EPS beats don't move stocks - guidance, margins, and forward commentary do. A practical guide to skimming earnings for what matters in the next 24 hours.
 date: 2026-06-12
 tag: Stocks
 read_minutes: 9
@@ -37,7 +37,7 @@ Listen for:
 
 - **What does the CFO emphasize?** They often signal what to watch for next quarter.
 - **What do analysts ask repeatedly?** That's the concern Wall Street has. Pressure points.
-- **Any pivots in language?** "Headwinds" appearing for the first time. "Investment year" — code for margin compression. "Macro uncertainty" — code for they don't know either.
+- **Any pivots in language?** "Headwinds" appearing for the first time. "Investment year" - code for margin compression. "Macro uncertainty" - code for they don't know either.
 
 Most earnings call transcripts are free on the company's IR site within 24 hours.
 
@@ -51,7 +51,7 @@ A company can grow revenue 20% and still have a stock that gets crushed if margi
 | Operating margin | Underlying business profitability |
 | Free cash flow | The cash actually being generated, not accounting profit |
 
-If operating margins are expanding while revenue grows, that's the magic combination — a stock that compounds for years.
+If operating margins are expanding while revenue grows, that's the magic combination - a stock that compounds for years.
 
 If margins are shrinking while revenue grows? The market starts pricing in "growth has a cost." Multiples compress.
 
@@ -91,7 +91,7 @@ Here's what to actually do when you're holding through an earnings print:
 
 **Next day:**
 - Sell-side analysts update price targets pre-market
-- Watch for downgrades after a "beat" or upgrades after a "miss" — they tell you what professionals actually heard on the call
+- Watch for downgrades after a "beat" or upgrades after a "miss" - they tell you what professionals actually heard on the call
 
 ## What to skip
 

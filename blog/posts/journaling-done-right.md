@@ -1,7 +1,7 @@
 ---
 title: Journaling done right: turning random trades into a pattern you can study
 slug: journaling-done-right
-description: A bad journal is a list of trades. A good journal is a map of your decision-making. Here's what to actually write down — and what to ignore.
+description: A bad journal is a list of trades. A good journal is a map of your decision-making. Here's what to actually write down - and what to ignore.
 date: 2026-06-12
 tag: Trading Psychology
 read_minutes: 5
@@ -16,17 +16,17 @@ A useful journal turns trades into data you can learn from. It surfaces patterns
 
 For every trade, capture these things at the moment of decision:
 
-1. **Setup** — What made you take the trade? (e.g. "breakout above 50dma on volume")
-2. **Conviction** — How confident were you, 1-10? Be honest.
-3. **Risk plan** — Stop loss price, target price, position size
-4. **Emotional state** — Calm? Excited? Revenge-trading? FOMO?
-5. **Time of day** — First hour, midday, last hour? Friday afternoon?
+1. **Setup** - What made you take the trade? (e.g. "breakout above 50dma on volume")
+2. **Conviction** - How confident were you, 1-10? Be honest.
+3. **Risk plan** - Stop loss price, target price, position size
+4. **Emotional state** - Calm? Excited? Revenge-trading? FOMO?
+5. **Time of day** - First hour, midday, last hour? Friday afternoon?
 
 After the trade closes, add:
 
-6. **Outcome** — P&L
-7. **What went right or wrong** — One sentence. Not "the market hated me."
-8. **Did you follow your plan?** — Yes / No / Mostly
+6. **Outcome** - P&L
+7. **What went right or wrong** - One sentence. Not "the market hated me."
+8. **Did you follow your plan?** - Yes / No / Mostly
 
 That's it. Eight fields. Anything more and you'll stop doing it.
 
@@ -71,7 +71,7 @@ These are personal patterns. No book or course can show them to you. Your journa
 
 ## Use the trade journal you already have
 
-If you're using Tradevada's Journal tab, you already capture half of this — entry, exit, P&L, ticker. The other half is in your head and it has to make it onto the page (or into the notes field on each trade) for it to count.
+If you're using Tradevada's Journal tab, you already capture half of this - entry, exit, P&L, ticker. The other half is in your head and it has to make it onto the page (or into the notes field on each trade) for it to count.
 
 The minimum viable journal: a Google Doc with eight columns. Doesn't have to be fancy. Has to be **consistent**.
 

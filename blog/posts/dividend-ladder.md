@@ -8,7 +8,7 @@ read_minutes: 8
 hero_image: /img/blog/dividend-ladder.jpg
 ---
 
-A dividend ladder is a portfolio of stocks chosen so that dividend payments land in different months — so cash flows in steadily instead of bunched.
+A dividend ladder is a portfolio of stocks chosen so that dividend payments land in different months - so cash flows in steadily instead of bunched.
 
 It's not flashy. There's no swing trade rush, no options leverage, no overnight 20% rip. It's the kind of investing you forget about and check in on years later, surprised at how much the position has grown.
 
@@ -22,9 +22,9 @@ Three reasons dividend stocks are more interesting than the yield alone:
 
 ## Most US stocks pay quarterly
 
-The standard schedule is four payments per year. Most companies stick to roughly the same months each year — the rhythm doesn't change much.
+The standard schedule is four payments per year. Most companies stick to roughly the same months each year - the rhythm doesn't change much.
 
-Some pay monthly (REITs especially, and ETFs like JEPI/JEPQ). Some pay annually. A few (like O — Realty Income) brand themselves around their monthly payment.
+Some pay monthly (REITs especially, and ETFs like JEPI/JEPQ). Some pay annually. A few (like O - Realty Income) brand themselves around their monthly payment.
 
 For a ladder, you mix stocks in **different quarterly cycles** so payments come in across the year:
 
@@ -34,22 +34,22 @@ For a ladder, you mix stocks in **different quarterly cycles** so payments come 
 | Cycle 2 | Feb / May / Aug / Nov | AAPL, AMZN, CVX |
 | Cycle 3 | Mar / Jun / Sep / Dec | KO, MSFT, PG |
 
-Pick 2-3 names per cycle and you have dividend income hitting every month of the year. (Exact payment months for any specific ticker can shift over time — verify on Yahoo Finance or your brokerage.)
+Pick 2-3 names per cycle and you have dividend income hitting every month of the year. (Exact payment months for any specific ticker can shift over time - verify on Yahoo Finance or your brokerage.)
 
 ## What "good" dividend yield looks like
 
-The naive trap: chasing the highest yield. A 12% yield is almost always 12% for a reason — the company is in trouble or the dividend is about to be cut.
+The naive trap: chasing the highest yield. A 12% yield is almost always 12% for a reason - the company is in trouble or the dividend is about to be cut.
 
 Better filters:
 
 - **Dividend yield 2-5%** for established blue chips (KO, JNJ, PG)
 - **5-7%** for higher-yield names with some risk (T, VZ, BTI)
-- **Above 7%** is dangerous territory — verify the dividend coverage ratio (free cash flow / dividend paid). Under 1.5x is precarious.
+- **Above 7%** is dangerous territory - verify the dividend coverage ratio (free cash flow / dividend paid). Under 1.5x is precarious.
 - **Dividend growth rate** matters more than current yield. A stock yielding 2.5% that grows the dividend 10% per year will out-pay a stock yielding 5% with flat dividends within 8 years.
 
 ## The 5-10 stock rule
 
-A ladder works best with 5-10 names across cycles and sectors. Fewer than 5 and you're too concentrated. More than 10 and you're effectively running an ETF — at which point just buy SCHD or VYM and save yourself the trouble.
+A ladder works best with 5-10 names across cycles and sectors. Fewer than 5 and you're too concentrated. More than 10 and you're effectively running an ETF - at which point just buy SCHD or VYM and save yourself the trouble.
 
 The mix should span:
 - 2-3 cycles (so monthly cash flow)
@@ -67,7 +67,7 @@ But:
 
 In 20 years, that $25,000 with reinvested dividends and modest 7% total return is around $96,000, paying ~$4,800/year. The income tripled while you did nothing.
 
-In 30 years, it's $190,000 paying ~$9,500/year — and most of the gains came from the compounding, not from your contributions.
+In 30 years, it's $190,000 paying ~$9,500/year - and most of the gains came from the compounding, not from your contributions.
 
 ## What to avoid
 
@@ -79,7 +79,7 @@ In 30 years, it's $190,000 paying ~$9,500/year — and most of the gains came fr
 ## The practical playbook
 
 1. Pick 6-8 names across 3 cycles, 4 sectors
-2. Allocate equally to start — $5,000 each in a $30,000-$40,000 portfolio
+2. Allocate equally to start - $5,000 each in a $30,000-$40,000 portfolio
 3. Set DRIP on every holding
 4. Once per quarter, rebalance: top off any name that's drifted under 80% of target weight
 5. Once per year, review: any holding cut its dividend? Replace it. Any one position grown past 25% of portfolio? Trim it.

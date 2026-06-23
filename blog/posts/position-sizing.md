@@ -65,10 +65,10 @@ A more reasonable sizing on that account: maybe one put contract on a $10 stock,
 
 Once you've got the 1% rule locked in, you can layer in more sophisticated sizing:
 
-1. **Core positions** (40-60% of account) — Highest conviction, longest hold, smallest position changes. Boring blue chips, index ETFs, your main income wheel.
-2. **Tactical positions** (20-30%) — Medium conviction, weeks-to-months hold. Earnings plays, sector rotations, specific setups.
-3. **Speculative** (10-15%) — High conviction, short timeframe, OK if it goes to zero. Single-stock momentum, lottery options, etc.
-4. **Cash** (5-20%) — Always have powder dry for opportunities. A position you can't enter is the same as a position you didn't take.
+1. **Core positions** (40-60% of account) - Highest conviction, longest hold, smallest position changes. Boring blue chips, index ETFs, your main income wheel.
+2. **Tactical positions** (20-30%) - Medium conviction, weeks-to-months hold. Earnings plays, sector rotations, specific setups.
+3. **Speculative** (10-15%) - High conviction, short timeframe, OK if it goes to zero. Single-stock momentum, lottery options, etc.
+4. **Cash** (5-20%) - Always have powder dry for opportunities. A position you can't enter is the same as a position you didn't take.
 
 If you blow up the speculative bucket, the core is fine. Survive to trade another day.
 

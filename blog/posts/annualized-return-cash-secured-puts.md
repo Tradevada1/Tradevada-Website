@@ -27,12 +27,12 @@ Say you sell one $17.50 put for $0.44 with 14 days to expiry and let it expire w
 - Collateral: $1,750
 - Days held: 14
 
-Raw yield is 44 ÷ 1,750 = 2.51%. That looks modest — but it took two weeks, not a year. Annualized: 2.51% × (365 ÷ 14) = **65.5%**.
+Raw yield is 44 ÷ 1,750 = 2.51%. That looks modest - but it took two weeks, not a year. Annualized: 2.51% × (365 ÷ 14) = **65.5%**.
 
 Run the same premium on a 45-day contract and the annualized figure drops to about 20%. Same $44. Very different rate.
 
 ## Why this changes which trades you take
 
-Once you annualize consistently, shorter-dated premium often beats fatter, longer-dated premium — and you can finally compare a 7 DTE trade against a 45 DTE trade on equal footing. It also keeps you honest about early exits: buying back at 50% profit in a third of the time usually raises your annualized return even though you left premium on the table.
+Once you annualize consistently, shorter-dated premium often beats fatter, longer-dated premium - and you can finally compare a 7 DTE trade against a 45 DTE trade on equal footing. It also keeps you honest about early exits: buying back at 50% profit in a third of the time usually raises your annualized return even though you left premium on the table.
 
-The catch is the bookkeeping. Every fill, every buyback, every expiry needs the dates and the collateral tracked per trade — which is exactly the kind of arithmetic that should not live in a spreadsheet you update by hand.
+The catch is the bookkeeping. Every fill, every buyback, every expiry needs the dates and the collateral tracked per trade - which is exactly the kind of arithmetic that should not live in a spreadsheet you update by hand.

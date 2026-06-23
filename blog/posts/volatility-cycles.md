@@ -48,7 +48,7 @@ Absolute IV is misleading. A stock at 35% IV could be at the top or bottom of it
 
 For premium sellers, you want IV rank above 50. The higher, the better.
 
-Above 80 is "back up the truck" territory — assuming the stock isn't about to crash through your strike.
+Above 80 is "back up the truck" territory - assuming the stock isn't about to crash through your strike.
 
 ## The "sell when high, buy when low" rule
 
@@ -60,11 +60,11 @@ So you want to OPEN positions when IV is high (you collect rich premium), and ei
 
 The opposite is true for premium buyers. If you're buying long calls or puts:
 - IV rank below 30 is where you want to enter (cheap optionality)
-- IV rank above 60 is brutal — the option has to make a big move just to overcome the implied volatility you paid
+- IV rank above 60 is brutal - the option has to make a big move just to overcome the implied volatility you paid
 
 ## The volatility skew you can't ignore
 
-Index options like SPX have a permanent "skew" — out-of-the-money puts are pricier than out-of-the-money calls. Same distance from the money, different IV.
+Index options like SPX have a permanent "skew" - out-of-the-money puts are pricier than out-of-the-money calls. Same distance from the money, different IV.
 
 This is because crashes happen faster than rallies. Big institutional traders pay up for downside protection, which permanently pumps put prices.
 
@@ -74,10 +74,10 @@ For volatility traders: the put skew can suddenly compress (after a crash + reco
 
 ## Specific tools to track
 
-- **VIX** — market-wide 30-day SPX vol
-- **VXN** — Nasdaq-100 equivalent (usually higher because tech moves more)
-- **Term structure** — VIX9D vs VIX vs VIX3M. In normal times, longer-dated > shorter. In crisis, it inverts.
-- **IV rank per ticker** — most brokerages and Tradevada show this on the option chain
+- **VIX** - market-wide 30-day SPX vol
+- **VXN** - Nasdaq-100 equivalent (usually higher because tech moves more)
+- **Term structure** - VIX9D vs VIX vs VIX3M. In normal times, longer-dated > shorter. In crisis, it inverts.
+- **IV rank per ticker** - most brokerages and Tradevada show this on the option chain
 
 The setup for premium sellers: high IV rank + normal-shaped term structure + a stock you don't mind owning at the strike. Hard to beat.
 
@@ -85,8 +85,8 @@ The setup for premium sellers: high IV rank + normal-shaped term structure + a s
 
 Three setups to avoid:
 
-1. **IV rank under 30** — premium is too low to compensate for the assignment risk
+1. **IV rank under 30** - premium is too low to compensate for the assignment risk
 2. **Just before a binary event** (earnings, FDA decision, Fed) on a small account where one bad gap could hurt
-3. **Right after a vol spike, when IV is still extending higher** — selling on the way up is catching a knife
+3. **Right after a vol spike, when IV is still extending higher** - selling on the way up is catching a knife
 
 The discipline isn't picking the right direction. It's knowing which environment rewards your strategy and which destroys it.

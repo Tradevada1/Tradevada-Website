@@ -1,7 +1,7 @@
 ---
 title: Paper trading vs. small real money: which one actually teaches you
 slug: paper-vs-small-real-money
-description: Paper trading teaches you the mechanics. Small real money teaches you the emotions. You need both — in the right order — and most people skip the second.
+description: Paper trading teaches you the mechanics. Small real money teaches you the emotions. You need both - in the right order - and most people skip the second.
 date: 2026-06-12
 tag: Trading Psychology
 read_minutes: 5
@@ -72,7 +72,7 @@ The big mistake: skipping small real money entirely. You paper trade for a year,
 
 The first real $500 loss will hit harder than every paper trade combined. You're not ready for it. The instinct to over-trade, panic-close, or revenge will appear, and you'll have no calibration for what's normal or what's a warning sign.
 
-Three months of small real money would have saved you from this. The cost is essentially zero — you might lose $200-$500 in the small account, but you avoid losing $5,000-$10,000 from emotional inexperience in the big one.
+Three months of small real money would have saved you from this. The cost is essentially zero - you might lose $200-$500 in the small account, but you avoid losing $5,000-$10,000 from emotional inexperience in the big one.
 
 ## What this means for you right now
 

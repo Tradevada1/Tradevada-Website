@@ -1,7 +1,7 @@
 ---
 title: Rolling options: when to roll, when to take assignment, when to walk away
 slug: rolling-options
-description: You sold a put and now it's under your strike. Rolling for credit can rescue the trade — or quietly bury it. The decision framework matters more than the move.
+description: You sold a put and now it's under your strike. Rolling for credit can rescue the trade - or quietly bury it. The decision framework matters more than the move.
 date: 2026-06-12
 tag: Wheel Strategy
 read_minutes: 7
@@ -14,13 +14,13 @@ Three real options: take assignment, roll the position, or close it. Picking the
 
 ## What "rolling" actually means
 
-To roll an option is to close the current position and open a new one in the same direction, usually for a later expiration and sometimes a different strike. You're not escaping the trade — you're extending it.
+To roll an option is to close the current position and open a new one in the same direction, usually for a later expiration and sometimes a different strike. You're not escaping the trade - you're extending it.
 
 A roll done right collects more credit than it costs. A roll done wrong locks in a loss and pretends it didn't happen.
 
 > **The only honest roll is one that collects net credit and improves your position.**
 
-If you have to pay debit to roll, you're not rolling — you're financing a loss with new risk. Sometimes that's correct. Usually it isn't.
+If you have to pay debit to roll, you're not rolling - you're financing a loss with new risk. Sometimes that's correct. Usually it isn't.
 
 ## The decision tree
 
