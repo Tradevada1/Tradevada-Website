@@ -1,7 +1,7 @@
 ---
 title: Revenge trading: the trap after every losing day and how to spot it in yourself
 slug: revenge-trading
-description: You lose money. You feel like you need to "make it back today." The trade you take next is almost always your worst. Here's why — and the simple rule that stops it.
+description: You lose money. You feel like you need to "make it back today." The trade you take next is almost always your worst. Here's why - and the simple rule that stops it.
 date: 2026-06-12
 tag: Trading Psychology
 read_minutes: 5
@@ -16,13 +16,13 @@ That's revenge trading. Every trader does it at least once. The good ones learn 
 
 Three things are working against you in the moment:
 
-1. **Loss aversion** — losses feel 2x worse than equivalent gains. The pain is real and disproportionate.
-2. **Sunk cost framing** — your brain treats the morning loss as "money I'm owed back," not money that's gone.
-3. **Time compression** — you're trying to fix in one trade what took 4 trades to break.
+1. **Loss aversion** - losses feel 2x worse than equivalent gains. The pain is real and disproportionate.
+2. **Sunk cost framing** - your brain treats the morning loss as "money I'm owed back," not money that's gone.
+3. **Time compression** - you're trying to fix in one trade what took 4 trades to break.
 
 None of these are rational. All of them feel rational in the moment.
 
-The chemistry matters too. A loss triggers cortisol. Elevated cortisol degrades decision-making — measurably, in lab settings. You're literally a worse trader for the next 60-90 minutes after a significant loss.
+The chemistry matters too. A loss triggers cortisol. Elevated cortisol degrades decision-making - measurably, in lab settings. You're literally a worse trader for the next 60-90 minutes after a significant loss.
 
 ## What revenge trades look like
 

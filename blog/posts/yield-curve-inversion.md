@@ -10,7 +10,7 @@ hero_image: /img/blog/yield-curve-inversion.jpg
 
 In normal times, longer-term bonds pay more than shorter-term bonds. You're lending money for longer, so you demand more interest. The chart of yields by maturity slopes up.
 
-When it doesn't — when 2-year Treasuries pay more than 10-year Treasuries — that's an inversion. And for the last 50 years, inversions have preceded every U.S. recession.
+When it doesn't - when 2-year Treasuries pay more than 10-year Treasuries - that's an inversion. And for the last 50 years, inversions have preceded every U.S. recession.
 
 This is one of the few macro signals that actually has predictive value. Worth understanding.
 
@@ -18,10 +18,10 @@ This is one of the few macro signals that actually has predictive value. Worth u
 
 The yield curve plots interest rates against maturity. On any given day:
 
-- **3-month Treasury bill** — closest to the Fed funds rate
-- **2-year Treasury note** — market expectation of where Fed funds will be over the next 2 years
-- **10-year Treasury note** — long-term growth + inflation expectations
-- **30-year Treasury bond** — very long-term outlook
+- **3-month Treasury bill** - closest to the Fed funds rate
+- **2-year Treasury note** - market expectation of where Fed funds will be over the next 2 years
+- **10-year Treasury note** - long-term growth + inflation expectations
+- **30-year Treasury bond** - very long-term outlook
 
 The most-watched spread is **10s minus 2s** (also written "10Y - 2Y" or "T10Y2Y"). When that number is positive, the curve is normal. When it's negative, the curve is inverted.
 
@@ -31,13 +31,13 @@ Here's the logic:
 
 The short end of the curve is dominated by Fed policy. If the Fed is fighting inflation by hiking rates aggressively, short-term yields go up fast.
 
-The long end is dominated by future growth and inflation expectations. If markets expect growth to slow (because of those rate hikes), long-term yields don't rise as much — and may even fall if recession is expected.
+The long end is dominated by future growth and inflation expectations. If markets expect growth to slow (because of those rate hikes), long-term yields don't rise as much - and may even fall if recession is expected.
 
 Net result: short rates above long rates. The curve inverts.
 
 > **The signal:** the bond market is collectively saying "the Fed is going to break something with these rate hikes, and we expect lower rates and slower growth ahead."
 
-That collective opinion has been right about every U.S. recession since 1968. Not perfect — but a remarkably consistent leading indicator.
+That collective opinion has been right about every U.S. recession since 1968. Not perfect - but a remarkably consistent leading indicator.
 
 ## The lag
 
@@ -89,7 +89,7 @@ When the curve inverts:
 
 Almost as important: when the curve goes back to normal (10Y rises above 2Y again).
 
-Counter-intuitively, this is often **closer to the actual recession start** than the inversion itself. The Fed has typically started cutting rates by then — which steepens the curve — and the cuts are usually in response to deteriorating conditions.
+Counter-intuitively, this is often **closer to the actual recession start** than the inversion itself. The Fed has typically started cutting rates by then - which steepens the curve - and the cuts are usually in response to deteriorating conditions.
 
 The uninversion is the warning that the slowdown is no longer hypothetical.
 

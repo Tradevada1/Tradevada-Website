@@ -12,14 +12,14 @@ If you trade U.S. equities, your P&L on any given month is shaped less by the co
 
 Knowing the schedule isn't optional. Knowing the typical reaction matters even more.
 
-## FOMC (Federal Open Market Committee) — 8 times per year
+## FOMC (Federal Open Market Committee) - 8 times per year
 
 The Fed sets interest rates. The decisions are announced at **2:00 PM ET** on Wednesdays, eight times per year. Powell's press conference starts at 2:30 PM ET.
 
 The two events that move markets:
 
-1. **The rate decision and statement (2:00 PM)** — Are rates up, down, or held?
-2. **The press conference (2:30 PM)** — Forward guidance, dot plot interpretation, Powell's tone.
+1. **The rate decision and statement (2:00 PM)** - Are rates up, down, or held?
+2. **The press conference (2:30 PM)** - Forward guidance, dot plot interpretation, Powell's tone.
 
 The market usually reacts in three phases:
 
@@ -31,14 +31,14 @@ The market usually reacts in three phases:
 
 Powell's tone matters more than the rate decision itself. The dollar amount of the rate change is usually priced in beforehand.
 
-## CPI (Consumer Price Index) — once per month
+## CPI (Consumer Price Index) - once per month
 
-Inflation data. Released at **8:30 AM ET** on the second Wednesday of each month (sometimes later — check the BLS calendar).
+Inflation data. Released at **8:30 AM ET** on the second Wednesday of each month (sometimes later - check the BLS calendar).
 
 What the market watches:
 
 - **Headline CPI** (year-over-year and month-over-month)
-- **Core CPI** (strips out food and energy — the Fed's preferred measure)
+- **Core CPI** (strips out food and energy - the Fed's preferred measure)
 - **Shelter inflation** (largest single component, slowest to move)
 - **Services ex-shelter** (the Fed's "supercore" focus)
 
@@ -52,7 +52,7 @@ The reaction logic:
 
 CPI mornings have some of the highest realized volatility of any pre-market session. Options on SPY and QQQ are often expensive going in.
 
-## NFP (Non-Farm Payrolls) — first Friday of each month
+## NFP (Non-Farm Payrolls) - first Friday of each month
 
 The monthly jobs report from the Bureau of Labor Statistics, released at **8:30 AM ET** on the first Friday of each month.
 
@@ -60,7 +60,7 @@ Five numbers to scan:
 
 1. **Headline jobs added** (consensus vs. actual)
 2. **Unemployment rate**
-3. **Average hourly earnings** (wage inflation — Fed cares deeply)
+3. **Average hourly earnings** (wage inflation - Fed cares deeply)
 4. **Labor force participation rate**
 5. **Revisions to the previous two months**
 
@@ -85,13 +85,13 @@ It can flip again. The market's current obsession determines the reaction. As of
 | Day of | Hold existing positions, don't open or close unless forced |
 | Day after | Re-assess; volatility usually compresses |
 
-The mistake to avoid: closing positions during the IV expansion before the event. You're paying premium twice — once when you sold it, again when you buy it back at peak fear.
+The mistake to avoid: closing positions during the IV expansion before the event. You're paying premium twice - once when you sold it, again when you buy it back at peak fear.
 
 ## Where to find the calendar
 
 Three sources I'd actually use:
 - BLS.gov (NFP, CPI release schedule)
 - FederalReserve.gov (FOMC dates, statements, dot plots)
-- Inside Tradevada's Events tab — we pull these in
+- Inside Tradevada's Events tab - we pull these in
 
 Mark them on your calendar. Plan around them. Your future self will thank you.

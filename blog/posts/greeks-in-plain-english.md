@@ -30,13 +30,13 @@ Theta is the daily decay. It's the amount the option's value bleeds out just fro
 - A long option has **negative theta**. You're losing value every day.
 - A short option (sold) has **positive theta**. Time decay works in your favor.
 
-Theta accelerates as expiration approaches. The last two weeks are where decay is fiercest — which is exactly when premium sellers want to hold positions.
+Theta accelerates as expiration approaches. The last two weeks are where decay is fiercest - which is exactly when premium sellers want to hold positions.
 
 This is why "selling premium" makes money in flat markets. The clock is on your side.
 
 ## Gamma: how fast does delta change?
 
-Gamma is the rate of change of delta. As the stock moves, delta shifts — and gamma tells you how fast.
+Gamma is the rate of change of delta. As the stock moves, delta shifts - and gamma tells you how fast.
 
 - Options at-the-money have the **highest gamma**. A small stock move flips delta meaningfully.
 - Options deep ITM or far OTM have **low gamma**. Their deltas barely move.
@@ -50,7 +50,7 @@ Vega tells you what happens to the option price when implied volatility changes 
 - Long options have **positive vega**. If IV spikes, the option gains value, even if the stock hasn't moved.
 - Short options have **negative vega**. Your short premium suffers when volatility expands.
 
-This is the hidden second engine for premium sellers. You want to sell when IV is rich (high), and hope for IV to contract (mean-revert lower) — which makes your short option cheaper to buy back.
+This is the hidden second engine for premium sellers. You want to sell when IV is rich (high), and hope for IV to contract (mean-revert lower) - which makes your short option cheaper to buy back.
 
 ## Which one matters most?
 
@@ -68,7 +68,7 @@ For a wheel-style premium seller: **theta is your income**, **vega is your envir
 
 ## What to do with this
 
-You don't need to calculate Greeks yourself — every brokerage shows them. The skill is reading them before you click "submit."
+You don't need to calculate Greeks yourself - every brokerage shows them. The skill is reading them before you click "submit."
 
 Before opening any options position, look at the four numbers. Ask: which one is helping me, which one is fighting me? Is theta my friend today or my enemy? Is IV rich enough to justify the trade?
 

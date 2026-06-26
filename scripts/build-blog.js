@@ -113,7 +113,7 @@ const BLOG_CSS = `<style>
 
 const CTA_HTML = `<div class="blog-cta">
 <div class="blog-cta-head">Tradevada tracks this automatically.</div>
-<div class="blog-cta-body">Win rate by strategy, premium collected, annualized returns — imported straight from your broker.</div>
+<div class="blog-cta-body">Win rate by strategy, premium collected, annualized returns - imported straight from your broker.</div>
 <a class="btn primary" href="${SIGNUP_URL}">Get Started →</a>
 </div>`;
 
@@ -160,7 +160,7 @@ function loadPosts() {
     const [meta, body] = parseFrontMatter(raw);
     const slug = meta.slug || fn.replace(/\.md$/, '');
     if (!/^[a-z0-9-]+$/.test(slug)) {
-      console.warn(`skipping ${fn} — slug must be lowercase letters, digits and dashes`);
+      console.warn(`skipping ${fn} - slug must be lowercase letters, digits and dashes`);
       continue;
     }
     posts.push({
@@ -222,7 +222,7 @@ ${p.tag ? `<span class="blog-tag">${esc(p.tag)}</span>` : ''}
 <section class="blog-hero">
 <span class="blog-eyebrow">The Tradevada Blog</span>
 <h1>Journal smarter. <span class="accent">Trade the data.</span></h1>
-<p>Journaling, analytics, and the wheel — for traders who track.</p>
+<p>Journaling, analytics, and the wheel - for traders who track.</p>
 </section>
 ${mainHero}
 <section class="blog-grid">
@@ -234,7 +234,7 @@ ${CTA_HTML}
     title: 'Blog | Tradevada',
     metaHtml: seoMeta({
       title: 'The Tradevada Blog',
-      description: 'Journaling, analytics, and the wheel — for traders who track. Guides and worked examples from Tradevada.',
+      description: 'Journaling, analytics, and the wheel - for traders who track. Guides and worked examples from Tradevada.',
       url: `${BASE_URL}/blog/`,
       ogImage: DEFAULT_OG,
       type: 'website',

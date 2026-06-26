@@ -36,13 +36,13 @@ Growth contracting. Earnings falling. Fed cutting.
 - **Outperformers:** Utilities, consumer staples, health care (true defensives)
 - **Lagging:** Almost everything cyclical
 
-This isn't a perfect clock — phases can last months or years, and they overlap. But the broad pattern is real and tradable.
+This isn't a perfect clock - phases can last months or years, and they overlap. But the broad pattern is real and tradable.
 
 ## Why this happens
 
 Three mechanical reasons:
 
-1. **Interest rates affect different sectors differently.** Banks make money on net interest margin — they love rising rates. Tech is heavily discounted at higher rates because more of their value is far-future earnings. Utilities behave like bonds — rate-sensitive.
+1. **Interest rates affect different sectors differently.** Banks make money on net interest margin - they love rising rates. Tech is heavily discounted at higher rates because more of their value is far-future earnings. Utilities behave like bonds - rate-sensitive.
 2. **Consumer behavior changes.** In recovery, consumers buy discretionary goods. In recession, they cut everything except essentials.
 3. **Capital expenditure cycles.** Late-cycle, companies have built out capacity and stop spending. Early-cycle, they start again.
 
@@ -61,25 +61,25 @@ You don't need to be a macro economist. Just check these three quarterly and you
 The temptation is to violently rotate your whole portfolio every 6 months. Don't.
 
 Better approach:
-- **Core allocation** (60-70%) — broad market exposure that doesn't change. SPY, QQQ, sector-neutral.
-- **Cyclical tilt** (20-30%) — overweight the 2-3 sectors that match the current phase. Underweight the laggers.
-- **Cash/defensive sleeve** (5-20%) — bigger when late-cycle, smaller when early-cycle.
+- **Core allocation** (60-70%) - broad market exposure that doesn't change. SPY, QQQ, sector-neutral.
+- **Cyclical tilt** (20-30%) - overweight the 2-3 sectors that match the current phase. Underweight the laggers.
+- **Cash/defensive sleeve** (5-20%) - bigger when late-cycle, smaller when early-cycle.
 
 This way you participate in the rotation without trying to time exact turns. Over a full cycle, the tilt typically adds 200-500 bps versus straight S&P exposure.
 
 ## The sector ETFs you'd actually use
 
-- **XLK** — Technology
-- **XLF** — Financials
-- **XLE** — Energy
-- **XLV** — Health care
-- **XLY** — Consumer discretionary
-- **XLP** — Consumer staples
-- **XLI** — Industrials
-- **XLU** — Utilities
-- **XLB** — Materials
-- **XLRE** — Real estate
-- **XLC** — Communication services
+- **XLK** - Technology
+- **XLF** - Financials
+- **XLE** - Energy
+- **XLV** - Health care
+- **XLY** - Consumer discretionary
+- **XLP** - Consumer staples
+- **XLI** - Industrials
+- **XLU** - Utilities
+- **XLB** - Materials
+- **XLRE** - Real estate
+- **XLC** - Communication services
 
 All 0.10% expense ratio, all highly liquid for options if you want to overlay strategies.
 
@@ -96,6 +96,6 @@ The honest truth: rotation is a probabilistic edge, not a deterministic one. It 
 
 The single most reliable rotation: **defensives outperform during recessions.**
 
-Utilities, consumer staples, and health care drop less than the market when growth fears spike. They're not exciting in good times — that's why they outperform in bad ones.
+Utilities, consumer staples, and health care drop less than the market when growth fears spike. They're not exciting in good times - that's why they outperform in bad ones.
 
 If you're not sure where in the cycle you are, the simplest hedge is keeping 10-15% in defensive sectors as a permanent allocation. It'll lag in bull markets and earn its keep in bear ones.

@@ -2,7 +2,7 @@
 title: A Weekly Routine for Wheel Traders (That Takes Under an Hour)
 seo_title: Weekly Routine for Wheel Traders
 slug: wheel-trading-weekly-routine
-description: The weekly options trading routine that keeps a wheel portfolio managed — what to check, when to roll, and the review habit that compounds skill.
+description: The weekly options trading routine that keeps a wheel portfolio managed - what to check, when to roll, and the review habit that compounds skill.
 date: 2026-06-04
 tag: Journaling
 read_minutes: 6
@@ -13,7 +13,7 @@ The wheel's best feature is that it doesn't need you very often. The catch: when
 
 ## Sunday: the fifteen-minute scan
 
-Before the week opens, look at three things. Which positions expire this week — and which are in the money? What's on the economic calendar — Fed days and CPI prints move everything, and there's no reason to open trades hours before them. Any earnings inside your open positions' lifetimes? That's the list of decisions the week will demand; everything else is optional.
+Before the week opens, look at three things. Which positions expire this week - and which are in the money? What's on the economic calendar - Fed days and CPI prints move everything, and there's no reason to open trades hours before them. Any earnings inside your open positions' lifetimes? That's the list of decisions the week will demand; everything else is optional.
 
 ## Midweek: manage by rule, not by mood
 
@@ -25,4 +25,4 @@ Decide before the close, not during it: let winners expire, close anything you d
 
 ## The weekly review nobody skips twice
 
-Ten minutes after Friday's close: log what closed, tag any rule you broke, and glance at the running numbers — premium captured this week, win rate by strategy, capital deployed versus idle. The review is where trading skill actually accumulates; the trades are just where it gets tested. Do it for three months and the data starts telling you things about yourself that no course can.
+Ten minutes after Friday's close: log what closed, tag any rule you broke, and glance at the running numbers - premium captured this week, win rate by strategy, capital deployed versus idle. The review is where trading skill actually accumulates; the trades are just where it gets tested. Do it for three months and the data starts telling you things about yourself that no course can.

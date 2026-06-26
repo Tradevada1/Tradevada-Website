@@ -14,7 +14,7 @@ The discipline to cut losers is rarer than the skill to pick winners. And it has
 
 ## Why losers feel different
 
-A small loss in dollar terms feels disproportionately bad. Behavioral economists call this **loss aversion** — humans feel losses about 2x more intensely than equivalent gains.
+A small loss in dollar terms feels disproportionately bad. Behavioral economists call this **loss aversion** - humans feel losses about 2x more intensely than equivalent gains.
 
 This is why:
 - You'll hold a $200 loser for weeks "hoping it comes back"
@@ -37,13 +37,13 @@ Write it down BEFORE you put the trade on. The moment the position is open, your
 ## Three stop loss frameworks
 
 **1. The price-based stop (technical)**
-Set a price below a chart level — recent support, a moving average, a swing low. If the level breaks, you exit. This works for trades with a clear "thesis breaks" price.
+Set a price below a chart level - recent support, a moving average, a swing low. If the level breaks, you exit. This works for trades with a clear "thesis breaks" price.
 
 **2. The percentage stop (mechanical)**
 Set a dollar or percentage loss. "If this trade hits -10%, I'm out." Simpler. Works for less directional trades or basket trading.
 
 **3. The time stop (most underrated)**
-"If this trade isn't working within 5 days, I'm out — even if it's not at a price stop." Most failed trades reveal themselves through inaction. The stock just sits there while opportunity cost mounts.
+"If this trade isn't working within 5 days, I'm out - even if it's not at a price stop." Most failed trades reveal themselves through inaction. The stock just sits there while opportunity cost mounts.
 
 Combine them. Most pros use a price stop AND a time stop, and exit on whichever triggers first.
 

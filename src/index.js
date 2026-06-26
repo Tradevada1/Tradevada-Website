@@ -1,5 +1,5 @@
 /**
- * Tradevada — Cloudflare Worker.
+ * Tradevada - Cloudflare Worker.
  *
  * Serves the static marketing site (the ./public folder, via the ASSETS
  * binding) and handles two JSON API routes that the site's forms POST to:
@@ -41,12 +41,12 @@ function welcomeHtml(name) {
     <div style="font-family:Arial,Helvetica,sans-serif;max-width:560px;margin:0 auto;color:#15151e;line-height:1.6">
       <h2 style="color:#15151e">Welcome to Tradevada</h2>
       <p>${hi}</p>
-      <p>Thanks for joining. As promised, here&rsquo;s your <strong>Trading Playbook</strong> — it&rsquo;s attached to this email, and you can also download it here:</p>
+      <p>Thanks for joining. As promised, here&rsquo;s your <strong>Trading Playbook</strong> - it&rsquo;s attached to this email, and you can also download it here:</p>
       <p style="text-align:center;margin:28px 0">
         <a href="${PLAYBOOK_URL}" style="background:#7c3aed;color:#fff;text-decoration:none;font-weight:700;padding:14px 28px;border-radius:10px;display:inline-block">Download the Playbook →</a>
       </p>
-      <p>We&rsquo;ll send practical, no-spam trading insights — only when it&rsquo;s worth it.</p>
-      <p style="margin-top:24px">— The Tradevada team<br>
+      <p>We&rsquo;ll send practical, no-spam trading insights - only when it&rsquo;s worth it.</p>
+      <p style="margin-top:24px">- The Tradevada team<br>
       <a href="https://www.tradevada.com" style="color:#7c3aed;text-decoration:none">tradevada.com</a></p>
     </div>`;
 }
@@ -147,7 +147,7 @@ async function handleContact(request, env) {
     <h2>New contact form submission</h2>
     <p><strong>Name:</strong> ${escapeHtml(name)}</p>
     <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-    <p><strong>Topic:</strong> ${escapeHtml(topic || "—")}</p>
+    <p><strong>Topic:</strong> ${escapeHtml(topic || "-")}</p>
     <p><strong>Subject:</strong> ${escapeHtml(subject)}</p>
     <hr>
     <p style="white-space:pre-wrap">${escapeHtml(message)}</p>
@@ -221,7 +221,7 @@ async function handleSubscribe(request, env) {
       reply_to: email,
       subject: `[Newsletter] New subscriber: ${email}`,
       html: `<p><strong>Email:</strong> ${escapeHtml(email)}</p>
-             <p><strong>Name:</strong> ${escapeHtml(name || "—")}</p>`,
+             <p><strong>Name:</strong> ${escapeHtml(name || "-")}</p>`,
     });
   } catch (err) {
     console.error("subscribe notify failed:", err);
