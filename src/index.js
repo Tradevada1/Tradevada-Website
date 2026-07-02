@@ -33,7 +33,7 @@ const DEFAULTS = {
 
 // Public URL of the Trading Playbook PDF (lives in ./public). New newsletter
 // subscribers get it emailed to them automatically (attached + a download link).
-const PLAYBOOK_URL = "https://www.tradevada.com/playbook.pdf";
+const PLAYBOOK_URL = "https://tradevada.com/playbook.pdf";
 
 function welcomeHtml(name) {
   const hi = name ? `Hi ${escapeHtml(name)},` : "Hey there,";
@@ -47,7 +47,7 @@ function welcomeHtml(name) {
       </p>
       <p>We&rsquo;ll send practical, no-spam trading insights - only when it&rsquo;s worth it.</p>
       <p style="margin-top:24px">- The Tradevada team<br>
-      <a href="https://www.tradevada.com" style="color:#7c3aed;text-decoration:none">tradevada.com</a></p>
+      <a href="https://tradevada.com" style="color:#7c3aed;text-decoration:none">tradevada.com</a></p>
     </div>`;
 }
 
@@ -55,8 +55,8 @@ export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
 
-    if (url.hostname === "tradevada.com" || url.protocol === "http:") {
-      url.hostname = "www.tradevada.com";
+    if (url.hostname === "www.tradevada.com" || url.protocol === "http:") {
+      url.hostname = "tradevada.com";
       url.protocol = "https:";
       return Response.redirect(url.toString(), 301);
     }

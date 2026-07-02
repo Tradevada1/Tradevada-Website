@@ -3,7 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const HOST = 'www.tradevada.com';
+const HOST = 'tradevada.com';
 const KEY = 'c189ec2c5f9622e11ea9a69d2d7911ed';
 const KEY_LOCATION = `https://${HOST}/${KEY}.txt`;
 
