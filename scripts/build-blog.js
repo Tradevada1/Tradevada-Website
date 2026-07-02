@@ -7,7 +7,7 @@ const POSTS_DIR = path.join(ROOT, 'blog', 'posts');
 const OUT_DIR = path.join(ROOT, 'public', 'blog');
 const SITEMAP = path.join(ROOT, 'public', 'sitemap.xml');
 const SHELL_SOURCE = path.join(ROOT, 'public', 'about.html');
-const BASE_URL = 'https://www.tradevada.com';
+const BASE_URL = 'https://tradevada.com';
 const SIGNUP_URL = 'https://app.tradevada.com/signup';
 const DEFAULT_OG = '/img/blog/og-default.png';
 

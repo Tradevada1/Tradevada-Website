@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.tradevada.com/sitemap.xml
+Sitemap: https://tradevada.com/sitemap.xml
