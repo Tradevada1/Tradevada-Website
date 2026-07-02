@@ -7,7 +7,7 @@ const POSTS_DIR = path.join(ROOT, 'blog', 'posts');
 const OUT_DIR = path.join(ROOT, 'public', 'blog');
 const SITEMAP = path.join(ROOT, 'public', 'sitemap.xml');
 const SHELL_SOURCE = path.join(ROOT, 'public', 'about.html');
-const BASE_URL = 'https://tradevada.com';
+const BASE_URL = 'https://www.tradevada.com';
 const SIGNUP_URL = 'https://app.tradevada.com/signup';
 const DEFAULT_OG = '/img/blog/og-default.png';
 
@@ -302,7 +302,7 @@ ${newer ? `<a href="/blog/${newer.slug}">${esc(newer.title)} →</a>` : ''}
 
 function updateSitemap(posts) {
   let xml = fs.readFileSync(SITEMAP, 'utf-8');
-  xml = xml.replace(/\s*<url><loc>https:\/\/tradevada\.com\/blog[^<]*<\/loc>.*?<\/url>/g, '');
+  xml = xml.replace(/\s*<url><loc>https:\/\/(?:www\.)?tradevada\.com\/blog[^<]*<\/loc>.*?<\/url>/g, '');
   const today = new Date().toISOString().slice(0, 10);
   const entries = [`  <url><loc>${BASE_URL}/blog/</loc><lastmod>${today}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>`]
     .concat(posts.map(p => `  <url><loc>${BASE_URL}/blog/${p.slug}</loc>${p.date ? `<lastmod>${p.date}</lastmod>` : ''}<changefreq>monthly</changefreq><priority>0.7</priority></url>`));
