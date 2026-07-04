@@ -81,7 +81,7 @@ const BLOG_CSS = `<style>
 .blog-article-hero img{width:100%;height:auto;display:block}
 .blog-article-head h1{font-size:34px;font-weight:800;line-height:1.22;letter-spacing:-0.03em;margin:12px 0 10px;color:var(--text)}
 .blog-article-meta{color:var(--dim);font-size:13px}
-.blog-article-body{font-size:18px;line-height:1.7;color:rgba(21,21,30,.8)}
+.blog-article-body{font-size:18px;line-height:1.7;color:rgba(232,234,237,.8)}
 .blog-article-body h2{font-size:25px;font-weight:800;letter-spacing:-0.02em;color:var(--text);margin:36px 0 14px;line-height:1.3}
 .blog-article-body h3{font-size:19px;font-weight:700;color:var(--text);margin:28px 0 10px}
 .blog-article-body p{margin:0 0 18px}
@@ -123,6 +123,7 @@ function page(shell, {title, metaHtml, bodyHtml}) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
 <title>${esc(title)}</title>
 ${metaHtml}
 ${shell.ga}
