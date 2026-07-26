@@ -74,7 +74,7 @@ const BLOG_CSS = `<style>
 .blog-card.featured p{font-size:15px;line-height:1.6}
 .blog-card.featured .blog-feat-arrow{flex-shrink:0;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#9b6cff 0,#7c3aed 52%,#6516d9 100%);color:#fff;font-size:22px;box-shadow:0 12px 32px -12px rgba(124,58,237,.85)}
 @media (max-width:899px){.blog-card.featured{flex-direction:column;align-items:stretch}.blog-card.featured .blog-feat-img{flex:none;max-height:220px}.blog-card.featured .blog-feat-img img{min-height:0;height:220px}.blog-card.featured .blog-feat-arrow{display:none}.blog-card.featured h2{font-size:22px}}
-.blog-tag{align-self:flex-start;display:inline-block;padding:3px 10px;border-radius:999px;font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:var(--primary-soft);color:var(--primary);border:1px solid rgba(124,58,237,.30)}
+.blog-tag{align-self:flex-start;display:inline-block;padding:3px 10px;border-radius:999px;font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:var(--primary-soft);color:#fff;border:1px solid rgba(124,58,237,.30)}
 .blog-article{max-width:700px;margin:0 auto;padding:46px 22px 70px}
 .blog-article-head{margin-bottom:26px}
 .blog-article-hero{margin:0 0 28px;border-radius:16px;overflow:hidden;border:1px solid var(--border);box-shadow:0 14px 38px -18px rgba(12,14,38,0.18)}
@@ -109,7 +109,61 @@ const BLOG_CSS = `<style>
 .blog-pagenav a:hover{color:var(--primary)}
 @media (max-width:899px){.blog-grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:599px){.blog-grid{grid-template-columns:1fr}.blog-hero h1{font-size:30px}.blog-article-head h1{font-size:27px}.blog-article-body{font-size:16.5px}}
+.blog-news{margin:56px 0 8px;padding:34px 30px;border:1px solid var(--border-strong);border-radius:18px;background:linear-gradient(135deg,rgba(124,58,237,.10),rgba(124,58,237,.03))}
+.blog-news-inner{max-width:560px;margin:0 auto;text-align:center}
+.blog-news h2{font-size:24px;font-weight:800;letter-spacing:-0.02em;color:var(--text);margin:0 0 8px}
+.blog-news p{color:var(--muted);font-size:14.5px;line-height:1.6;margin:0 0 20px}
+.blog-news-form{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.blog-news-form input{flex:1 1 190px;min-width:0;padding:12px 14px;border-radius:10px;border:1px solid var(--border-strong);background:rgba(255,255,255,.04);color:var(--text);font-size:14px;font-family:inherit}
+.blog-news-form input::placeholder{color:var(--dim)}
+.blog-news-form input:focus{outline:none;border-color:var(--primary);background:rgba(255,255,255,.06)}
+.blog-news-form button{flex:0 0 auto;padding:12px 24px;border-radius:10px;border:0;background:var(--primary);color:#fff;font-size:14px;font-weight:700;font-family:inherit;cursor:pointer;transition:opacity .18s}
+.blog-news-form button:hover{opacity:.88}
+.blog-news-form button:disabled{opacity:.55;cursor:default}
+.blog-news-msg{min-height:20px;margin-top:12px;font-size:13.5px;font-weight:600}
+.blog-news-msg.ok{color:#34D399}
+.blog-news-msg.err{color:#F87171}
+@media(max-width:560px){.blog-news{padding:26px 18px}.blog-news-form input,.blog-news-form button{flex:1 1 100%}}
 </style>`;
+
+const NEWSLETTER_HTML = `<section class="blog-news">
+<div class="blog-news-inner">
+<h2>Get the weekly edge</h2>
+<p>Wheel setups, journaling tactics, and market notes - one email a week. Plus the Tradevada Trading Playbook, free.</p>
+<form class="blog-news-form" id="nlform" novalidate>
+<input type="text" id="nlname" name="name" placeholder="First name" autocomplete="given-name">
+<input type="email" id="nlemail" name="email" placeholder="you@email.com" autocomplete="email" required>
+<button type="submit" id="nlbtn">Subscribe</button>
+</form>
+<div class="blog-news-msg" id="nlmsg" role="status" aria-live="polite"></div>
+</div>
+<script>
+(function(){
+  var f=document.getElementById('nlform');if(!f)return;
+  var b=document.getElementById('nlbtn'),m=document.getElementById('nlmsg');
+  f.addEventListener('submit',function(ev){
+    ev.preventDefault();
+    var email=(document.getElementById('nlemail').value||'').trim();
+    var name=(document.getElementById('nlname').value||'').trim();
+    if(!email){m.textContent='Enter your email address.';m.className='blog-news-msg err';return;}
+    var label=b.textContent;b.disabled=true;b.textContent='Sending...';
+    m.textContent='';m.className='blog-news-msg';
+    fetch('/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email,name:name})})
+      .then(function(r){return r.json().catch(function(){return {};}).then(function(j){return {ok:r.ok,j:j};});})
+      .then(function(res){
+        if(res.ok&&res.j&&res.j.ok){m.textContent='You are in. Check your inbox for the playbook.';m.className='blog-news-msg ok';f.reset();}
+        else{
+          var code=res.j&&res.j.error;
+          m.textContent=code==='invalid_email'?'That email does not look right.':'Something went wrong. Please try again in a moment.';
+          m.className='blog-news-msg err';
+        }
+      })
+      .catch(function(){m.textContent='Network error. Please try again in a moment.';m.className='blog-news-msg err';})
+      .then(function(){b.disabled=false;b.textContent=label;});
+  });
+})();
+</script>
+</section>`;
 
 const CTA_HTML = `<div class="blog-cta">
 <div class="blog-cta-head">Tradevada tracks this automatically.</div>
@@ -171,6 +225,7 @@ function loadPosts() {
       description: meta.description || '',
       date: meta.date || '',
       tag: meta.tag || '',
+      author: meta.author || 'Tradevada',
       readMinutes: parseInt(meta.read_minutes, 10) || 5,
       ogImage: heroExists(meta.og_image) ? meta.og_image : (heroExists(meta.hero_image) ? meta.hero_image : DEFAULT_OG),
       heroImage: heroExists(meta.hero_image) ? meta.hero_image : '',
@@ -206,7 +261,7 @@ ${p.heroImage ? `<div class="blog-feat-img"><img src="${p.heroImage}" alt="${esc
 ${p.tag ? `<span class="blog-tag">${esc(p.tag)}</span>` : ''}
 <h2>${esc(p.title)}</h2>
 <p>${esc(p.description)}</p>
-<div class="blog-card-meta">${fmtDate(p.date)} · ${p.readMinutes} min read</div>
+<div class="blog-card-meta">${esc(p.author)} · ${fmtDate(p.date)} · ${p.readMinutes} min read</div>
 </div>
 </a>`
     : `<a class="blog-card" href="/blog/${p.slug}">
@@ -214,7 +269,7 @@ ${p.heroImage ? `<div class="blog-card-img"><img src="${p.heroImage}" alt="${esc
 ${p.tag ? `<span class="blog-tag">${esc(p.tag)}</span>` : ''}
 <h2>${esc(p.title)}</h2>
 <p>${esc(p.description)}</p>
-<div class="blog-card-meta">${fmtDate(p.date)} · ${p.readMinutes} min read</div>
+<div class="blog-card-meta">${esc(p.author)} · ${fmtDate(p.date)} · ${p.readMinutes} min read</div>
 </a>`).join('\n');
   const mainHero = heroExists('/img/blog/blog-hero.jpg')
     ? `<div class="blog-hero-banner"><img src="/img/blog/blog-hero.jpg" alt="The Tradevada Blog" loading="eager"></div>`
@@ -230,6 +285,7 @@ ${mainHero}
 ${cards}
 </section>
 ${CTA_HTML}
+${NEWSLETTER_HTML}
 </main>`;
   return page(shell, {
     title: 'Blog | Tradevada',
@@ -273,7 +329,7 @@ function buildPost(shell, p, older, newer, posts) {
 <header class="blog-article-head">
 ${p.tag ? `<span class="blog-tag">${esc(p.tag)}</span>` : ''}
 <h1>${esc(p.title)}</h1>
-<div class="blog-article-meta">${fmtDate(p.date)} · ${p.readMinutes} min read</div>
+<div class="blog-article-meta">${esc(p.author)} · ${fmtDate(p.date)} · ${p.readMinutes} min read</div>
 </header>
 ${p.heroImage ? `<div class="blog-article-hero"><img src="${p.heroImage}" alt="${esc(p.title)}"></div>` : ''}
 <div class="blog-article-body">
