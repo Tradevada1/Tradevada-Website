@@ -32,7 +32,21 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-<style>:root{--bg:#07070c;--panel:#13131d;--border:rgba(255,255,255,0.09);--border-strong:rgba(255,255,255,0.16);--text:#e8eaed;--muted:rgba(232,234,237,0.68);--dim:rgba(232,234,237,0.48);--primary:#7C3AED;--primary-2:#7C3AED;--primary-soft:rgba(124,58,237,0.14);--teal:#14b8a6;--teal-soft:rgba(20,184,166,0.14);--mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;--sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}*{box-sizing:border-box;margin:0;padding:0}body,html{background:var(--bg);color:var(--text);font-family:var(--sans);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;line-height:1.7;scroll-behavior:smooth}a{color:var(--primary-2);text-decoration:none}a:hover{text-decoration:underline}.bg-canvas{position:fixed;inset:0;z-index:-1;pointer-events:none}.bg-canvas::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 50% at 50% 0,rgba(124,58,237,.18) 0,transparent 60%),radial-gradient(40% 30% at 85% 30%,rgba(20,184,166,.06) 0,transparent 60%)}nav.top{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(11,11,18,.72);border-bottom:1px solid var(--border)}nav.top .row{max-width:1280px;margin:0 auto;padding:0 28px;height:64px;display:flex;align-items:center;justify-content:space-between}.w-trade{color:var(--text)}.w-vada{color:var(--ink)}a.brand{display:flex;align-items:center;gap:6px;font-weight:800;letter-spacing:-.03em;font-size:17px;color:var(--text);transition:opacity .15s}a.brand:hover{opacity:.85;text-decoration:none}a.brand .mark img{filter:brightness(0) invert(1)}.brand .mark{width:36px;height:36px;border-radius:10px;overflow:hidden;flex-shrink:0;box-shadow:0 8px 24px -8px rgba(124,58,237,.6)}a.brand .mark svg{display:block;width:100%;height:100%}.nav-actions{display:flex;align-items:center;gap:10px}.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:10px;font-weight:600;font-size:14px;border:1px solid var(--border);color:var(--muted);transition:.15s;white-space:nowrap}.btn:hover{color:var(--text);border-color:var(--border-strong);background:rgba(0,0,0,.03);text-decoration:none}.btn.primary{background:linear-gradient(135deg,#8b5cf6,#7c3aed 50%,#6d28d9);color:#fff;border-color:transparent;box-shadow:0 10px 30px -10px rgba(124,58,237,.7)}.btn.primary:hover{box-shadow:0 14px 40px -10px rgba(124,58,237,.85)}.hero{padding:96px 28px 48px;text-align:center;max-width:880px;margin:0 auto}.eyebrow{display:inline-block;padding:6px 14px;border-radius:999px;background:var(--primary-soft);border:1px solid rgba(124,58,237,.3);color:var(--primary-2);font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:18px}.hero h1{font-size:clamp(40px,5.4vw,68px);font-weight:800;letter-spacing:-.03em;line-height:1.05}.hero h1 .accent{background:linear-gradient(120deg,#7c3aed,#8b5cf6,#14b8a6);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{color:var(--muted);font-size:18px;margin-top:22px;max-width:640px;margin-left:auto;margin-right:auto;line-height:1.6}.content{max-width:880px;margin:0 auto;padding:24px 28px 80px}.lead{font-size:18px;color:var(--muted);margin-bottom:48px;line-height:1.7}.lead strong{color:var(--text);font-weight:600}section{margin-bottom:64px}section h2{font-size:30px;font-weight:800;letter-spacing:-.02em;margin-bottom:20px;line-height:1.2;color:var(--text)}section h2 .accent{background:linear-gradient(120deg,#7c3aed,#8b5cf6,#14b8a6);-webkit-background-clip:text;background-clip:text;color:transparent}section p{color:rgba(232,234,237,.85);font-size:16px;margin-bottom:14px}.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:32px 0}.stat{padding:24px;border-radius:14px;border:1px solid var(--border);background:linear-gradient(180deg,rgba(0,0,0,.03),rgba(0,0,0,.01))}.stat .num{font-family:var(--mono);font-size:32px;font-weight:700;letter-spacing:-.02em;background:linear-gradient(120deg,#7c3aed,#8b5cf6,#14b8a6);-webkit-background-clip:text;background-clip:text;color:transparent}.stat .lbl{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-top:6px;font-weight:600}.principles{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:24px}.principle{padding:24px;border-radius:14px;border:1px solid var(--border);background:linear-gradient(180deg,rgba(0,0,0,.03),rgba(0,0,0,.01));transition:.2s}.principle:hover{border-color:var(--border-strong);transform:translateY(-2px)}.principle .ico{width:38px;height:38px;border-radius:10px;background:var(--primary-soft);border:1px solid rgba(124,58,237,.3);color:var(--primary-2);display:grid;place-items:center;margin-bottom:14px}.principle h3{font-size:16px;font-weight:700;margin-bottom:6px;color:var(--text)}.principle p{font-size:14px;color:var(--muted);line-height:1.6}.builder-card{margin-top:24px;padding:32px;border-radius:18px;background:radial-gradient(80% 60% at 0 0,rgba(124,58,237,.18),transparent 60%),linear-gradient(180deg,rgba(0,0,0,.03),rgba(0,0,0,.01));border:1px solid var(--border-strong);display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center}.builder-card .av{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,#a78bfa,#5b21b6);display:grid;place-items:center;color:#fff;font-weight:800;font-size:30px;box-shadow:0 12px 30px -10px rgba(124,58,237,.7)}.builder-card .meta h3{font-size:18px;font-weight:700;margin-bottom:4px}.builder-card .role{color:var(--primary-2);font-size:13px;font-family:var(--mono);font-weight:600;margin-bottom:8px}.builder-card .quote{color:var(--muted);font-size:14.5px;font-style:italic;line-height:1.6}.cta-strip{margin-top:60px;padding:42px;border-radius:18px;text-align:center;background:radial-gradient(60% 80% at 50% 0,rgba(124,58,237,.13),transparent 70%),linear-gradient(180deg,rgba(124,58,237,.06),rgba(20,184,166,.04));border:1px solid var(--border-strong)}.cta-strip h3{font-size:26px;font-weight:800;letter-spacing:-.015em;margin-bottom:8px}.cta-strip p{color:var(--muted);font-size:15px;margin-bottom:22px}.cta-strip .actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}footer{border-top:1px solid var(--border);margin-top:60px;padding:40px 28px}.foot-row{max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px;color:var(--dim);font-size:13px}.foot-links{display:flex;gap:24px;flex-wrap:wrap}.foot-links a{color:var(--muted)}.foot-links a:hover{color:var(--text)}@media (max-width:760px){.stat-row{grid-template-columns:1fr 1fr}.principles{grid-template-columns:1fr}.builder-card{grid-template-columns:1fr;text-align:center}.builder-card .av{margin:0 auto}.hero{padding:60px 20px 32px}}@media (max-width:540px){nav.top .nav-actions .btn{padding:7px 11px;font-size:12.5px;gap:4px}nav.top .row{padding-left:14px;padding-right:14px}}.nav-links{display:flex;align-items:center;gap:2px}.nav-drop-btn,.nav-links>a{padding:9px 14px;border-radius:9px;color:var(--muted);font-size:14px;font-weight:500;transition:.18s;text-decoration:none}.nav-links>a:hover{color:#7c3aed}.nav-drop{position:relative}.nav-drop-btn{display:inline-flex;align-items:center;gap:6px;background:0 0;border:none;cursor:pointer;font-family:inherit}.nav-drop-btn svg{transition:transform .2s}.nav-drop:hover .nav-drop-btn{color:#7c3aed}.nav-drop:hover .nav-drop-btn svg{transform:rotate(180deg)}.nav-menu{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(6px);min-width:200px;background:var(--panel);border:1px solid var(--border-strong);border-radius:13px;box-shadow:0 20px 44px -18px rgba(20,22,55,.32);padding:8px;display:flex;flex-direction:column;opacity:0;visibility:hidden;transition:.18s;z-index:60}.nav-drop:hover .nav-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}.nav-menu a{padding:10px 12px;border-radius:9px;color:var(--muted);font-size:14px;font-weight:500;white-space:nowrap;text-decoration:none}.nav-menu a:hover{background:var(--panel-2);color:#7c3aed}.nav-burger{display:none}#mnav{display:none}#mnav .msub{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(232,234,237,.4);font-weight:700;padding:18px 6px 8px;margin-top:6px;border-top:1px solid var(--border)}#mnav a.sub{padding:14px 6px;font-size:16px;font-weight:500;color:var(--text);border-bottom:1px solid var(--border);text-decoration:none}@media(max-width:880px){.nav-links{display:none}nav.top .nav-actions{display:none}.nav-burger{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;width:42px;height:38px;border-radius:10px;border:1px solid var(--border-strong);background:rgba(0,0,0,.03);cursor:pointer;padding:0}.nav-burger span{display:block;width:18px;height:2px;border-radius:2px;background:var(--text);transition:.22s}.nav-burger.open span:first-child{transform:translateY(6px) rotate(45deg)}.nav-burger.open span:nth-child(2){opacity:0}.nav-burger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}#mnav{display:block;position:absolute;left:0;right:0;top:100%;background:rgba(11,11,18,.98);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border-strong);box-shadow:0 24px 44px -22px rgba(20,22,55,.3);max-height:0;overflow:hidden;transition:max-height .3s ease}#mnav.open{max-height:calc(100vh - 68px);overflow-y:auto;-webkit-overflow-scrolling:touch}#mnav .inner{padding:8px 18px 20px;display:flex;flex-direction:column}#mnav a.ml{padding:14px 6px;font-size:16px;font-weight:600;color:var(--text);border-bottom:1px solid var(--border);text-decoration:none}#mnav .mrow{display:flex;gap:10px;margin-top:14px}#mnav .mrow a{flex:1;text-align:center;padding:14px;border-radius:12px;font-weight:700;font-size:15px;text-decoration:none}#mnav .mrow .si{background:rgba(0,0,0,.05);color:var(--text);border:1px solid var(--border-strong)}#mnav .mrow .gs{background:linear-gradient(135deg,#9b6cff,#7c3aed);color:#fff}}.brand .wordmark,.wordmark{font-family:'Montserrat',var(--sans);font-weight:800;letter-spacing:-.018em}/*TVFIX*/a:hover{text-decoration:none!important}.badge,.badge-free,.eyebrow,.pill,.tag,.tag-wolf,.deep-tag,.wp-pill,.wp-pill.long,.wp-pill.risk,.wp-pill.otm,.price-savings,.tagc,.tagb,.way h3 .tag{color:#fff!important}.bill-toggle button.active,.bill-toggle .active{background:#7c3aed!important;color:#fff!important}/*/TVFIX*/</style>
+<style>:root{--bg:#07070c;--panel:#13131d;--border:rgba(255,255,255,0.09);--border-strong:rgba(255,255,255,0.16);--text:#e8eaed;--muted:rgba(232,234,237,0.68);--dim:rgba(232,234,237,0.48);--primary:#7C3AED;--primary-2:#7C3AED;--primary-soft:rgba(124,58,237,0.14);--teal:#14b8a6;--teal-soft:rgba(20,184,166,0.14);--mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;--sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}*{box-sizing:border-box;margin:0;padding:0}body,html{background:var(--bg);color:var(--text);font-family:var(--sans);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;line-height:1.7;scroll-behavior:smooth}a{color:var(--primary-2);text-decoration:none}a:hover{text-decoration:underline}.bg-canvas{position:fixed;inset:0;z-index:-1;pointer-events:none}.bg-canvas::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 50% at 50% 0,rgba(124,58,237,.18) 0,transparent 60%),radial-gradient(40% 30% at 85% 30%,rgba(20,184,166,.06) 0,transparent 60%)}nav.top{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(11,11,18,.72);border-bottom:1px solid var(--border)}nav.top .row{max-width:1280px;margin:0 auto;padding:0 28px;height:64px;display:flex;align-items:center;justify-content:space-between}.w-trade{color:var(--text)}.w-vada{color:var(--ink)}a.brand{display:flex;align-items:center;gap:6px;font-weight:800;letter-spacing:-.03em;font-size:17px;color:var(--text);transition:opacity .15s}a.brand:hover{opacity:.85;text-decoration:none}a.brand .mark img{filter:brightness(0) invert(1)}.brand .mark{width:36px;height:36px;border-radius:10px;overflow:hidden;flex-shrink:0;box-shadow:0 8px 24px -8px rgba(124,58,237,.6)}a.brand .mark svg{display:block;width:100%;height:100%}.nav-actions{display:flex;align-items:center;gap:10px}.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:10px;font-weight:600;font-size:14px;border:1px solid var(--border);color:var(--muted);transition:.15s;white-space:nowrap}.btn:hover{color:var(--text);border-color:var(--border-strong);background:rgba(0,0,0,.03);text-decoration:none}.btn.primary{background:linear-gradient(135deg,#8b5cf6,#7c3aed 50%,#6d28d9);color:#fff;border-color:transparent;box-shadow:0 10px 30px -10px rgba(124,58,237,.7)}.btn.primary:hover{box-shadow:0 14px 40px -10px rgba(124,58,237,.85)}.hero{padding:96px 28px 48px;text-align:center;max-width:880px;margin:0 auto}.eyebrow{display:inline-block;padding:6px 14px;border-radius:999px;background:var(--primary-soft);border:1px solid rgba(124,58,237,.3);color:var(--primary-2);font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:18px}.hero h1{font-size:clamp(40px,5.4vw,68px);font-weight:800;letter-spacing:-.03em;line-height:1.05}.hero h1 .accent{background:linear-gradient(120deg,#7c3aed,#8b5cf6,#14b8a6);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{color:var(--muted);font-size:18px;margin-top:22px;max-width:640px;margin-left:auto;margin-right:auto;line-height:1.6}.content{max-width:880px;margin:0 auto;padding:24px 28px 80px}.lead{font-size:18px;color:var(--muted);margin-bottom:48px;line-height:1.7}.lead strong{color:var(--text);font-weight:600}section{margin-bottom:64px}section h2{font-size:30px;font-weight:800;letter-spacing:-.02em;margin-bottom:20px;line-height:1.2;color:var(--text)}section h2 .accent{background:linear-gradient(120deg,#7c3aed,#8b5cf6,#14b8a6);-webkit-background-clip:text;background-clip:text;color:transparent}section p{color:rgba(232,234,237,.85);font-size:16px;margin-bottom:14px}.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:32px 0}.stat{padding:24px;border-radius:14px;border:1px solid var(--border);background:linear-gradient(180deg,rgba(0,0,0,.03),rgba(0,0,0,.01))}.stat .num{font-family:var(--mono);font-size:32px;font-weight:700;letter-spacing:-.02em;background:linear-gradient(120deg,#7c3aed,#8b5cf6,#14b8a6);-webkit-background-clip:text;background-clip:text;color:transparent}.stat .lbl{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-top:6px;font-weight:600}.principles{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:24px}.principle{padding:24px;border-radius:14px;border:1px solid var(--border);background:linear-gradient(180deg,rgba(0,0,0,.03),rgba(0,0,0,.01));transition:.2s}.principle:hover{border-color:var(--border-strong);transform:translateY(-2px)}.principle .ico{width:38px;height:38px;border-radius:10px;background:var(--primary-soft);border:1px solid rgba(124,58,237,.3);color:#fff;display:grid;place-items:center;margin-bottom:14px}.principle h3{font-size:16px;font-weight:700;margin-bottom:6px;color:var(--text)}.principle p{font-size:14px;color:var(--muted);line-height:1.6}.builder-card{margin-top:24px;padding:32px;border-radius:18px;background:radial-gradient(80% 60% at 0 0,rgba(124,58,237,.18),transparent 60%),linear-gradient(180deg,rgba(0,0,0,.03),rgba(0,0,0,.01));border:1px solid var(--border-strong);display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center}.builder-card .av{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,#a78bfa,#5b21b6);display:grid;place-items:center;color:#fff;font-weight:800;font-size:30px;box-shadow:0 12px 30px -10px rgba(124,58,237,.7)}.builder-card .meta h3{font-size:18px;font-weight:700;margin-bottom:4px}.builder-card .role{color:var(--primary-2);font-size:13px;font-family:var(--mono);font-weight:600;margin-bottom:8px}.builder-card .quote{color:var(--muted);font-size:14.5px;font-style:italic;line-height:1.6}.cta-strip{margin-top:60px;padding:42px;border-radius:18px;text-align:center;background:radial-gradient(60% 80% at 50% 0,rgba(124,58,237,.13),transparent 70%),linear-gradient(180deg,rgba(124,58,237,.06),rgba(20,184,166,.04));border:1px solid var(--border-strong)}.cta-strip h3{font-size:26px;font-weight:800;letter-spacing:-.015em;margin-bottom:8px}.cta-strip p{color:var(--muted);font-size:15px;margin-bottom:22px}.cta-strip .actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}footer{border-top:1px solid var(--border);margin-top:60px;padding:40px 28px}.foot-row{max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px;color:var(--dim);font-size:13px}.foot-links{display:flex;gap:24px;flex-wrap:wrap}.foot-links a{color:var(--muted)}.foot-links a:hover{color:var(--text)}@media (max-width:760px){.stat-row{grid-template-columns:1fr 1fr}.principles{grid-template-columns:1fr}.builder-card{grid-template-columns:1fr;text-align:center}.builder-card .av{margin:0 auto}.hero{padding:60px 20px 32px}}@media (max-width:540px){nav.top .nav-actions .btn{padding:7px 11px;font-size:12.5px;gap:4px}nav.top .row{padding-left:14px;padding-right:14px}}.nav-links{display:flex;align-items:center;gap:2px}.nav-drop-btn,.nav-links>a{padding:9px 14px;border-radius:9px;color:var(--muted);font-size:14px;font-weight:500;transition:.18s;text-decoration:none}.nav-links>a:hover{color:#7c3aed}.nav-drop{position:relative}.nav-drop-btn{display:inline-flex;align-items:center;gap:6px;background:0 0;border:none;cursor:pointer;font-family:inherit}.nav-drop-btn svg{transition:transform .2s}.nav-drop:hover .nav-drop-btn{color:#7c3aed}.nav-drop:hover .nav-drop-btn svg{transform:rotate(180deg)}.nav-menu{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(6px);min-width:200px;background:var(--panel);border:1px solid var(--border-strong);border-radius:13px;box-shadow:0 20px 44px -18px rgba(20,22,55,.32);padding:8px;display:flex;flex-direction:column;opacity:0;visibility:hidden;transition:.18s;z-index:60}.nav-drop:hover .nav-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}.nav-menu a{padding:10px 12px;border-radius:9px;color:var(--muted);font-size:14px;font-weight:500;white-space:nowrap;text-decoration:none}.nav-menu a:hover{background:var(--panel-2);color:#7c3aed}.nav-burger{display:none}#mnav{display:none}#mnav .msub{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(232,234,237,.4);font-weight:700;padding:18px 6px 8px;margin-top:6px;border-top:1px solid var(--border)}#mnav a.sub{padding:14px 6px;font-size:16px;font-weight:500;color:var(--text);border-bottom:1px solid var(--border);text-decoration:none}@media(max-width:880px){.nav-links{display:none}nav.top .nav-actions{display:none}.nav-burger{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;width:42px;height:38px;border-radius:10px;border:1px solid var(--border-strong);background:rgba(0,0,0,.03);cursor:pointer;padding:0}.nav-burger span{display:block;width:18px;height:2px;border-radius:2px;background:var(--text);transition:.22s}.nav-burger.open span:first-child{transform:translateY(6px) rotate(45deg)}.nav-burger.open span:nth-child(2){opacity:0}.nav-burger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}#mnav{display:block;position:absolute;left:0;right:0;top:100%;background:rgba(11,11,18,.98);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border-strong);box-shadow:0 24px 44px -22px rgba(20,22,55,.3);max-height:0;overflow:hidden;transition:max-height .3s ease}#mnav.open{max-height:calc(100vh - 68px);overflow-y:auto;-webkit-overflow-scrolling:touch}#mnav .inner{padding:8px 18px 20px;display:flex;flex-direction:column}#mnav a.ml{padding:14px 6px;font-size:16px;font-weight:600;color:var(--text);border-bottom:1px solid var(--border);text-decoration:none}#mnav .mrow{display:flex;gap:10px;margin-top:14px}#mnav .mrow a{flex:1;text-align:center;padding:14px;border-radius:12px;font-weight:700;font-size:15px;text-decoration:none}#mnav .mrow .si{background:rgba(0,0,0,.05);color:var(--text);border:1px solid var(--border-strong)}#mnav .mrow .gs{background:linear-gradient(135deg,#9b6cff,#7c3aed);color:#fff}}.brand .wordmark,.wordmark{font-family:'Montserrat',var(--sans);font-weight:800;letter-spacing:-.018em}/*TVFIX*/a:hover{text-decoration:none!important}.badge,.badge-free,.eyebrow,.pill,.tag,.tag-wolf,.deep-tag,.wp-pill,.wp-pill.long,.wp-pill.risk,.wp-pill.otm,.price-savings,.tagc,.tagb,.way h3 .tag{color:#fff!important}.bill-toggle button.active,.bill-toggle .active{background:#7c3aed!important;color:#fff!important}/*/TVFIX*/</style>
+<style>
+.nav-ico{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;flex:0 0 16px;margin-right:9px;opacity:.62;transition:opacity .18s}
+.nav-ico svg{width:16px;height:16px;display:block}
+.nav-links>a,.nav-menu a{display:inline-flex;align-items:center}
+.nav-drop-btn{display:inline-flex;align-items:center}
+.nav-links>a:hover .nav-ico,.nav-menu a:hover .nav-ico,.nav-drop:hover .nav-drop-btn .nav-ico,#mnav a.ml:hover .nav-ico,#mnav a.sub:hover .nav-ico{opacity:1}
+.nav-links>a.active .nav-ico{opacity:1}
+#mnav a.ml,#mnav a.sub{display:flex;align-items:center}
+#mnav a.ml .nav-ico,#mnav a.sub .nav-ico{width:18px;height:18px;flex:0 0 18px;margin-right:12px;opacity:.55}
+#mnav a.ml .nav-ico svg,#mnav a.sub .nav-ico svg{width:18px;height:18px}
+#mnav .msub{display:flex;align-items:center}
+#mnav .msub .nav-ico{width:14px;height:14px;flex:0 0 14px;margin-right:9px;opacity:.5}
+#mnav .msub .nav-ico svg{width:14px;height:14px}
+</style>
 <style>
 .blog-main{max-width:1060px;margin:0 auto;padding:26px 22px 64px}
 .blog-hero{text-align:center;padding:10px 0 24px;position:relative;margin:0}
@@ -63,7 +77,7 @@
 .blog-card.featured p{font-size:15px;line-height:1.6}
 .blog-card.featured .blog-feat-arrow{flex-shrink:0;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#9b6cff 0,#7c3aed 52%,#6516d9 100%);color:#fff;font-size:22px;box-shadow:0 12px 32px -12px rgba(124,58,237,.85)}
 @media (max-width:899px){.blog-card.featured{flex-direction:column;align-items:stretch}.blog-card.featured .blog-feat-img{flex:none;max-height:220px}.blog-card.featured .blog-feat-img img{min-height:0;height:220px}.blog-card.featured .blog-feat-arrow{display:none}.blog-card.featured h2{font-size:22px}}
-.blog-tag{align-self:flex-start;display:inline-block;padding:3px 10px;border-radius:999px;font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:var(--primary-soft);color:var(--primary);border:1px solid rgba(124,58,237,.30)}
+.blog-tag{align-self:flex-start;display:inline-block;padding:3px 10px;border-radius:999px;font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:var(--primary-soft);color:#fff;border:1px solid rgba(124,58,237,.30)}
 .blog-article{max-width:700px;margin:0 auto;padding:46px 22px 70px}
 .blog-article-head{margin-bottom:26px}
 .blog-article-hero{margin:0 0 28px;border-radius:16px;overflow:hidden;border:1px solid var(--border);box-shadow:0 14px 38px -18px rgba(12,14,38,0.18)}
@@ -98,10 +112,25 @@
 .blog-pagenav a:hover{color:var(--primary)}
 @media (max-width:899px){.blog-grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:599px){.blog-grid{grid-template-columns:1fr}.blog-hero h1{font-size:30px}.blog-article-head h1{font-size:27px}.blog-article-body{font-size:16.5px}}
+.blog-news{margin:56px 0 8px;padding:34px 30px;border:1px solid var(--border-strong);border-radius:18px;background:linear-gradient(135deg,rgba(124,58,237,.10),rgba(124,58,237,.03))}
+.blog-news-inner{max-width:560px;margin:0 auto;text-align:center}
+.blog-news h2{font-size:24px;font-weight:800;letter-spacing:-0.02em;color:var(--text);margin:0 0 8px}
+.blog-news p{color:var(--muted);font-size:14.5px;line-height:1.6;margin:0 0 20px}
+.blog-news-form{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.blog-news-form input{flex:1 1 190px;min-width:0;padding:12px 14px;border-radius:10px;border:1px solid var(--border-strong);background:rgba(255,255,255,.04);color:var(--text);font-size:14px;font-family:inherit}
+.blog-news-form input::placeholder{color:var(--dim)}
+.blog-news-form input:focus{outline:none;border-color:var(--primary);background:rgba(255,255,255,.06)}
+.blog-news-form button{flex:0 0 auto;padding:12px 24px;border-radius:10px;border:0;background:var(--primary);color:#fff;font-size:14px;font-weight:700;font-family:inherit;cursor:pointer;transition:opacity .18s}
+.blog-news-form button:hover{opacity:.88}
+.blog-news-form button:disabled{opacity:.55;cursor:default}
+.blog-news-msg{min-height:20px;margin-top:12px;font-size:13.5px;font-weight:600}
+.blog-news-msg.ok{color:#34D399}
+.blog-news-msg.err{color:#F87171}
+@media(max-width:560px){.blog-news{padding:26px 18px}.blog-news-form input,.blog-news-form button{flex:1 1 100%}}
 </style>
 </head>
 <body>
-<nav class="top"><div class="row"><a class="brand" href="/index.html" aria-label="Tradevada home"><div class="mark"><img src="/logo-mark.png?v=3" alt="Tradevada" style="width:100%;height:100%;object-fit:contain;display:block"></div><span class="wordmark"><span class="w-trade">TRADE</span><span class="w-vada">VADA</span></span></a><div class="nav-links"><a href="/features.html">Features</a> <a href="/pricing.html">Pricing</a><div class="nav-drop"><button class="nav-drop-btn" type="button">Resources <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button><div class="nav-menu"><a href="/wheel-guide.html">Wheel Guide</a><a href="/blog/">Blog</a><a href="/docs.html">Documentation</a><a href="/status.html">Status</a></div></div><a href="/brokers.html">Supported Brokers</a></div><button class="nav-burger" aria-label="Open menu" onclick='this.classList.toggle("open"),document.getElementById("mnav").classList.toggle("open")'><span></span><span></span><span></span></button><div class="nav-actions"><a class="btn" href="https://app.tradevada.com/login">Sign In</a> <a class="btn primary" href="https://app.tradevada.com/signup">Get Started →</a></div></div><div id="mnav"><div class="inner"><a class="ml" href="/features.html">Features</a><a class="ml" href="/pricing.html">Pricing</a><a class="ml" href="/brokers.html">Supported Brokers</a><div class="msub">Resources</div><a class="sub" href="/wheel-guide.html">Wheel Guide</a><a class="sub" href="/blog/">Blog</a><a class="sub" href="/docs.html">Documentation</a><a class="sub" href="/status.html">Status</a><div class="mrow"><a class="si" href="https://app.tradevada.com/login">Sign In</a><a class="gs" href="https://app.tradevada.com/signup">Get Started →</a></div></div></div></nav>
+<nav class="top"><div class="row"><a class="brand" href="/index.html" aria-label="Tradevada home"><div class="mark"><img src="/logo-mark.png?v=3" alt="Tradevada" style="width:100%;height:100%;object-fit:contain;display:block"></div><span class="wordmark"><span class="w-trade">TRADE</span><span class="w-vada">VADA</span></span></a><div class="nav-links"><a href="/features.html"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z"/></svg></span>Features</a> <a href="/pricing.html"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></span>Pricing</a><div class="nav-drop"><button class="nav-drop-btn" type="button"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></span>Resources <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button><div class="nav-menu"><a href="/wheel-guide.html"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="4.93" y1="4.93" x2="9.17" y2="9.17"/><line x1="14.83" y1="14.83" x2="19.07" y2="19.07"/><line x1="14.83" y1="9.17" x2="19.07" y2="4.93"/><line x1="4.93" y1="19.07" x2="9.17" y2="14.83"/></svg></span>Wheel Guide</a><a href="/blog/"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4z"/></svg></span>Blog</a><a href="/docs.html"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>Documentation</a><a href="/status.html"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span>Status</a></div></div><a href="/brokers.html"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></span>Supported Brokers</a></div><button class="nav-burger" aria-label="Open menu" onclick='this.classList.toggle("open"),document.getElementById("mnav").classList.toggle("open")'><span></span><span></span><span></span></button><div class="nav-actions"><a class="btn" href="https://app.tradevada.com/login">Sign In</a> <a class="btn primary" href="https://app.tradevada.com/signup">Get Started →</a></div></div><div id="mnav"><div class="inner"><a class="ml" href="/features.html"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z"/></svg></span>Features</a><a class="ml" href="/pricing.html"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></span>Pricing</a><a class="ml" href="/brokers.html"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></span>Supported Brokers</a><div class="msub"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></span>Resources</div><a class="sub" href="/wheel-guide.html"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="4.93" y1="4.93" x2="9.17" y2="9.17"/><line x1="14.83" y1="14.83" x2="19.07" y2="19.07"/><line x1="14.83" y1="9.17" x2="19.07" y2="4.93"/><line x1="4.93" y1="19.07" x2="9.17" y2="14.83"/></svg></span>Wheel Guide</a><a class="sub" href="/blog/"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4z"/></svg></span>Blog</a><a class="sub" href="/docs.html"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>Documentation</a><a class="sub" href="/status.html"><span class="nav-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span>Status</a><div class="mrow"><a class="si" href="https://app.tradevada.com/login">Sign In</a><a class="gs" href="https://app.tradevada.com/signup">Get Started →</a></div></div></div></nav>
 <main class="blog-main">
 <section class="blog-hero">
 <span class="blog-eyebrow">The Tradevada Blog</span>
@@ -116,7 +145,7 @@
 <span class="blog-tag">Wheel Strategy</span>
 <h2>How to Pick the Best Stocks for the Wheel Strategy</h2>
 <p>A screening checklist for wheel strategy stocks - liquidity, IV, fundamentals, and the one question that filters out 90% of bad candidates.</p>
-<div class="blog-card-meta">Jun 16, 2026 · 7 min read</div>
+<div class="blog-card-meta">Tradevada · Jun 16, 2026 · 7 min read</div>
 </div>
 </a>
 <a class="blog-card" href="/blog/annualized-return-cash-secured-puts">
@@ -124,217 +153,217 @@
 <span class="blog-tag">Wheel Strategy</span>
 <h2>How to Calculate Annualized Return on Cash-Secured Puts</h2>
 <p>The formula wheel traders should use, with worked examples.</p>
-<div class="blog-card-meta">Jun 15, 2026 · 6 min read</div>
+<div class="blog-card-meta">Tradevada · Jun 15, 2026 · 6 min read</div>
 </a>
 <a class="blog-card" href="/blog/why-wheel-traders-need-a-journal">
 <div class="blog-card-img"><img src="/img/blog/why-wheel-traders-need-a-journal.jpg" alt="Why Every Wheel Trader Needs a Real Journal (Not a Spreadsheet)" loading="lazy"></div>
 <span class="blog-tag">Journaling</span>
 <h2>Why Every Wheel Trader Needs a Real Journal (Not a Spreadsheet)</h2>
 <p>The wheel produces more bookkeeping per dollar than almost any strategy. What to track, why spreadsheets break, and what good tracking gives you back.</p>
-<div class="blog-card-meta">Jun 14, 2026 · 7 min read</div>
+<div class="blog-card-meta">Tradevada · Jun 14, 2026 · 7 min read</div>
 </a>
 <a class="blog-card" href="/blog/monthly-income-selling-options">
 <div class="blog-card-img"><img src="/img/blog/monthly-income-selling-options.jpg" alt="Monthly Income From Selling Options - What&#39;s Realistic" loading="lazy"></div>
 <span class="blog-tag">Options Income</span>
 <h2>Monthly Income From Selling Options - What&#39;s Realistic</h2>
 <p>Can you generate monthly income selling options? Realistic return targets for cash-secured puts and covered calls, and the lifestyle math nobody posts.</p>
-<div class="blog-card-meta">Jun 13, 2026 · 7 min read</div>
+<div class="blog-card-meta">Tradevada · Jun 13, 2026 · 7 min read</div>
 </a>
 <a class="blog-card" href="/blog/cutting-losers-fast">
 <div class="blog-card-img"><img src="/img/blog/cutting-losers-fast.jpg" alt="Cutting losers fast: building the discipline before you need it" loading="lazy"></div>
 <span class="blog-tag">Trading Psychology</span>
 <h2>Cutting losers fast: building the discipline before you need it</h2>
 <p>The trade you can&#39;t stomach to close is the one that ends careers. A rules-based framework for exiting losers without ego or hope getting in the way.</p>
-<div class="blog-card-meta">Jun 12, 2026 · 6 min read</div>
+<div class="blog-card-meta">Tradevada · Jun 12, 2026 · 6 min read</div>
 </a>
 <a class="blog-card" href="/blog/dividend-ladder">
 <div class="blog-card-img"><img src="/img/blog/dividend-ladder.jpg" alt="Building a dividend ladder: getting paid quarterly without thinking about it" loading="lazy"></div>
 <span class="blog-tag">Stocks</span>
 <h2>Building a dividend ladder: getting paid quarterly without thinking about it</h2>
 <p>A boring portfolio of staggered dividend payers can throw off monthly income that compounds for decades. The mechanics are simple. The patience is the hard part.</p>
-<div class="blog-card-meta">Jun 12, 2026 · 8 min read</div>
+<div class="blog-card-meta">Tradevada · Jun 12, 2026 · 8 min read</div>
 </a>
 <a class="blog-card" href="/blog/fed-cpi-nfp-macro-data">
 <div class="blog-card-img"><img src="/img/blog/fed-cpi-nfp-macro-data.jpg" alt="Fed days, CPI, NFP: how macro data ripples through your trades" loading="lazy"></div>
 <span class="blog-tag">Market Trends</span>
 <h2>Fed days, CPI, NFP: how macro data ripples through your trades</h2>
 <p>Three economic data releases drive most of the volatility in the U.S. stock market. Knowing the schedule and the typical reaction is half the battle.</p>
-<div class="blog-card-meta">Jun 12, 2026 · 10 min read</div>
+<div class="blog-card-meta">Tradevada · Jun 12, 2026 · 10 min read</div>
 </a>
 <a class="blog-card" href="/blog/greeks-in-plain-english">
 <div class="blog-card-img"><img src="/img/blog/greeks-in-plain-english.jpg" alt="Understanding the Greeks: Delta, Theta, Gamma, Vega in plain English" loading="lazy"></div>
 <span class="blog-tag">Options Education</span>
 <h2>Understanding the Greeks: Delta, Theta, Gamma, Vega in plain English</h2>
 <p>Four numbers that tell you how an option will move. What they actually measure, how to read them as risk, and which one matters most for the strategy you&#39;re running.</p>
-<div class="blog-card-meta">Jun 12, 2026 · 6 min read</div>
+<div class="blog-card-meta">Tradevada · Jun 12, 2026 · 6 min read</div>
 </a>
 <a class="blog-card" href="/blog/journaling-done-right">
 <div class="blog-card-img"><img src="/img/blog/journaling-done-right.jpg" alt="Journaling done right: turning random trades into a pattern you can study" loading="lazy"></div>
 <span class="blog-tag">Trading Psychology</span>
 <h2>Journaling done right: turning random trades into a pattern you can study</h2>
 <p>A bad journal is a list of trades. A good journal is a map of your decision-making. Here&#39;s what to actually write down - and what to ignore.</p>
-<div class="blog-card-meta">Jun 12, 2026 · 5 min read</div>
+<div class="blog-card-meta">Tradevada · Jun 12, 2026 · 5 min read</div>
 </a>
 <a class="blog-card" href="/blog/paper-vs-small-real-money">
 <div class="blog-card-img"><img src="/img/blog/paper-vs-small-real-money.jpg" alt="Paper trading vs. small real money: which one actually teaches you" loading="lazy"></div>
 <span class="blog-tag">Trading Psychology</span>
 <h2>Paper trading vs. small real money: which one actually teaches you</h2>
 <p>Paper trading teaches you the mechanics. Small real money teaches you the emotions. You need both - in the right order - and most people skip the second.</p>
-<div class="blog-card-meta">Jun 12, 2026 · 5 min read</div>
+<div class="blog-card-meta">Tradevada · Jun 12, 2026 · 5 min read</div>
 </a>
 <a class="blog-card" href="/blog/position-sizing">
 <div class="blog-card-img"><img src="/img/blog/position-sizing.jpg" alt="Position sizing: how much to risk on a single trade" loading="lazy"></div>
 <span class="blog-tag">Stocks</span>
 <h2>Position sizing: how much to risk on a single trade</h2>
 <p>A bad position size will kill an account faster than a bad strategy. The framework professional traders use to make sure no single trade can sink the ship.</p>
-<div class="blog-card-meta">Jun 12, 2026 · 7 min read</div>
+<div class="blog-card-meta">Tradevada · Jun 12, 2026 · 7 min read</div>
 </a>
 <a class="blog-card" href="/blog/reading-earnings-reports">
 <div class="blog-card-img"><img src="/img/blog/reading-earnings-reports.jpg" alt="Reading earnings reports: what actually moves the stock" loading="lazy"></div>
 <span class="blog-tag">Stocks</span>
 <h2>Reading earnings reports: what actually moves the stock</h2>
 <p>EPS beats don&#39;t move stocks - guidance, margins, and forward commentary do. A practical guide to skimming earnings for what matters in the next 24 hours.</p>
-<div class="blog-card-meta">Jun 12, 2026 · 9 min read</div>
+<div class="blog-card-meta">Tradevada · Jun 12, 2026 · 9 min read</div>
 </a>
 <a class="blog-card" href="/blog/revenge-trading">
 <div class="blog-card-img"><img src="/img/blog/revenge-trading.jpg" alt="Revenge trading: the trap after every losing day and how to spot it in yourself" loading="lazy"></div>
 <span class="blog-tag">Trading Psychology</span>
 <h2>Revenge trading: the trap after every losing day and how to spot it in yourself</h2>
 <p>You lose money. You feel like you need to &quot;make it back today.&quot; The trade you take next is almost always your worst. Here&#39;s why - and the simple rule that stops it.</p>
-<div class="blog-card-meta">Jun 12, 2026 · 5 min read</div>
+<div class="blog-card-meta">Tradevada · Jun 12, 2026 · 5 min read</div>
 </a>
 <a class="blog-card" href="/blog/rolling-options">
 <div class="blog-card-img"><img src="/img/blog/rolling-options.jpg" alt="Rolling options: when to roll, when to take assignment, when to walk away" loading="lazy"></div>
 <span class="blog-tag">Wheel Strategy</span>
 <h2>Rolling options: when to roll, when to take assignment, when to walk away</h2>
 <p>You sold a put and now it&#39;s under your strike. Rolling for credit can rescue the trade - or quietly bury it. The decision framework matters more than the move.</p>
-<div class="blog-card-meta">Jun 12, 2026 · 7 min read</div>
+<div class="blog-card-meta">Tradevada · Jun 12, 2026 · 7 min read</div>
 </a>
 <a class="blog-card" href="/blog/sector-rotation">
 <div class="blog-card-img"><img src="/img/blog/sector-rotation.jpg" alt="Sector rotation: why money flows from tech to energy and back" loading="lazy"></div>
 <span class="blog-tag">Stocks</span>
 <h2>Sector rotation: why money flows from tech to energy and back</h2>
 <p>Markets don&#39;t move all together. Capital rotates between sectors based on the economic cycle. Knowing where you are in the cycle tells you what to overweight.</p>
-<div class="blog-card-meta">Jun 12, 2026 · 8 min read</div>
+<div class="blog-card-meta">Tradevada · Jun 12, 2026 · 8 min read</div>
 </a>
 <a class="blog-card" href="/blog/sizing-up-after-winning">
 <div class="blog-card-img"><img src="/img/blog/sizing-up-after-winning.jpg" alt="Sizing up after a winning streak: the most expensive mistake confident traders make" loading="lazy"></div>
 <span class="blog-tag">Trading Psychology</span>
 <h2>Sizing up after a winning streak: the most expensive mistake confident traders make</h2>
 <p>Six green days in a row. Your conviction is high. Your size goes up. The next loss wipes out a third of the streak. The math of why winners size up, then quietly give it back.</p>
-<div class="blog-card-meta">Jun 12, 2026 · 5 min read</div>
+<div class="blog-card-meta">Tradevada · Jun 12, 2026 · 5 min read</div>
 </a>
 <a class="blog-card" href="/blog/strike-selection">
 <div class="blog-card-img"><img src="/img/blog/strike-selection.jpg" alt="Strike selection: how delta, DTE, and your account size pick the strike for you" loading="lazy"></div>
 <span class="blog-tag">Options Education</span>
 <h2>Strike selection: how delta, DTE, and your account size pick the strike for you</h2>
 <p>The right strike isn&#39;t the one with the highest premium. It&#39;s the one that matches your conviction, your account, and how much pain you can stand at assignment.</p>
-<div class="blog-card-meta">Jun 12, 2026 · 7 min read</div>
+<div class="blog-card-meta">Tradevada · Jun 12, 2026 · 7 min read</div>
 </a>
 <a class="blog-card" href="/blog/volatility-cycles">
 <div class="blog-card-img"><img src="/img/blog/volatility-cycles.jpg" alt="Volatility cycles: VIX, IV rank, and when to sell premium vs. buy it" loading="lazy"></div>
 <span class="blog-tag">Market Trends</span>
 <h2>Volatility cycles: VIX, IV rank, and when to sell premium vs. buy it</h2>
 <p>Volatility moves in cycles. Knowing where you are in the cycle determines whether selling premium is genius or career-ending.</p>
-<div class="blog-card-meta">Jun 12, 2026 · 8 min read</div>
+<div class="blog-card-meta">Tradevada · Jun 12, 2026 · 8 min read</div>
 </a>
 <a class="blog-card" href="/blog/wheel-strategy-explained">
 <div class="blog-card-img"><img src="/img/blog/wheel-strategy-explained.jpg" alt="The Wheel Strategy, Explained Step by Step" loading="lazy"></div>
 <span class="blog-tag">Wheel Strategy</span>
 <h2>The Wheel Strategy, Explained Step by Step</h2>
 <p>Sell puts, take assignment, sell calls, repeat. How the wheel actually works, where the money comes from, and what can go wrong.</p>
-<div class="blog-card-meta">Jun 12, 2026 · 8 min read</div>
+<div class="blog-card-meta">Tradevada · Jun 12, 2026 · 8 min read</div>
 </a>
 <a class="blog-card" href="/blog/yield-curve-inversion">
 <div class="blog-card-img"><img src="/img/blog/yield-curve-inversion.jpg" alt="Yield curve inversion explained: why traders care about 2s vs. 10s" loading="lazy"></div>
 <span class="blog-tag">Market Trends</span>
 <h2>Yield curve inversion explained: why traders care about 2s vs. 10s</h2>
 <p>A yield curve inversion has predicted every U.S. recession for 50 years. What it actually is, why it works, and how to read it without panicking.</p>
-<div class="blog-card-meta">Jun 12, 2026 · 7 min read</div>
+<div class="blog-card-meta">Tradevada · Jun 12, 2026 · 7 min read</div>
 </a>
 <a class="blog-card" href="/blog/iv-rank-for-premium-sellers">
 <div class="blog-card-img"><img src="/img/blog/iv-rank-for-premium-sellers.jpg" alt="IV Rank Explained - When Implied Volatility Pays Premium Sellers" loading="lazy"></div>
 <span class="blog-tag">Trade Analysis</span>
 <h2>IV Rank Explained - When Implied Volatility Pays Premium Sellers</h2>
 <p>What implied volatility and IV rank actually measure, why premium sellers care, and how to use IV rank to time cash-secured puts and covered calls.</p>
-<div class="blog-card-meta">Jun 11, 2026 · 6 min read</div>
+<div class="blog-card-meta">Tradevada · Jun 11, 2026 · 6 min read</div>
 </a>
 <a class="blog-card" href="/blog/when-to-roll-cash-secured-put">
 <div class="blog-card-img"><img src="/img/blog/when-to-roll-cash-secured-put.jpg" alt="When to Roll a Cash-Secured Put - and When to Take Assignment" loading="lazy"></div>
 <span class="blog-tag">Wheel Strategy</span>
 <h2>When to Roll a Cash-Secured Put - and When to Take Assignment</h2>
 <p>Rolling feels like defense, but sometimes it&#39;s just postponing a decision. A framework for choosing between the roll and the shares.</p>
-<div class="blog-card-meta">Jun 10, 2026 · 7 min read</div>
+<div class="blog-card-meta">Tradevada · Jun 10, 2026 · 7 min read</div>
 </a>
 <a class="blog-card" href="/blog/theta-decay-explained">
 <div class="blog-card-img"><img src="/img/blog/theta-decay-explained.jpg" alt="Theta Decay Explained - How Time Pays Option Sellers" loading="lazy"></div>
 <span class="blog-tag">Options Education</span>
 <h2>Theta Decay Explained - How Time Pays Option Sellers</h2>
 <p>What theta decay is, why time decay accelerates near expiration, and how premium sellers turn the clock into an income stream.</p>
-<div class="blog-card-meta">Jun 9, 2026 · 6 min read</div>
+<div class="blog-card-meta">Tradevada · Jun 9, 2026 · 6 min read</div>
 </a>
 <a class="blog-card" href="/blog/covered-call-mistakes">
 <div class="blog-card-img"><img src="/img/blog/covered-call-mistakes.jpg" alt="5 Covered Call Mistakes That Quietly Cap Your Returns" loading="lazy"></div>
 <span class="blog-tag">Covered Calls</span>
 <h2>5 Covered Call Mistakes That Quietly Cap Your Returns</h2>
 <p>The call side of the wheel looks easy. These five habits are why most traders make less than they should on it.</p>
-<div class="blog-card-meta">Jun 8, 2026 · 7 min read</div>
+<div class="blog-card-meta">Tradevada · Jun 8, 2026 · 7 min read</div>
 </a>
 <a class="blog-card" href="/blog/metrics-that-measure-wheel-strategy">
 <div class="blog-card-img"><img src="/img/blog/metrics-that-measure-wheel-strategy.jpg" alt="Win Rate Lies - The Metrics That Actually Measure a Wheel Strategy" loading="lazy"></div>
 <span class="blog-tag">Trade Analysis</span>
 <h2>Win Rate Lies - The Metrics That Actually Measure a Wheel Strategy</h2>
 <p>Premium sellers win most of their trades and can still lose money. Here are the numbers that tell the truth about a wheel.</p>
-<div class="blog-card-meta">Jun 6, 2026 · 6 min read</div>
+<div class="blog-card-meta">Tradevada · Jun 6, 2026 · 6 min read</div>
 </a>
 <a class="blog-card" href="/blog/wheel-strategy-small-account">
 <div class="blog-card-img"><img src="/img/blog/wheel-strategy-small-account.jpg" alt="Running the Wheel Strategy on a Small Account" loading="lazy"></div>
 <span class="blog-tag">Wheel Strategy</span>
 <h2>Running the Wheel Strategy on a Small Account</h2>
 <p>How much money you need for the wheel strategy, which stocks fit a small account, and the position sizing rules that keep you alive long enough to compound.</p>
-<div class="blog-card-meta">Jun 5, 2026 · 7 min read</div>
+<div class="blog-card-meta">Tradevada · Jun 5, 2026 · 7 min read</div>
 </a>
 <a class="blog-card" href="/blog/wheel-trading-weekly-routine">
 <div class="blog-card-img"><img src="/img/blog/wheel-trading-weekly-routine.jpg" alt="A Weekly Routine for Wheel Traders (That Takes Under an Hour)" loading="lazy"></div>
 <span class="blog-tag">Journaling</span>
 <h2>A Weekly Routine for Wheel Traders (That Takes Under an Hour)</h2>
 <p>The weekly options trading routine that keeps a wheel portfolio managed - what to check, when to roll, and the review habit that compounds skill.</p>
-<div class="blog-card-meta">Jun 4, 2026 · 6 min read</div>
+<div class="blog-card-meta">Tradevada · Jun 4, 2026 · 6 min read</div>
 </a>
 <a class="blog-card" href="/blog/options-greeks-for-wheel-traders">
 <div class="blog-card-img"><img src="/img/blog/options-greeks-for-wheel-traders.jpg" alt="Options Greeks for Wheel Traders - Delta, Theta, and DTE in Plain English" loading="lazy"></div>
 <span class="blog-tag">Options Education</span>
 <h2>Options Greeks for Wheel Traders - Delta, Theta, and DTE in Plain English</h2>
 <p>The options Greeks that actually matter for cash-secured puts and covered calls - how delta sets your odds, theta sets your pay, and DTE sets the terms.</p>
-<div class="blog-card-meta">Jun 3, 2026 · 8 min read</div>
+<div class="blog-card-meta">Tradevada · Jun 3, 2026 · 8 min read</div>
 </a>
 <a class="blog-card" href="/blog/best-time-to-sell-options">
 <div class="blog-card-img"><img src="/img/blog/best-time-to-sell-options.jpg" alt="When Is the Best Time to Sell Options? Timing Premium Without Predicting Markets" loading="lazy"></div>
 <span class="blog-tag">Options Income</span>
 <h2>When Is the Best Time to Sell Options? Timing Premium Without Predicting Markets</h2>
 <p>The best time to sell options is a set of conditions, not a time of day - IV spikes, post-earnings resets, and calendar spots sellers wait for.</p>
-<div class="blog-card-meta">Jun 2, 2026 · 6 min read</div>
+<div class="blog-card-meta">Tradevada · Jun 2, 2026 · 6 min read</div>
 </a>
 <a class="blog-card" href="/blog/compounding-options-premium">
 <div class="blog-card-img"><img src="/img/blog/compounding-options-premium.jpg" alt="Compounding Options Premium - Turning Small Credits Into Real Capital" loading="lazy"></div>
 <span class="blog-tag">Options Income</span>
 <h2>Compounding Options Premium - Turning Small Credits Into Real Capital</h2>
 <p>How reinvesting options premium compounds a wheel account, the snowball math at 1.5-2.5% a month, and the habits that protect the curve.</p>
-<div class="blog-card-meta">Jun 1, 2026 · 6 min read</div>
+<div class="blog-card-meta">Tradevada · Jun 1, 2026 · 6 min read</div>
 </a>
 <a class="blog-card" href="/blog/managing-losing-cash-secured-put">
 <div class="blog-card-img"><img src="/img/blog/managing-losing-cash-secured-put.jpg" alt="Managing a Losing Cash-Secured Put - The Defense Playbook" loading="lazy"></div>
 <span class="blog-tag">Wheel Strategy</span>
 <h2>Managing a Losing Cash-Secured Put - The Defense Playbook</h2>
 <p>Your short put is deep in the money. Roll, take assignment, or cut? A decision framework for managing losing cash-secured puts without making it worse.</p>
-<div class="blog-card-meta">May 30, 2026 · 7 min read</div>
+<div class="blog-card-meta">Tradevada · May 30, 2026 · 7 min read</div>
 </a>
 <a class="blog-card" href="/blog/trading-psychology-discipline">
 <div class="blog-card-img"><img src="/img/blog/trading-psychology-discipline.jpg" alt="Trading Psychology for Premium Sellers - Discipline Beats Conviction" loading="lazy"></div>
 <span class="blog-tag">Trading Psychology</span>
 <h2>Trading Psychology for Premium Sellers - Discipline Beats Conviction</h2>
 <p>Why options sellers blow up less from bad strategy and more from broken discipline - revenge trading, oversizing, and the systems that prevent both.</p>
-<div class="blog-card-meta">May 28, 2026 · 7 min read</div>
+<div class="blog-card-meta">Tradevada · May 28, 2026 · 7 min read</div>
 </a>
 </section>
 <div class="blog-cta">
@@ -342,6 +371,44 @@
 <div class="blog-cta-body">Win rate by strategy, premium collected, annualized returns - imported straight from your broker.</div>
 <a class="btn primary" href="https://app.tradevada.com/signup">Get Started →</a>
 </div>
+<section class="blog-news">
+<div class="blog-news-inner">
+<h2>Get the weekly edge</h2>
+<p>Wheel setups, journaling tactics, and market notes - one email a week. Plus the Tradevada Trading Playbook, free.</p>
+<form class="blog-news-form" id="nlform" novalidate>
+<input type="text" id="nlname" name="name" placeholder="First name" autocomplete="given-name">
+<input type="email" id="nlemail" name="email" placeholder="you@email.com" autocomplete="email" required>
+<button type="submit" id="nlbtn">Subscribe</button>
+</form>
+<div class="blog-news-msg" id="nlmsg" role="status" aria-live="polite"></div>
+</div>
+<script>
+(function(){
+  var f=document.getElementById('nlform');if(!f)return;
+  var b=document.getElementById('nlbtn'),m=document.getElementById('nlmsg');
+  f.addEventListener('submit',function(ev){
+    ev.preventDefault();
+    var email=(document.getElementById('nlemail').value||'').trim();
+    var name=(document.getElementById('nlname').value||'').trim();
+    if(!email){m.textContent='Enter your email address.';m.className='blog-news-msg err';return;}
+    var label=b.textContent;b.disabled=true;b.textContent='Sending...';
+    m.textContent='';m.className='blog-news-msg';
+    fetch('/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email,name:name})})
+      .then(function(r){return r.json().catch(function(){return {};}).then(function(j){return {ok:r.ok,j:j};});})
+      .then(function(res){
+        if(res.ok&&res.j&&res.j.ok){m.textContent='You are in. Check your inbox for the playbook.';m.className='blog-news-msg ok';f.reset();}
+        else{
+          var code=res.j&&res.j.error;
+          m.textContent=code==='invalid_email'?'That email does not look right.':'Something went wrong. Please try again in a moment.';
+          m.className='blog-news-msg err';
+        }
+      })
+      .catch(function(){m.textContent='Network error. Please try again in a moment.';m.className='blog-news-msg err';})
+      .then(function(){b.disabled=false;b.textContent=label;});
+  });
+})();
+</script>
+</section>
 </main>
 <footer><div class="foot-row"><span>© 2026 Tradevada, LLC · Texas, USA</span> <span style="display:block;width:100%;margin-top:10px;font-size:12px;line-height:1.55;color:rgba(232,234,237,.45)">Tradevada is a trading journal and analytics tool - not a broker, financial adviser, or signal service, and nothing here is financial advice. You are solely responsible for your own trading decisions. See our <a href="/disclaimer.html" style="color:inherit;text-decoration:underline">full disclaimer</a>.</span><div class="foot-links"><a href="/index.html">Home</a> <a href="/pricing.html">Pricing</a> <a href="/about.html">About</a> <a href="/terms.html">Terms</a> <a href="/privacy.html">Privacy</a> <a href="/disclaimer.html">Disclaimer</a> <a href="/contact.html">Contact</a></div></div><!--PATCH:footer-social--><div class="foot-social" style="display:flex;gap:16px;justify-content:center;align-items:center;padding:18px 0 2px"><a href="https://www.facebook.com/tradevada" target="_blank" rel="noopener" aria-label="Tradevada on Facebook" style="color:var(--muted,#888);opacity:.85;transition:opacity .15s,color .15s;display:inline-flex" onmouseover="this.style.opacity=1;this.style.color='#7c3aed'" onmouseout="this.style.opacity=.85;this.style.color=''"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.99 3.657 9.128 8.438 9.878v-6.987H7.898V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.891h-2.33v6.987C18.343 21.128 22 16.99 22 12z"/></svg></a><a href="https://www.instagram.com/tradevada" target="_blank" rel="noopener" aria-label="Tradevada on Instagram" style="color:var(--muted,#888);opacity:.85;transition:opacity .15s,color .15s;display:inline-flex" onmouseover="this.style.opacity=1;this.style.color='#7c3aed'" onmouseout="this.style.opacity=.85;this.style.color=''"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></svg></a><a href="https://discord.gg/Mn4pJZbZD" target="_blank" rel="noopener" aria-label="Tradevada on Discord" style="color:var(--muted,#888);opacity:.85;transition:opacity .15s,color .15s;display:inline-flex" onmouseover="this.style.opacity=1;this.style.color='#7c3aed'" onmouseout="this.style.opacity=.85;this.style.color=''"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.09.09 0 0 0-.07.03c-.18.33-.39.76-.53 1.09a16.09 16.09 0 0 0-4.8 0c-.14-.34-.35-.76-.54-1.09-.01-.02-.04-.03-.07-.03-1.5.26-2.93.71-4.27 1.33-.01 0-.02.01-.03.02-2.72 4.07-3.47 8.03-3.1 11.95 0 .02.01.04.03.05 1.8 1.32 3.53 2.12 5.24 2.65.03.01.06 0 .07-.02.4-.55.76-1.13 1.07-1.74.02-.04 0-.08-.04-.09-.57-.22-1.11-.48-1.64-.78-.04-.02-.04-.08-.01-.11.11-.08.22-.17.33-.25.02-.02.05-.02.07-.01 3.44 1.57 7.15 1.57 10.55 0 .02-.01.05-.01.07.01.11.09.22.17.33.26.04.03.04.09-.01.11-.52.31-1.07.56-1.64.78-.04.01-.05.06-.04.09.32.61.68 1.19 1.07 1.74.03.02.06.03.09.02 1.72-.53 3.45-1.33 5.25-2.65.02-.01.03-.03.03-.05.44-4.53-.73-8.46-3.1-11.95-.01-.01-.02-.02-.04-.02zM8.52 14.91c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12 0 1.17-.84 2.12-1.89 2.12zm6.97 0c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12 0 1.17-.83 2.12-1.89 2.12z"/></svg></a></div></footer>
 </body>
